@@ -1,0 +1,83 @@
+#!/bin/bash
+
+home=~/PostDoc/Programs/CNN/CNN/
+miniconda=~/miniconda3/etc/profile.d/conda.sh
+keras=$keras
+
+#if [[ -f "$miniconda" ]]; then
+#    echo "$miniconda exists"
+#    source $miniconda
+#  else
+#    echo -e "miniconda not found"
+#    exit 1
+#fi
+
+if [[ -d "$home" ]]; then
+    echo "Running from $home."
+  else
+    echo -e "CNN home not found"
+    exit 1
+fi
+
+plot_coords=$home"plot_coords.R"
+classify_leaf_disc=$home"classify_leaf_disc.py"
+
+helpFunction()
+{
+  echo ""
+  echo "Usage: $( basename -- "$0" ) -f path/to/leaf/disc/dir/ -l model_l_vs_b.h5 -s model_s_vs_no-s.h5"
+  echo -e "\t-f Path to leaf disc containing folder. Don't forget the / at the end"
+  echo -e "\t-l Path to custom Keras model: leaf vs background (if not supplied standard model will be used)"
+  echo -e "\t-s Path to custom Keras model: sporangia vs no-sporangia (if notsupplied standard model will be used)"
+  echo -e ""
+  exit 1
+}
+
+while getopts "f:l:s:" opt
+do
+  case "$opt" in
+    f ) parameterF="$OPTARG" ;;
+    l ) parameterL="$OPTARG" ;;
+    s ) parameterS="$OPTARG" ;;
+    ? ) helpFunction ;;
+  esac
+done
+
+if [[ -d "$parameterF" ]]; then
+    echo -e "[info]\tLeaf disc folder exists."
+  else
+    helpFunction
+fi
+
+if [ -z "$parameterL" ]
+then
+   echo -e "[info]\tNo -l option. Using standard model: leaf_vs_back_acc98_model.h5";
+   parameterL=$home"leaf_vs_back_acc98_model.h5"
+   #echo -e "[info]\t$parameterL"
+fi
+
+if [ -z "$parameterS" ]
+then
+   echo -e "[info]\tNo -S option. Using standard model: spo_vs_nospo_acc92_model.h5";
+   parameterS=$home"spo_vs_nospo_acc92_model.h5"
+   #echo -e "[info]\t$parameterS"
+fi
+
+#echo -e "[info]\tActivating Keras"
+#conda activate $keras
+
+mkdir $parameterF"results"
+touch $parameterF"cassify_results.txt"
+touch $parameterF"error.log"
+
+echo -e "[info]\tRunning classify_leaf_disc.py. This might take some time."
+python $classify_leaf_disc $parameterF $parameterL $parameterS 2> $parameterF"error.log"
+
+echo -e "[info]\tRunning plot_coords.R"
+
+coords=$parameterF*coord.txt
+for f in $coords
+do
+  echo -e "[info]\t\tPlotting "$(basename -- $f )
+  Rscript $plot_coords -c $f 2>> $parameterF"error.log"
+done
