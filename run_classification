@@ -58,8 +58,8 @@ fi
 
 if [ -z "$parameterS" ]
 then
-   echo -e "[info]\tNo -S option. Using standard model: spo_vs_nospo_acc92_model.h5";
-   parameterS=$home"spo_vs_nospo_acc92_model.h5"
+   echo -e "[info]\tNo -S option. Using standard model: spo_vs_nospo_acc96_model4.h5";
+   parameterS=$home"spo_vs_nospo_acc96_model4.h5"
    #echo -e "[info]\t$parameterS"
 fi
 
@@ -67,6 +67,7 @@ fi
 #conda activate $keras
 
 mkdir $parameterF"results"
+mkdir $parameterF"spo"
 touch $parameterF"cassify_results.txt"
 touch $parameterF"error.log"
 
