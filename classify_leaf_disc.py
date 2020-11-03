@@ -8,6 +8,31 @@ import image_slicer
 from keras.preprocessing.image import load_img, img_to_array
 import glob
 import shutil
+import time
+
+# Print iterations progress
+def printProgressBar (iteration, total, prefix = '', suffix = '', decimals = 1, length = 100, fill = '█', printEnd = "\r"):
+    """
+    Call in a loop to create terminal progress bar
+    @params:
+        iteration   - Required  : current iteration (Int)
+        total       - Required  : total iterations (Int)
+        prefix      - Optional  : prefix string (Str)
+        suffix      - Optional  : suffix string (Str)
+        decimals    - Optional  : positive number of decimals in percent complete (Int)
+        length      - Optional  : character length of bar (Int)
+        fill        - Optional  : bar fill character (Str)
+        printEnd    - Optional  : end character (e.g. "\r", "\r\n") (Str)
+    """
+    percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
+    filledLength = int(length * iteration // total)
+    bar = fill * filledLength + '-' * (length - filledLength)
+    print(f'\r{prefix} |{bar}| {percent}% {suffix}', end = printEnd)
+    # Print New Line on Complete
+    if iteration == total:
+        print()
+
+start = time.time()
 
 if len(sys.argv) == 4:
     leaf_discs = sys.argv[1]
@@ -26,7 +51,7 @@ else:
 
 # Initialize sample name variable
 sample = 0
-
+i = 0
 # Specify the image type
 valid_img = [".jpg"]
 
@@ -45,6 +70,7 @@ with open(leaf_discs+"cassify_results.txt", 'w') as results:
     # Print the header
     results.write("Sample\tNumber\tLeaf disc\tAgar\t%Leaf disc\t%Agar\tspo\tno spo\t%spo\t%no spo\n")
 
+    printProgressBar(0, num_img, prefix = '[info]  Progress:', suffix = 'Complete', length = 50)
     for image in os.listdir(leaf_discs):
 
         if image.endswith('.jpg'):
@@ -108,6 +134,7 @@ with open(leaf_discs+"cassify_results.txt", 'w') as results:
             with open(leaf_discs+image+"spo_coord.txt", 'w') as f:
                 for k in spo:
                     if k.endswith('.png'):
+                        shutil.copy2(k, leaf_discs+"spo")
                         n=k.split("/")
                         n1=n[-1].split(".")
                         n2=n1[1].split("_")
@@ -126,3 +153,8 @@ with open(leaf_discs+"cassify_results.txt", 'w') as results:
             shutil.rmtree(leaf_discs+'tmp')
         else:
             continue
+        i=i+1
+        printProgressBar(i, num_img, prefix = '[info]  Progress:', suffix = 'Complete', length = 50)
+
+end = time.time()
+print("[info] Elapsed time: " + str(round((end - start)/60))+" min")
