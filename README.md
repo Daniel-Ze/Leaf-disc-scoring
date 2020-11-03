@@ -96,6 +96,7 @@ Running from /Users/daniel/PostDoc/Programs/CNN/CNN/.
 [info]		Folder:		/Users/daniel/PostDoc/Programs/CNN/CNN/test/
 [info]		Model 1:	/Users/daniel/PostDoc/Programs/CNN/CNN/leaf_vs_back_acc98_model.h5
 [info]		Model 2:	/Users/daniel/PostDoc/Programs/CNN/CNN/spo_vs_nospo_acc92_model.h5
+[info]  Progress: |██████████████████████████████████████████████████| 100.0% Complete
 [info]	Running plot_coords.R
 [info]		Plotting score1_3_Plate_1_II_s47.jpgspo_coord.txt
 [info]		Plotting score5_1_Plate_3_I_s03.jpgspo_coord.txt
