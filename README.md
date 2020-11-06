@@ -9,6 +9,7 @@ The program slices pictures of leaf discs into 506 pictures and classifies the
 slices into infected and not infected with a trained CNN. After classification
 it calculates the percentage as a standardized score representing percent
 infected leaf disc area.
+![run_classification](https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/run_classification.png?raw=true)
 
 ## What it needs
 
@@ -117,4 +118,4 @@ Test	score9_3_Plate_6_I_s18.jpg	4	442	64	87	13	156	286	35	65
 
 The program also generates a plot indicating the leaf disc slices which were
 classified as infected in a folder called **results**.
-![alt text](https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/results_combined.png?raw=true)
+![results](https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/results_combined.png?raw=true)
