@@ -70,8 +70,9 @@ $ conda activate Keras
 $ run_classification
 Running from /path/of/install/CNN/.
 
-Usage: run_classification -f path/to/leaf/disc/dir/ -l model_l_vs_b.h5 -s model_s_vs_no-s.h5
+Usage: run_classification -f path/to/leaf/disc/dir/ -e Inoculation1 -l model_l_vs_b.h5 -s model_s_vs_no-s.h5
 	-f Path to leaf disc containing folder. Don't forget the / at the end
+	-e Give your experiment a name
 	-l Path to custom Keras model: leaf vs background (if not supplied standard model will be used)
 	-s Path to custom Keras model: sporangia vs no-sporangia (if notsupplied standard model will be used)
 ```
@@ -86,9 +87,10 @@ total four leaf discs with different degrees of infection severity are
 supplied.
 Running the test:
 ```
-run_classification -f ~/path/to/program/CNN/test/
+run_classification -f ~/path/to/program/CNN/test/ -e Test
 Running from /Users/daniel/PostDoc/Programs/CNN/CNN/.
 [info]	Leaf disc folder exists.
+[info]	Experiment name : Test
 [info]	No -l option. Using standard model: leaf_vs_back_acc98_model.h5
 [info]	No -S option. Using standard model: spo_vs_nospo_acc92_model.h5
 [info]	Running classify_leaf_disc.py. This might take some time.
