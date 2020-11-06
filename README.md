@@ -10,7 +10,7 @@ slices into infected and not infected with a trained CNN. After classification
 it calculates the percentage as a standardized score representing percent
 infected leaf disc area.
 
-<img src="https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/run_classification.png?raw=true" width="48">
+<img src="https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/run_classification.png?raw=true" width="100">
 
 ## What it needs
 
