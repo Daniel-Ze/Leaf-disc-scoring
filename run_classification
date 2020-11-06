@@ -20,22 +20,25 @@ if [[ -d "$home" ]]; then
 fi
 
 plot_coords=$home"plot_coords.R"
+plot_pheno=$home"plot_pheno.R"
 classify_leaf_disc=$home"classify_leaf_disc.py"
 
 helpFunction()
 {
   echo ""
-  echo "Usage: $( basename -- "$0" ) -f path/to/leaf/disc/dir/ -l model_l_vs_b.h5 -s model_s_vs_no-s.h5"
+  echo "Usage: $( basename -- "$0" ) -f path/to/leaf/disc/dir/ -e Inoculation1 -l model_l_vs_b.h5 -s model_s_vs_no-s.h5"
   echo -e "\t-f Path to leaf disc containing folder. Don't forget the / at the end"
+  echo -e "\t-e Give your experiment a name"
   echo -e "\t-l Path to custom Keras model: leaf vs background (if not supplied standard model will be used)"
   echo -e "\t-s Path to custom Keras model: sporangia vs no-sporangia (if notsupplied standard model will be used)"
   echo -e ""
   exit 1
 }
 
-while getopts "f:l:s:" opt
+while getopts "e:f:l:s:" opt
 do
   case "$opt" in
+    e ) parameterE="$OPTARG" ;;
     f ) parameterF="$OPTARG" ;;
     l ) parameterL="$OPTARG" ;;
     s ) parameterS="$OPTARG" ;;
@@ -49,6 +52,14 @@ if [[ -d "$parameterF" ]]; then
     helpFunction
 fi
 
+if [ -z "$parameterE" ]
+then
+    echo -e "[info]\tNo experiment name supplied. Naming it Inoculation1"
+    parameterE=Inoculation1
+else
+    echo -e "[info]\tExperiment name : "$parameterE
+fi
+
 if [ -z "$parameterL" ]
 then
    echo -e "[info]\tNo -l option. Using standard model: leaf_vs_back_acc98_model.h5";
@@ -58,7 +69,7 @@ fi
 
 if [ -z "$parameterS" ]
 then
-   echo -e "[info]\tNo -S option. Using standard model: spo_vs_nospo_acc96_model4.h5";
+   echo -e "[info]\tNo -S option. Using standard model: spo_vs_nospo_acc96_model4-1.h5";
    parameterS=$home"spo_vs_nospo_acc96_model4.h5"
    #echo -e "[info]\t$parameterS"
 fi
@@ -68,11 +79,11 @@ fi
 
 mkdir $parameterF"results"
 mkdir $parameterF"spo"
-touch $parameterF"cassify_results.txt"
+touch $parameterF"classify_results.txt"
 touch $parameterF"error.log"
 
 echo -e "[info]\tRunning classify_leaf_disc.py. This might take some time."
-python $classify_leaf_disc $parameterF $parameterL $parameterS 2> $parameterF"error.log"
+python $classify_leaf_disc $parameterF $parameterL $parameterS $parameterE 2> $parameterF"error.log"
 
 echo -e "[info]\tRunning plot_coords.R"
 
@@ -82,3 +93,5 @@ do
   echo -e "[info]\t\tPlotting "$(basename -- $f )
   Rscript $plot_coords -c $f 2>> $parameterF"error.log"
 done
+
+Rscript $plot_pheno -r $parameterF"classify_results.txt" 2>> $parameterF"error.log"
