@@ -108,11 +108,11 @@ Running from /Users/daniel/PostDoc/Programs/CNN/CNN/.
 Running the program should yield the following results:
 
 ```
-Sample	Number	Leaf disc	Agar	%Leaf disc	%Agar	spo	no spo	%spo	%no spo
-score7_4_Plate_6_II_s77.jpg	1	376	130	74	26	287	89	76	24
-score1_3_Plate_1_II_s47.jpg	2	339	167	67	33	38	301	11	89
-score5_1_Plate_3_I_s03.jpg	3	369	137	73	27	201	168	54	46
-score9_3_Plate_6_I_s18.jpg	4	442	64	87	13	416	26	94	6
+Exp_name	Sample	Number	Leaf_disc	Agar	perc_leaf_disc	perc_agar	spo	no_spo	perc_spo	perc_no_spo
+Test	score7_4_Plate_6_II_s77.jpg	1	376	130	74	26	162	214	43	57
+Test	score1_3_Plate_1_II_s47.jpg	2	339	167	67	33	12	327	4	96
+Test	score5_1_Plate_3_I_s03.jpg	3	369	137	73	27	35	334	9	91
+Test	score9_3_Plate_6_I_s18.jpg	4	442	64	87	13	156	286	35	65
 ```
 
 The program also generates a plot indicating the leaf disc slices which were
