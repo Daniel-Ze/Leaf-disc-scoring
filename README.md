@@ -117,3 +117,4 @@ Test	score9_3_Plate_6_I_s18.jpg	4	442	64	87	13	156	286	35	65
 
 The program also generates a plot indicating the leaf disc slices which were
 classified as infected in a folder called **results**.
+![alt text](https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/results_combined.png?raw=true)
