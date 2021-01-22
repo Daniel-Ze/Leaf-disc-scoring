@@ -38,7 +38,7 @@ $ pip install --upgrade pip setuptools
 ```
   - Install Tensorflow
 ```
-$ pip install 'tensorflow==2.2.0'
+$ pip install 'tensorflow==2.4.0'
 ```
   - Install Keras
 ```
