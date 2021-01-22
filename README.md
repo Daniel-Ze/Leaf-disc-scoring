@@ -48,6 +48,10 @@ $ pip install 'keras==2.4.0'
 ```
 $ pip install image_slicer
 ```
+  - Install open-cv
+```
+$ pip install opencv-python
+```
   - Install R
 ```
 $ mamba install R
