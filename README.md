@@ -44,6 +44,10 @@ $ pip install 'tensorflow==2.2.0'
 ```
 $ pip install 'keras==2.4.0'
 ```
+  - Install image_slicer
+```
+$ pip install image_slicer
+```
   - Install R
 ```
 $ mamba install R
