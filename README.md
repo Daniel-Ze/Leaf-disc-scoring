@@ -38,11 +38,11 @@ $ pip install --upgrade pip setuptools
 ```
   - Install Tensorflow
 ```
-$ pip install tensorflow
+$ pip install 'tensorflow==2.2.0'
 ```
   - Install Keras
 ```
-$ pip install keras
+$ pip install 'keras==2.4.0'
 ```
   - Install R
 ```
