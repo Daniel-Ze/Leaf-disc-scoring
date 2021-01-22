@@ -42,7 +42,7 @@ $ pip install 'tensorflow==2.4.0'
 ```
   - Install Keras
 ```
-$ pip install 'keras==2.4.0'
+$ pip install 'keras==2.4.3'
 ```
   - Install image_slicer
 ```
