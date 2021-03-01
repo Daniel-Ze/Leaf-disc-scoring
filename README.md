@@ -36,18 +36,12 @@ $ conda activate keras
 ```
 $ pip install --upgrade pip setuptools
 ```
-  - Install Tensorflow
+  - Install requirements
 ```
-$ pip install 'tensorflow==2.4.0'
+$ cd Leaf-disc-scoring/
+$ pip install -r requirements.txt
 ```
-  - Install Keras
-```
-$ pip install 'keras==2.4.3'
-```
-  - Install image_slicer
-```
-$ pip install image_slicer
-```
+
   - Install open-cv
 ```
 $ pip install opencv-python
