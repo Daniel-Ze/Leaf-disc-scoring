@@ -1,0 +1,4 @@
+###### Leaf disc scoring requirements:
+image_slicer
+tensorflow==2.4.0
+keras==2.4.3
