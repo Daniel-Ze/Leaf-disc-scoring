@@ -42,10 +42,6 @@ $ cd Leaf-disc-scoring/
 $ pip install -r requirements.txt
 ```
 
-  - Install open-cv
-```
-$ pip install opencv-python
-```
   - Install R
 ```
 $ mamba install R
