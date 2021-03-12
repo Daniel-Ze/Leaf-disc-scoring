@@ -5,8 +5,7 @@ inoculation experiments with grapevine downy mildew (_Plasmopara viticola_).
 
 If you use this code please cite:\
 **High-throughput phenotyping of leaf discs infected with grapevine downy mildew using trained convolutional neural networks**\
-Zendler D, Nagarjun M, Schwandner A, Hausmann L, Zyprian E
-
+Zendler D, Nagarjun M, Schwandner A, Hausmann L, Zyprian E\
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Leaf disc scoring pipeline</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/Daniel-Ze/Leaf-disc-scoring" property="cc:attributionName" rel="cc:attributionURL">Daniel Zendler</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
@@ -14,15 +13,22 @@ Zendler D, Nagarjun M, Schwandner A, Hausmann L, Zyprian E
 
 ## The general pipeline
 
-The whole pipeline is written in python, R. The two scripts are wrapped in a bash script for consecutive execution. The pipeline can therefore
-be run on any given UNIX system with all the depencies installed. It was tested on MacOS Mojave and Ubuntu 18, 20.
-The leaf disc scoring pipeline first slices the supplied leaf disc image into 506 sub images. The scoring pipeline itself consists of two CNNs:
+The whole pipeline is written in python and R. The two scripts are wrapped in a bash script for consecutive execution. The pipeline can therefore
+be run on any given UNIX system with all the depencies installed. It was tested and worked on:
+
+  - MacOS Mojave
+  - Ubuntu 18 LTS, 20 LTS.
+
+The leaf disc scoring pipeline first slices the supplied leaf disc image into 506 sub images using image_slicer. The scoring pipeline itself 
+then consists of two trained CNNs with binary output:
 
   1. CNN1: Group slices into background and leaf disc itself
   2. CNN2: Group classified leaf disc slices into infected and not infected
 
 The resulting number of leaf disc slices infected and not infected are expressed as percentage and are included in the final result.
-The pipeline will iterate over all images in a given folder.
+The pipeline will iterate over all images in a given folder. The pipeline outputs the raw results as a tab delimited text file that 
+can be further used with R. Further the pipeline produces plots of the original RGB image overlaid with the slcies classified as 
+infected with downy mildew and a boxplot showing the overall phenotypic distribution in the given dataset.
 
 ## What it needs
 
