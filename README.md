@@ -1,4 +1,4 @@
-# CNN leaf disc scoring
+# Leaf disc scoring
 
 Objective and high-throughput calssification of leaf disc images form artificial
 inoculation experiments with grapevine downy mildew (_Plasmopara viticola_).
