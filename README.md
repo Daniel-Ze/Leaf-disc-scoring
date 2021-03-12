@@ -30,7 +30,7 @@ The pipeline will iterate over all images in a given folder. The pipeline output
 can be further used with R. Further the pipeline produces plots of the original RGB image overlaid with the slcies classified as 
 infected with downy mildew and a boxplot showing the overall phenotypic distribution in the given dataset.\
 \
-\
+
 
 ## What it needs
 
