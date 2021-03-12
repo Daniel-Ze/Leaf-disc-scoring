@@ -28,7 +28,9 @@ then consists of two trained CNNs with binary output:
 The resulting number of leaf disc slices infected and not infected are expressed as percentage and are included in the final result.
 The pipeline will iterate over all images in a given folder. The pipeline outputs the raw results as a tab delimited text file that 
 can be further used with R. Further the pipeline produces plots of the original RGB image overlaid with the slcies classified as 
-infected with downy mildew and a boxplot showing the overall phenotypic distribution in the given dataset.
+infected with downy mildew and a boxplot showing the overall phenotypic distribution in the given dataset.\
+\
+\
 
 ## What it needs
 
