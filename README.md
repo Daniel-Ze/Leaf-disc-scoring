@@ -128,6 +128,6 @@ Running the program should yield the following results:
 The program also generates a plot indicating the leaf disc slices which were classified as infected in a folder called **results**. In the same folder a plot should be present showing the percentage leaf disc covered with sporangiophore distribution of the analyzed leaf disc images. The raw results can be found in a tab delimited text file in the main folder called **classify_results.txt**
 ![results](https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/results_combined_git.png?raw=true)
 
-## What to do if your images are not in the right resolution, not infected with downy mildew or you just cool and want to train your models yourself
+## "Oh no my images are not in the right resolution" , "My samples are not infected with downy mildew" or "I want to train my own models"
 
 With the main pipeline a folder with additional scripts is supplied. The python scripts should help you to set your stuff up with another pathogen or if you just want to train your models on image data from yoour experiments. So please go to scripts and read the README.
