@@ -87,8 +87,7 @@ $ echo 'export PATH=/usr/local/bin:$PATH' >>~/.bashrc
 
 ## Running the pipeline
 
-Before running the program make sure to activate the conda environment with all
-the necessary programs installed.
+Before running the program make sure to activate the conda environment with all the necessary depencies installed.
 ```
 $ conda activate Keras
 (keras)$ run_classification
@@ -101,14 +100,9 @@ Usage: run_classification -f path/to/leaf/disc/dir/ -e Inoculation1 -l model_l_v
 	-s Path to custom Keras model: sporangia vs no-sporangia (if notsupplied standard model will be used)
 ```
 
-If you intend to use the classification for images of the size **XY** and you
-want to use the pre-trained models for the classification the flags **-l** and
-**-s** can be ignored. The program will then use the models supplied in the
-programs folder.
+If you intend to use the classification for images of the size **2752 × 2208 pixels** and you want to use the pre-trained models for the classification the flags **-l** and **-s** can be ignored. The program will then use the models supplied in the programs folder.
 
-To Check if the program runs properly a set of test images is supplied. In
-total four leaf discs with different degrees of infection severity are
-supplied.
+To Check if the program runs properly a set of test images is supplied. In total four leaf discs with different degrees of infection severity are supplied.\
 Running the test:
 ```
 run_classification -f ~/path/to/program/CNN/test/ -e Test
@@ -131,14 +125,6 @@ Running from /Users/daniel/PostDoc/Programs/CNN/CNN/.
 ```
 Running the program should yield the following results:
 
-```
-Exp_name	Sample	Number	Leaf_disc	Agar	perc_leaf_disc	perc_agar	spo	no_spo	perc_spo	perc_no_spo
-Test	score7_4_Plate_6_II_s77.jpg	1	376	130	74	26	162	214	43	57
-Test	score1_3_Plate_1_II_s47.jpg	2	339	167	67	33	12	327	4	96
-Test	score5_1_Plate_3_I_s03.jpg	3	369	137	73	27	35	334	9	91
-Test	score9_3_Plate_6_I_s18.jpg	4	442	64	87	13	156	286	35	65
-```
-
 The program also generates a plot indicating the leaf disc slices which were
 classified as infected in a folder called **results**.
-![results](https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/results_combined.png?raw=true)
+![results](https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/results_combined_git.png?raw=true)
