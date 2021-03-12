@@ -5,6 +5,7 @@ inoculation experiments with grapevine downy mildew (_Plasmopara viticola_).
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Leaf disc scoring pipeline</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/Daniel-Ze/Leaf-disc-scoring" property="cc:attributionName" rel="cc:attributionURL">Daniel Zendler</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
+<img align="left" src="https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/run_classification.png?raw=true" width="300">
 ## The general pipeline
 
 The leaf disc scoring pipeline first slices the supplied leaf disc image into 506 sub images. The scoring pipeline itself consists of two CNNs:
@@ -15,7 +16,7 @@ The leaf disc scoring pipeline first slices the supplied leaf disc image into 50
 The resulting number of leaf disc slices infected and not infected are expressed as percentage and are included in the final result.
 The pipeline will iterate over all images in a given folder.
 
-<img align="left" src="https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/run_classification.png?raw=true" width="300">
+
 
 ## What it needs
 
