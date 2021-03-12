@@ -12,63 +12,68 @@ Zendler D, Nagarjun M, Schwandner A, Hausmann L, Zyprian E\
 
 ## The general pipeline
 
-The whole pipeline is written in python and R. The two scripts are wrapped in a bash script for consecutive execution. The pipeline can therefore
-be run on any given UNIX system with all the depencies installed. It was tested and worked on:
+The CNNs were trained with images with a resolution of **2752 × 2208 pixels**. Using other resolutions than this has not been tested with the supplied model files and therefore no garuntee for success is given when using different resolutions.\
+The whole pipeline is written in python and R. The two scripts are wrapped in a bash script for consecutive execution. The pipeline can therefore be run on any given UNIX system with all the depencies installed. It was tested and worked on:
 
   - MacOS Mojave
   - Ubuntu 18 LTS, 20 LTS.
 
-The leaf disc scoring pipeline first slices the supplied leaf disc image into 506 sub images using image_slicer. The scoring pipeline itself 
-then consists of two trained CNNs with binary output:
+The leaf disc scoring pipeline first slices the supplied leaf disc image into 506 sub images using image_slicer. The scoring pipeline itself then consists of two trained CNNs with binary output:
 
   1. CNN1: Group slices into background and leaf disc itself
   2. CNN2: Group classified leaf disc slices into infected and not infected
 
-The resulting number of leaf disc slices infected and not infected are expressed as percentage and are included in the final result.
-The pipeline will iterate over all images in a given folder. The pipeline outputs the raw results as a tab delimited text file that 
-can be further used with R. Further the pipeline produces plots of the original RGB image overlaid with the slcies classified as 
-infected with downy mildew and a boxplot showing the overall phenotypic distribution in the given dataset.\
+The resulting number of leaf disc slices infected and not infected are expressed as percentage and are included in the final result. The pipeline will iterate over all images in a given folder. The pipeline outputs the raw results as a tab delimited text file that can be further used with R. Further the pipeline produces plots of the original RGB image overlaid with the slcies classified as infected with downy mildew and a boxplot showing the overall phenotypic distribution in the given dataset.\
 \
 ## What it needs
 
-  - Python 3.6
-  - Tensorflow
-  - Keras
-  - R
+  - Python > 3.6
+  - Tensorflow == 2.4.0
+  - Keras == 2.4.3
+  - R > 3.6, Rscript
     - ggplot2
     - R.utils
     - readr
-  - Rscript
+    - stringr
+    - jpeg
+    - data.table
 
-## How to get it running
+## How to install all dependencies
 
 Recommended installation:
+  - Clone repository
   - Install miniconda3 (if not already installed) and install mamba
   - Make a conda environment called Keras with python 3.6 installed
 ```
+$ git clone https://github.com/Daniel-Ze/Leaf-disc-scoring.git
 $ mamba create -n keras python=3.6
 $ conda activate keras
 ```
   - Next upgrade pip and setuptools
 ```
-$ pip install --upgrade pip setuptools
+(keras)$ pip install --upgrade pip setuptools
 ```
-  - Install requirements
+  - Install python requirements
 ```
-$ cd Leaf-disc-scoring/
-$ pip install -r requirements.txt
+(keras)$ cd ~/Leaf-disc-scoring/
+(keras)$ pip install -r requirements.txt
 ```
 
   - Install R
 ```
-$ mamba install R
+(keras)$ mamba install R
 ```
   - Install all libraries for R
 ```
-$ R
-> install.packages(c("ggplot2","R.utils","readr"))
+(keras)$ R
+> install.packages(c("ggplot2","R.utils","readr","stringr","jpeg","data.table"))
 > q()
 Save workspace image? [y/n/c]: n
+```
+  - Make the bash script executable
+```
+$ cd ~/leaf-disc-scoring
+$ chmod a+x run_classification
 ```
   - If you want to have the programm accessible from everywhere (! **make sure to
     adjust the path** !)
@@ -80,11 +85,13 @@ $ echo 'export PATH=/usr/local/bin:$PATH' >>~/.bashrc
 ```
   - Restart the terminal and you're all set
 
+## Running the pipeline
+
 Before running the program make sure to activate the conda environment with all
 the necessary programs installed.
 ```
 $ conda activate Keras
-$ run_classification
+(keras)$ run_classification
 Running from /path/of/install/CNN/.
 
 Usage: run_classification -f path/to/leaf/disc/dir/ -e Inoculation1 -l model_l_vs_b.h5 -s model_s_vs_no-s.h5
