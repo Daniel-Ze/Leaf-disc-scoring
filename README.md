@@ -3,8 +3,8 @@
 Objective and high-throughput calssification of leaf disc images form artificial
 inoculation experiments with grapevine downy mildew (_Plasmopara viticola_).
 
-If you use this code please cite: 
-**High-throughput phenotyping of leaf discs infected with grapevine downy mildew using trained convolutional neural networks**
+If you use this code please cite:\
+**High-throughput phenotyping of leaf discs infected with grapevine downy mildew using trained convolutional neural networks**\
 Zendler D, Nagarjun M, Schwandner A, Hausmann L, Zyprian E
 
 
