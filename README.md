@@ -8,8 +8,10 @@ inoculation experiments with grapevine downy mildew (_Plasmopara viticola_).
 ## The general pipeline
 
 The leaf disc scoring pipeline first slices the supplied leaf disc image into 506 sub images. The scoring pipeline itself consists of two CNNs:
+
   1. CNN1: Group slices into background and leaf disc itself
   2. CNN2: Group leaf disc slices into infected and not infected
+
 The resulting number of leaf disc slices infected and not infected are expressed as percentage and are included in the final result.
 The pipeline will iterate over all images in a given folder.
 
