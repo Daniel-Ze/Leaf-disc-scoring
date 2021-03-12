@@ -15,7 +15,7 @@ The leaf disc scoring pipeline first slices the supplied leaf disc image into 50
 The resulting number of leaf disc slices infected and not infected are expressed as percentage and are included in the final result.
 The pipeline will iterate over all images in a given folder.
 
-<img src="https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/run_classification.png?raw=true" width="300">
+<img src="https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/run_classification.png?raw=true" width="300", align="left">
 
 ## What it needs
 
