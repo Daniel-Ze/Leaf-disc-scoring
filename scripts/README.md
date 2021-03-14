@@ -1,6 +1,6 @@
 # Set up your own models
 
-This is a quick walk through for setting up your own trained models for images classification. For more detail please see this simple tutorial:\
+This is a quick walk through for setting up your own trained models for image classification. For more detail please see this simple tutorial:\
 https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html
 
 
@@ -132,4 +132,4 @@ Now that we have jupyter installed in out keras conda environment we can open th
 ```
 (keras) $ jupyter notebook ~/Leaf-disc-scoring/scripts/CNN_training.ipynb
 ```
-Follow the notes in the jupyter notebook. It will guid you through the process of model training.
+Follow the notes in the jupyter notebook. It will guid you through the process of model training. Once you're finished with the training and you're happy with the model accurracy and loss you can use the saved model to test it with your data. The run_classification script let's you take alternative models in different combinations for CNN1 and CNN2.
