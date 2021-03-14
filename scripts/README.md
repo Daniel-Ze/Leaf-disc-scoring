@@ -127,6 +127,7 @@ For the training of the first CNN we need the jupyter notebook from the scripts 
 ```
 $ conda activate keras
 (keras) $ mamba install jupyter
+(keras) $ pip install -U matplotlib
 ```
 Now that we have jupyter installed in out keras conda environment we can open the script jupyter notebook:
 ```
