@@ -10,6 +10,7 @@ Folder contains:
   - Template for rectangular petridishes (23 x 23 cm)
   - Template for standard round 120 mm petridishes
 
+Please make sure to print the petridisch templates in their original size.
 
 ## Quick start
 
