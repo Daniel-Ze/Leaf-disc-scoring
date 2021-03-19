@@ -107,29 +107,34 @@ If you intend to use the classification for images of the size **2752 × 220
 To Check if the program runs properly a set of test images is supplied. In total four leaf discs with different degrees of infection severity are supplied.\
 Running the test:
 ```
-run_classification -f ~/path/to/program/CNN/test/ -e Test
-Running from /Users/daniel/PostDoc/Programs/CNN/CNN/.
+$ run_classification -f test/ -e test_git
+/Users/daniel/miniconda3/etc/profile.d/conda.sh exists.
+[info]	Running from /Users/daniel/PostDoc/Programs/CNN/CNN/.
+[warning] No conda environment name given. Defaulting to: keras
+[info]	Running Keras in version: 2.4.3
 [info]	Leaf disc folder exists.
-[info]	Experiment name : Test
-[info]	No -l option. Using standard model: leaf_vs_back_acc98_model.h5
-[info]	No -S option. Using standard model: spo_vs_nospo_acc92_model.h5
+[info]	Experiment name : test_git
+[info]	No -l option. Using standard model: CNN1_model.h5
+[info]	No -S option. Using standard model: CNN2_model.h5
 [info]	Running classify_leaf_disc.py. This might take some time.
-[info]		Number of leaf discs:	4
-[info]		Folder:		/Users/daniel/PostDoc/Programs/CNN/CNN/test/
-[info]		Model 1:	/Users/daniel/PostDoc/Programs/CNN/CNN/leaf_vs_back_acc98_model.h5
-[info]		Model 2:	/Users/daniel/PostDoc/Programs/CNN/CNN/spo_vs_nospo_acc92_model.h5
+[info]		# leaf discs:	4
+[info]		Folder:		test/
+[info]		Model 1:	/Users/daniel/PostDoc/Programs/CNN/CNN/CNN1_model.h5
+[info]		Model 2:	/Users/daniel/PostDoc/Programs/CNN/CNN/CNN2_model.h5
+[warning]		Creation of the directory test//spo/ failed
 [info]  Progress: |██████████████████████████████████████████████████| 100.0% Complete
+[info] Elapsed time: 2 min
 [info]	Running plot_coords.R
-[info]		Plotting score1_3_Plate_1_II_s47.jpgspo_coord.txt
-[info]		Plotting score5_1_Plate_3_I_s03.jpgspo_coord.txt
-[info]		Plotting score7_4_Plate_6_II_s77.jpgspo_coord.txt
-[info]		Plotting score9_3_Plate_6_I_s18.jpgspo_coord.txt
+[info]		Plotting score1_3_Plate_1_II_s47.jpg
+[info]		Plotting score5_1_Plate_3_I_s03.jpg
+[info]		Plotting score7_4_Plate_6_II_s77.jpg
+[info]		Plotting score9_3_Plate_6_I_s18.jpg
 ```
 Running the program should yield the following results:
 
 The program also generates a plot indicating the leaf disc slices which were classified as infected in a folder called **results**. In the same folder a plot should be present showing the percentage leaf disc covered with sporangiophore distribution of the analyzed leaf disc images. The raw results can be found in a tab delimited text file in the main folder called **classify_results.txt**
 ![results](https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/results_combined_git.png?raw=true)
 
-## "Oh no my images are not in the right resolution" , "My samples are not infected with downy mildew" or "I want to train my own models"
+## "Oh no my images are not in the right resolution" , "My samples are not infected with downy mildew and I don't work with grapevine" or "I want to train my own models"
 
 With the main pipeline a folder with additional scripts is supplied. The python scripts should help you to set your stuff up with another pathogen or if you just want to train your models on image data from yoour experiments. So please go to scripts and read the README.
