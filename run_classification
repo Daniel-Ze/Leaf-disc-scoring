@@ -144,7 +144,7 @@ mv $parameterF"spo" $parameterF$parameterE
 mv $parameterF"classify_results.txt" $parameterF$parameterE
 mv $parameterF"error.log" $parameterF$parameterE
 
-for f in *_coord.txt
+for f in $parameterF*_coord.txt
 do
   mv $f $parameterF$parameterE
 done
