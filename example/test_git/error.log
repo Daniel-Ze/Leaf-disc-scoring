@@ -1,0 +1,208 @@
+2021-03-19 10:52:51.002117: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-03-19 10:52:51.002308: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-03-19 10:52:54.309878: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+Warning message:
+package ‘ggplot2’ was built under R version 3.6.2 
+Loading required package: R.oo
+Loading required package: R.methodsS3
+R.methodsS3 v1.8.1 (2020-08-26 16:20:06 UTC) successfully loaded. See ?R.methodsS3 for help.
+R.oo v1.24.0 (2020-08-26 16:11:58 UTC) successfully loaded. See ?R.oo for help.
+
+Attaching package: ‘R.oo’
+
+The following object is masked from ‘package:R.methodsS3’:
+
+    throw
+
+The following objects are masked from ‘package:methods’:
+
+    getClasses, getMethods
+
+The following objects are masked from ‘package:base’:
+
+    attach, detach, load, save
+
+R.utils v2.10.1 (2020-08-26 22:50:31 UTC) successfully loaded. See ?R.utils for help.
+
+Attaching package: ‘R.utils’
+
+The following object is masked from ‘package:utils’:
+
+    timestamp
+
+The following objects are masked from ‘package:base’:
+
+    cat, commandArgs, getOption, inherits, isOpen, nullfile, parse,
+    warnings
+
+Warning messages:
+1: package ‘R.utils’ was built under R version 3.6.2 
+2: package ‘R.oo’ was built under R version 3.6.2 
+3: package ‘R.methodsS3’ was built under R version 3.6.2 
+Warning messages:
+1: Use of `coord_tbl$V1` is discouraged. Use `V1` instead. 
+2: Use of `coord_tbl$V2` is discouraged. Use `V2` instead. 
+Warning message:
+package ‘ggplot2’ was built under R version 3.6.2 
+Loading required package: R.oo
+Loading required package: R.methodsS3
+R.methodsS3 v1.8.1 (2020-08-26 16:20:06 UTC) successfully loaded. See ?R.methodsS3 for help.
+R.oo v1.24.0 (2020-08-26 16:11:58 UTC) successfully loaded. See ?R.oo for help.
+
+Attaching package: ‘R.oo’
+
+The following object is masked from ‘package:R.methodsS3’:
+
+    throw
+
+The following objects are masked from ‘package:methods’:
+
+    getClasses, getMethods
+
+The following objects are masked from ‘package:base’:
+
+    attach, detach, load, save
+
+R.utils v2.10.1 (2020-08-26 22:50:31 UTC) successfully loaded. See ?R.utils for help.
+
+Attaching package: ‘R.utils’
+
+The following object is masked from ‘package:utils’:
+
+    timestamp
+
+The following objects are masked from ‘package:base’:
+
+    cat, commandArgs, getOption, inherits, isOpen, nullfile, parse,
+    warnings
+
+Warning messages:
+1: package ‘R.utils’ was built under R version 3.6.2 
+2: package ‘R.oo’ was built under R version 3.6.2 
+3: package ‘R.methodsS3’ was built under R version 3.6.2 
+Warning messages:
+1: Use of `coord_tbl$V1` is discouraged. Use `V1` instead. 
+2: Use of `coord_tbl$V2` is discouraged. Use `V2` instead. 
+Warning message:
+package ‘ggplot2’ was built under R version 3.6.2 
+Loading required package: R.oo
+Loading required package: R.methodsS3
+R.methodsS3 v1.8.1 (2020-08-26 16:20:06 UTC) successfully loaded. See ?R.methodsS3 for help.
+R.oo v1.24.0 (2020-08-26 16:11:58 UTC) successfully loaded. See ?R.oo for help.
+
+Attaching package: ‘R.oo’
+
+The following object is masked from ‘package:R.methodsS3’:
+
+    throw
+
+The following objects are masked from ‘package:methods’:
+
+    getClasses, getMethods
+
+The following objects are masked from ‘package:base’:
+
+    attach, detach, load, save
+
+R.utils v2.10.1 (2020-08-26 22:50:31 UTC) successfully loaded. See ?R.utils for help.
+
+Attaching package: ‘R.utils’
+
+The following object is masked from ‘package:utils’:
+
+    timestamp
+
+The following objects are masked from ‘package:base’:
+
+    cat, commandArgs, getOption, inherits, isOpen, nullfile, parse,
+    warnings
+
+Warning messages:
+1: package ‘R.utils’ was built under R version 3.6.2 
+2: package ‘R.oo’ was built under R version 3.6.2 
+3: package ‘R.methodsS3’ was built under R version 3.6.2 
+Warning messages:
+1: Use of `coord_tbl$V1` is discouraged. Use `V1` instead. 
+2: Use of `coord_tbl$V2` is discouraged. Use `V2` instead. 
+Warning message:
+package ‘ggplot2’ was built under R version 3.6.2 
+Loading required package: R.oo
+Loading required package: R.methodsS3
+R.methodsS3 v1.8.1 (2020-08-26 16:20:06 UTC) successfully loaded. See ?R.methodsS3 for help.
+R.oo v1.24.0 (2020-08-26 16:11:58 UTC) successfully loaded. See ?R.oo for help.
+
+Attaching package: ‘R.oo’
+
+The following object is masked from ‘package:R.methodsS3’:
+
+    throw
+
+The following objects are masked from ‘package:methods’:
+
+    getClasses, getMethods
+
+The following objects are masked from ‘package:base’:
+
+    attach, detach, load, save
+
+R.utils v2.10.1 (2020-08-26 22:50:31 UTC) successfully loaded. See ?R.utils for help.
+
+Attaching package: ‘R.utils’
+
+The following object is masked from ‘package:utils’:
+
+    timestamp
+
+The following objects are masked from ‘package:base’:
+
+    cat, commandArgs, getOption, inherits, isOpen, nullfile, parse,
+    warnings
+
+Warning messages:
+1: package ‘R.utils’ was built under R version 3.6.2 
+2: package ‘R.oo’ was built under R version 3.6.2 
+3: package ‘R.methodsS3’ was built under R version 3.6.2 
+Warning messages:
+1: Use of `coord_tbl$V1` is discouraged. Use `V1` instead. 
+2: Use of `coord_tbl$V2` is discouraged. Use `V2` instead. 
+Warning message:
+package ‘ggplot2’ was built under R version 3.6.2 
+Warning message:
+package ‘readr’ was built under R version 3.6.2 
+Loading required package: R.oo
+Loading required package: R.methodsS3
+R.methodsS3 v1.8.1 (2020-08-26 16:20:06 UTC) successfully loaded. See ?R.methodsS3 for help.
+R.oo v1.24.0 (2020-08-26 16:11:58 UTC) successfully loaded. See ?R.oo for help.
+
+Attaching package: ‘R.oo’
+
+The following object is masked from ‘package:R.methodsS3’:
+
+    throw
+
+The following objects are masked from ‘package:methods’:
+
+    getClasses, getMethods
+
+The following objects are masked from ‘package:base’:
+
+    attach, detach, load, save
+
+R.utils v2.10.1 (2020-08-26 22:50:31 UTC) successfully loaded. See ?R.utils for help.
+
+Attaching package: ‘R.utils’
+
+The following object is masked from ‘package:utils’:
+
+    timestamp
+
+The following objects are masked from ‘package:base’:
+
+    cat, commandArgs, getOption, inherits, isOpen, nullfile, parse,
+    warnings
+
+Warning messages:
+1: package ‘R.utils’ was built under R version 3.6.2 
+2: package ‘R.oo’ was built under R version 3.6.2 
+3: package ‘R.methodsS3’ was built under R version 3.6.2 
