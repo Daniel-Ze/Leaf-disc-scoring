@@ -1,97 +1,137 @@
 #!/bin/bash
 
+# Version 0.1
+# license http://creativecommons.org/licenses/by-nc-sa/4.0/
+
 home=~/PostDoc/Programs/CNN/CNN/
 miniconda=~/miniconda3/etc/profile.d/conda.sh
-keras=$keras
+keras="keras"
+keras_version_expected="2.4.3"
 
-#if [[ -f "$miniconda" ]]; then
-#    echo "$miniconda exists"
-#    source $miniconda
-#  else
-#    echo -e "miniconda not found"
-#    exit 1
-#fi
+# Check the miniconda3 installation
+if [[ -f $miniconda ]]; then
+  echo "$miniconda exists."
+  source $miniconda
+else
+  echo -e "[error]\tCould not find miniconda installation."
+  exit 1
+fi
 
+# Check the Leaf-disc-install folder
 if [[ -d "$home" ]]; then
-    echo "Running from $home."
+    echo -e "[info]\tRunning from $home."
   else
-    echo -e "CNN home not found"
+    echo -e "CNN home not found. Make sure to adjust line 4 in the run_classification script."
     exit 1
 fi
 
-plot_coords=$home"plot_coords.R"
+plot_coords=$home"plot_coords1.R"
 plot_pheno=$home"plot_pheno.R"
-classify_leaf_disc=$home"classify_leaf_disc.py"
+classify_leaf_disc=$home"classify_leaf_disc1.py"
 
 helpFunction()
 {
   echo ""
-  echo "Usage: $( basename -- "$0" ) -f path/to/leaf/disc/dir/ -e Inoculation1 -l model_l_vs_b.h5 -s model_s_vs_no-s.h5"
+  echo "Usage: $( basename -- "$0" ) -f path/to/leaf/disc/dir/ -e Inoculation1 -l model_l_vs_b.h5 -s model_s_vs_no-s.h5 -e keras"
   echo -e "\t-f Path to leaf disc containing folder. Don't forget the / at the end"
   echo -e "\t-e Give your experiment a name"
   echo -e "\t-l Path to custom Keras model: leaf vs background (if not supplied standard model will be used)"
   echo -e "\t-s Path to custom Keras model: sporangia vs no-sporangia (if notsupplied standard model will be used)"
+  echo -e "\t-k name of the conda environment with Leaf-disc-scoring dependencies installed (default: keras)"
   echo -e ""
   exit 1
 }
 
-while getopts "e:f:l:s:" opt
+while getopts "e:f:l:s:k:" opt
 do
   case "$opt" in
     e ) parameterE="$OPTARG" ;;
     f ) parameterF="$OPTARG" ;;
     l ) parameterL="$OPTARG" ;;
     s ) parameterS="$OPTARG" ;;
+    k ) parameterK="$OPTARG" ;;
     ? ) helpFunction ;;
   esac
 done
 
+if [ -z "$parameterK" ]
+then
+  echo -e "[warning] No conda environment name given. Defaulting to: keras"
+  parameterK="keras"
+fi
+
+conda activate $parameterK
+
+# Get the version number of the installed Keras
+keras_version=$(python -c 'import keras; print(keras.__version__)' 2> /dev/null)
+
+# Check if it is installed
+if [ -z $keras_version ]
+then
+  echo $keras_version
+  echo -e "\t!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+  echo -e "\t!!No Keras installation found in conda environment       !!"
+  echo -e "\t!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+  exit 1
+else
+  # Check if the right version is installed
+  if [ "$keras_version" != "$keras_version_expected" ]
+  then
+    echo -e "[error]\tWrong Keras version found. Make sure to install Keras v2.4.3"
+    exit 1
+  else
+    echo -e "[info]\tRunning Keras in version: "$keras_version
+  fi
+fi
+
+# Check if the specified folder with leaf disc images exists
 if [[ -d "$parameterF" ]]; then
     echo -e "[info]\tLeaf disc folder exists."
   else
     helpFunction
 fi
 
+# Check if there was a name given for the experiment
 if [ -z "$parameterE" ]
 then
-    echo -e "[info]\tNo experiment name supplied. Naming it Inoculation1"
+    echo -e "[info]\tNo experiment name supplied. Using: Inoculation1"
     parameterE=Inoculation1
 else
     echo -e "[info]\tExperiment name : "$parameterE
 fi
 
+# Check if an alternative CNN1 model was supplied
 if [ -z "$parameterL" ]
 then
-   echo -e "[info]\tNo -l option. Using standard model: leaf_vs_back_acc98_model.h5";
-   parameterL=$home"leaf_vs_back_acc98_model.h5"
-   #echo -e "[info]\t$parameterL"
+   echo -e "[info]\tNo -l option. Using standard model: CNN1_model.h5";
+   parameterL=$home"CNN1_model.h5"
 fi
 
+#Check if an alternative CNN2 model was supplied
 if [ -z "$parameterS" ]
 then
-   echo -e "[info]\tNo -S option. Using standard model: spo_vs_nospo_acc96_model4-1.h5";
-   parameterS=$home"spo_vs_nospo_acc96_model4.h5"
-   #echo -e "[info]\t$parameterS"
+   echo -e "[info]\tNo -S option. Using standard model: CNN2_model.h5";
+   parameterS=$home"CNN2_model.h5"
 fi
 
-#echo -e "[info]\tActivating Keras"
-#conda activate $keras
-
+# Create directories and output files
 mkdir $parameterF"results"
 mkdir $parameterF"spo"
 touch $parameterF"classify_results.txt"
 touch $parameterF"error.log"
 
+# Start the python script for clasification
 echo -e "[info]\tRunning classify_leaf_disc.py. This might take some time."
 python $classify_leaf_disc $parameterF $parameterL $parameterS $parameterE 2> $parameterF"error.log"
 
+# Plotting the data on the RGB images
 echo -e "[info]\tRunning plot_coords.R"
-
-coords=$parameterF*coord.txt
+coords=$parameterF*.jpg
 for f in $coords
 do
   echo -e "[info]\t\tPlotting "$(basename -- $f )
-  Rscript $plot_coords -c $f 2>> $parameterF"error.log"
+  Rscript $plot_coords -c $f"spo_coord.txt" 2>> $parameterF"error.log"
 done
 
+# Plotting the results overview
 Rscript $plot_pheno -r $parameterF"classify_results.txt" 2>> $parameterF"error.log"
