@@ -8,7 +8,10 @@ from keras.preprocessing.image import load_img, img_to_array
 import shutil
 import time
 import random
+import datetime
 
+# Version 0.2
+# license http://creativecommons.org/licenses/by-nc-sa/4.0/
 
 # Print iterations progress (https://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console)
 def printProgressBar (iteration, total, prefix = '', suffix = '', decimals = 1, length = 100, fill = '█', printEnd = "\r"):
@@ -68,7 +71,7 @@ def input():
         exit("Usage: python /path/to/leaf/disc /path/to/CNN_model_leaf_vs_back /path/to/CNN_model_nospo_vs_spo experiment_name")
 
 
-# Run CNN for leaf vs back
+# Run CNN1 for leaf vs back
 def predict_1(x):
     global model_leaf_vs_back
     img = load_img(x)
@@ -77,7 +80,7 @@ def predict_1(x):
     return (model_leaf_vs_back.predict(x)> 0.5).astype("int32")
 
 
-# Run CNN for spo vs nospo
+# Run CNN2 for spo vs nospo
 def predict_2(x):
     global model_nospo_vs_spo
     img = load_img(x)
@@ -86,8 +89,8 @@ def predict_2(x):
     return (model_nospo_vs_spo.predict(x)> 0.5).astype("int32")
 
 
+# Generate a random string for the temp folder
 def get_random_string():
-    # put your letters in the following string
     sample_letters = 'abcdefghi'
     result_str = ''.join((random.choice(sample_letters) for i in range(5)))
     return result_str
@@ -97,10 +100,12 @@ def get_random_string():
 def classify_img_slices(f_image):
     global sample
     sample = sample + 1
+
     # get the path and file name
     leaf_discs_path = os.path.dirname(f_image)+"/"
     leaf_disc_name = os.path.basename(f_image)
     rnd = get_random_string()
+
     # Create a temporary directory for the image slices
     try:
         os.mkdir(leaf_discs_path + "tmp"+rnd+"/")
@@ -119,7 +124,7 @@ def classify_img_slices(f_image):
     back = []
     images = []
 
-    # First CNN for leaf disc vs background
+    # First CNN for leaf disc vs background (CNN1)
     for f in os.listdir(leaf_discs_path + "tmp" + rnd):
         if f.endswith('.png'):
             path_file = leaf_discs_path + "tmp" + rnd + "/" + f
@@ -144,7 +149,7 @@ def classify_img_slices(f_image):
     spo = []
     no_spo = []
 
-    # Second CNN for sporangia vs no sporangia
+    # Second CNN for sporangia vs no sporangia (CNN2)
     for l in leafdisc:
         # Call predict_2() function
         classes = predict_2(l)
@@ -176,7 +181,7 @@ def classify_img_slices(f_image):
 
     # Open the created results file in 'append' mode
     with open(leaf_discs_path+"classify_results.txt", 'a') as results:
-
+        # Write the results from the classification to file
         results.write(input()[3]+"\t"+f_image+"\t"+str(sample)+"\t"+str(count_1) + "\t" + str(count_0) + "\t" + str(round((count_1 / count) * 100))
               + "\t" + str(round((count_0 / count) * 100)) + "\t" + str(count_1_1)
               + "\t" + str(count_0_1) + "\t" + str(round((count_1_1 / count_11) * 100)) + "\t" + str(round((count_0_1 / count_11) * 100)) + "\n")
@@ -192,11 +197,11 @@ def main():
     global model_leaf_vs_back
     global model_nospo_vs_spo
     global sample
+
     # Get the input
     input_1 = ()
     input_1 = input()
     leaf_discs = input_1[0]
-
     start = time.time()
 
     # Initialize sample name variable
@@ -226,10 +231,15 @@ def main():
 
     # Open the output file for the results (creates it if not existing)
     with open(leaf_discs+"classify_results.txt", 'w') as results:
-        # Print the header of the results file
+        # Print the header of the results file: Date and time, the folder with leaf discs, CNN1 and CNN2
+        results.write("# Date time: " + str(datetime.datetime.now()))
+        results.write("# Folder:\t\t"+leaf_discs)
+        results.write("# Model 1:\t"+sys.argv[2])
+        results.write("# Model 1:\t"+sys.argv[3])
         results.write("Exp_name\tSample\tNumber\tLeaf_disc\tAgar\tperc_leaf_disc\tperc_agar\tspo\tno_spo\tperc_spo\tperc_no_spo\n")
     results.close()
 
+    # Create a list with all the images in the folder
     for image in sorted(os.listdir(leaf_discs)):
         # Only do somthing with files that are a image
         if image.endswith('.jpg'):
@@ -245,6 +255,7 @@ def main():
     for image in leaf_disc_imgs:
         # Only do somthing with files that are a image
         if image.endswith('.jpg'):
+            # Run function classify_img_slices()
             classify_img_slices(image)
             i = i + 1
             sample = sample + 1
