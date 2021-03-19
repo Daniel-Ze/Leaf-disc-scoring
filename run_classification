@@ -135,3 +135,16 @@ done
 
 # Plotting the results overview
 Rscript $plot_pheno -r $parameterF"classify_results.txt" 2>> $parameterF"error.log"
+
+# Moving everything to a folder 
+mkdir $parameterF$parameterE
+
+mv $parameterF"results" $parameterF$parameterE
+mv $parameterF"spo" $parameterF$parameterE
+mv $parameterF"classify_results.txt" $parameterF$parameterE
+mv $parameterF"error.log" $parameterF$parameterE
+
+for f in *_coord.txt
+do
+  mv $f $parameterF$parameterE
+done
