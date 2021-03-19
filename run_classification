@@ -25,9 +25,9 @@ if [[ -d "$home" ]]; then
     exit 1
 fi
 
-plot_coords=$home"plot_coords1.R"
+plot_coords=$home"plot_coords.R"
 plot_pheno=$home"plot_pheno.R"
-classify_leaf_disc=$home"classify_leaf_disc1.py"
+classify_leaf_disc=$home"classify_leaf_disc.py"
 
 helpFunction()
 {
