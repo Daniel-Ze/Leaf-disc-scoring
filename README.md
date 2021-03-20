@@ -26,7 +26,7 @@ The leaf disc scoring pipeline first slices the supplied leaf disc image into 50
   2. CNN2: Group classified leaf disc slices into infected and not infected
 
 The resulting number of leaf disc slices infected and not infected are expressed as percentage and are included in the final result. The pipeline will iterate over all images in a given folder. The pipeline outputs the raw results as a tab delimited text file that can be further used with R. Further the pipeline produces plots of the original RGB image overlaid with the slcies classified as infected with downy mildew and a boxplot showing the overall phenotypic distribution in the given dataset.\
-\
+
 ## What it needs
 
   - Python > 3.6
@@ -46,51 +46,51 @@ Recommended installation:
   - Clone repository
   - Install miniconda3 (if not already installed) and install mamba
   - Make a conda environment called Keras with python 3.6 installed
-```
+```shell
 $ git clone https://github.com/Daniel-Ze/Leaf-disc-scoring.git
 $ mamba create -n keras python=3.6
 $ conda activate keras
 ```
   - Next upgrade pip and setuptools
-```
+```shell
 (keras)$ pip install --upgrade pip setuptools
 ```
   - Install python requirements
-```
+```shell
 (keras)$ cd ~/Leaf-disc-scoring/
 (keras)$ pip install -r requirements.txt
 ```
 
   - Install R
-```
+```shell
 (keras)$ mamba install R
 ```
   - Install all libraries for R
-```
+```shell
 (keras)$ R
 > install.packages(c("ggplot2","R.utils","readr","stringr","jpeg","data.table"))
 > q()
 Save workspace image? [y/n/c]: n
 ```
   - Make the bash script executable
-```
+```shell
 $ cd ~/leaf-disc-scoring
 $ chmod a+x run_classification
 ```
   - If you want to have the programm accessible from everywhere (! **make sure to
     adjust the path** !)
-```
+```shell
 # MacOS:
-$ echo 'export PATH=/usr/local/bin:$PATH' >>~/.bash_profile
+$ echo 'export PATH=~/Leaf-disc-scoring:$PATH' >>~/.bash_profile
 # Linux
-$ echo 'export PATH=/usr/local/bin:$PATH' >>~/.bashrc
+$ echo 'export PATH=~/Leaf-disc-scoring:$PATH' >>~/.bashrc
 ```
   - Restart the terminal and you're all set
 
 ## Running the pipeline
 
 Before running the program make sure to activate the conda environment with all the necessary depencies installed.
-```
+```shell
 $ conda activate Keras
 (keras)$ run_classification
 Running from /path/of/install/CNN/.
@@ -106,7 +106,7 @@ If you intend to use the classification for images of the size **2752 × 220
 
 To Check if the program runs properly a set of test images is supplied. In total four leaf discs with different degrees of infection severity are supplied.\
 Running the test:
-```
+```shell
 $ run_classification -f test/ -e test_git
 /Users/daniel/miniconda3/etc/profile.d/conda.sh exists.
 [info]	Running from /Users/daniel/PostDoc/Programs/CNN/CNN/.

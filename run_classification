@@ -3,7 +3,7 @@
 # Version 0.1
 # license http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-home=~/PostDoc/Programs/CNN/CNN/
+home=~/Leaf-disc-scoring/
 miniconda=~/miniconda3/etc/profile.d/conda.sh
 keras="keras"
 keras_version_expected="2.4.3"
@@ -136,7 +136,7 @@ done
 # Plotting the results overview
 Rscript $plot_pheno -r $parameterF"classify_results.txt" 2>> $parameterF"error.log"
 
-# Moving everything to a folder 
+# Moving everything to a folder
 mkdir $parameterF$parameterE
 
 mv $parameterF"results" $parameterF$parameterE
