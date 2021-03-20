@@ -1,3 +1,5 @@
+![title](https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/scripts/script_title.png)
+
 # Set up your own models
 
 This is a quick walk through for setting up your own trained models for image classification. For more detail please see this simple tutorial:\
