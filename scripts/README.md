@@ -201,3 +201,9 @@ Now that we have jupyter installed in out keras conda environment we can open th
 (keras) $ jupyter notebook ~/Leaf-disc-scoring/scripts/leaf-disc-scoring_CNN_training.ipynb
 ```
 Follow the notes in the jupyter notebook. It will guide you through the process of model training. Once you're finished with the training and you're happy with the model accurracy and loss you can use the saved model to test it with your data. The run_classification script let's you take alternative models in different combinations for CNN1 and CNN2.
+
+
+### References
+
+Image-Sorter2:
+Arsenov, N. 2020, image-sorter2: One-click image sorting/labelling script. https://github.com/Nestak2/image-sorter2
