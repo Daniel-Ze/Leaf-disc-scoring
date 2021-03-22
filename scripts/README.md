@@ -12,10 +12,9 @@ Tensorflow: https://www.tensorflow.org/learn
 Keras: https://keras.io/about/
 
 
-Everything her can be done with a standard laptop. No powerful GPU is required to train the simple models that are being used here. Everything worked fine on:
+As we're not using super deep neural networks like GoogLeNet, Inception, Xception etc. and as we will have only a small set of images we will be able to do all model trainings on a standard laptop. Everything presented here was either trained on a MacBook Pro or a Computer running Ubuntu:
   - MacBook Pro, 8 core cpu (multi threaded), 16gb ram
   - PC, 12 core cpu (multi threaded), 32 gb ram
-
 
 **Note:** I did not invent any of this. The process of classifying images is well documented out there in the world wide web. Remember: Using your favorite search engine is most of the time the best problem solver. The scripts supplied are just a suggestion. If there's a simpler and better solution to the problem use it :)
 
