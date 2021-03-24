@@ -20,7 +20,7 @@ As we're not using super deep neural networks like GoogLeNet, Inception, Xceptio
 
 ## 1. Image preparation
 
-You find several scripts in this folder that should help you set up the image data needed to train your own models. The first python script that we need is **chop_images.py**. To check if everythings fine with the script please change into the scripts folder and give it a dry run:
+You find several scripts in this folder that should help you set up the image data needed to train your own models. The first python script that we need is **chop_images.py**. To check if everything's fine with the script please change into the scripts folder and give it a dry run:
 ```shell
 $ cd ~/Leaf-disc-scoring/
 $ conda activate keras
@@ -33,7 +33,7 @@ Usage: python chop_images.py -i /path/to/images/ -s 506 -e .jpg
 -e / --extension= file type of the images in the folder: .jpg
 ```
 
-As you can see this is a simple python script wrapped around image_slicer. It is intended to slice your images in n pieces for manual classification.\
+As you can see this is a simple python script using image_slicer. It is intended to slice your images in n pieces for manual classification.\
 The python script will take a folder with images as input (-i) as you will have to use multiple images to generate enough image slices for training a new model. Image slices are stored in a folder with the Image_name.tif_slice. The generated slices are stored as .png files.
 
 ```shell
@@ -42,10 +42,11 @@ $ conda activate keras
 (keras) ~/folder/with/images/ $ python ~/Leaf-disc-scoring/scripts/chop_images.py -i ./ -s 506 -e .jpg
 ```
 The above command should slice all the images in your folder in 506 equal pieces (if it's possible). image_slicer will adjust the number of slices if it can devide it into the set number.\
+**Note:** You might want to change the number of image slices according to your image data. Higher resolution will alow you to make smaller slices (in theory) or you want to have less slices. It's up to you.\
 
 ## 2. Image sorting
 
-Now that we have out images chopped into little pieces we have to sort them in their respective categories. For this we will use the tool image-sorter2_script.py. This tool was written by Nestak2 and is available on github: https://github.com/Nestak2/image-sorter2. Please clone the git repository and install the requirements from the requirements.txt file.
+Now that we have our images chopped into little pieces we have to sort them into their respective categories. For this we will use the python script **image-sorter2_script.py**. This tool was written by Nestak2 and is available on github: https://github.com/Nestak2/image-sorter2. Please clone the git repository and install the requirements from the requirements.txt file.
 
 ```shell
 $ git clone https://github.com/Nestak2/image-sorter2.git
@@ -59,7 +60,7 @@ After you have installed the requirements to this very useful tool you should be
 (keras) $ cd ~/Leaf-disc-scoring/scripts/
 (keras) ~/Leaf-disc-scoring/scripts $ python image-sorter2_script.py
 [error]	No input folder
-Usage: python -i /path/to/images/ -m or -c -l bla,blubb,tralala -e .jpg
+Usage: python -i /path/to/images/ -m or -c -l class1,class2,class3 -e .jpg
 -h print this help
 -i input folder for image_sorter2
 -m move files
@@ -67,19 +68,19 @@ Usage: python -i /path/to/images/ -m or -c -l bla,blubb,tralala -e .jpg
 -l classes to sort images into: bla,blubb,tralala
 -e file extensions that are accepted: e.g. .png
 ```
-This should pop up if you run the script without any arguments. Now that we know that everything's fine with here we change to the images that have to be sorted into different categories and run the script on all image slices:
+This should pop up if you run the script without any arguments. Now that we know that everything's fine with the script we change to the images that have to be sorted into different categories and run the script on all image slices. As we have chopped several images into little pieces we can now iterate over the folders with those image pieces:
 ```shell
 (keras) $ cd ~/folder/with/images/
 (keras) ~/folder/with/images $ for f in */; do echo $f; python ~/Leaf-disc-scoring/scripts/image-sorter2_script.py -i $f -m -l class1,class2,class3 -e .png ; done
 ```
 
-The command will loop over all folders with generated slices in the image folder. We specified -m which will move the image slices in a folder with the respective calss and we have specified the classes with -l. Please feel free to change the class names to something you like and recognize easily.
+We specified -m which will move the image slices in a folder with the respective calss and we have specified the classes with -l. Please feel free to change the class names to something you like and recognize easily. Additionally you can add more classes e.g. a class for images that say nothing because they are out of focus.
 
 
 **Note:** This is one of the most important steps in training your model.
-  - There's this wisdom: Shit in shit out. The better the images are sorted the better the model training will be.
+  - There's this wisdom: Garbage in garbage out. The better the images are sorted the better the model training will be.
   - Make sure you're consistent during your sorting.
-  - This step should be done by the person who has the most experience with the pathogen.
+  - This step should be done by the person who has the most experience with the pathogen or trait to be analyzed.
   - The small images can be challenging to sort some times. It is wise to exclude the ones that you can't sort.
   - Human brains get tired from repetitive tasks (or at least mine). Therefore, it is wise to recheck your sorted images.
 
@@ -107,7 +108,7 @@ To train our models later we will need a folder structure like this:
                  /class2
 ```
 The ratio of training to validation should be around 60 : 40 % of images from the respective class. We are going to train binary CNNs therefore we will have two classes for training and validation later on.\
-In the Keras tutorial a total of 1000 images per class were used for training the CNN and 400 images were used for validation. We will follow this tutorial with out random select python script. We will chose 1000 images for training and 400 images for validation for each class we have generated in a folder called combined/:
+In the Keras tutorial a total of 1000 images per class were used for training the CNN and 400 images were used for validation. We will follow this tutorial with our random select python script. We will chose 1000 images for training and 400 images for validation for each class we have generated in a folder called combined/:
 ```shell
 (keras) ~/folder/with/images $ python ~/Leaf-disc-scoring/scripts/random_select_val_train.py -i combined/class1/ -v 400 -t 1000 -e .png
 ```
@@ -187,7 +188,7 @@ image_data/CNN2
 
 ## 6. Training the CNN models
 
-For the training of the first CNN we need the jupyter notebook from the scripts folder. Make sure to install jupyter in the keras conda environment:
+For the training of the CNNs we need the jupyter notebook from the scripts folder. Make sure to install jupyter in the keras conda environment:
 ```shell
 $ conda activate keras
 (keras) $ mamba install jupyter
@@ -199,10 +200,12 @@ Now that we have jupyter installed in out keras conda environment we can open th
 ```shell
 (keras) $ jupyter notebook ~/Leaf-disc-scoring/scripts/leaf-disc-scoring_CNN_training.ipynb
 ```
-Follow the notes in the jupyter notebook. It will guide you through the process of model training. Once you're finished with the training and you're happy with the model accurracy and loss you can use the saved model to test it with your data. The run_classification script let's you take alternative models in different combinations for CNN1 and CNN2.
+Follow the notes in the jupyter notebook. It will guide you through the process of model training. Once you're finished with the training, you're happy with the model accurracy and loss and the model evaluation went fine you can use the saved model to test it with your data. The run_classification script let's you take alternative models in different combinations for CNN1 and CNN2 with the flags -l and -s.
 
 
 ### References
 
 Image-Sorter2:
 Arsenov, N. 2020, image-sorter2: One-click image sorting/labelling script. https://github.com/Nestak2/image-sorter2
+
+
