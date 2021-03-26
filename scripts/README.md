@@ -151,10 +151,10 @@ image_data/combined
 Now we have all the data that we need to train our very own CNN models. First CNN model to train would be background vs. leaf disc. We therefore need the training and validation data of class1 and class4:
 ```shell
 (keras) ~/folder/with/images $ mkdir -p CNN1/{training,validation}/{class1,class4}
-(keras) ~/folder/with/images $ cp combined/class1/training CNN1/training/class1/
-(keras) ~/folder/with/images $ cp combined/class4/training CNN1/training/class4/
-(keras) ~/folder/with/images $ cp combined/class1/validation CNN1/validation/class1/
-(keras) ~/folder/with/images $ cp combined/class4/validation CNN1/validation/class4/
+(keras) ~/folder/with/images $ cp combined/class1/training/* CNN1/training/class1/
+(keras) ~/folder/with/images $ cp combined/class4/training/* CNN1/training/class4/
+(keras) ~/folder/with/images $ cp combined/class1/validation/* CNN1/validation/class1/
+(keras) ~/folder/with/images $ cp combined/class4/validation/* CNN1/validation/class4/
 ```
 
 Please follow these steps for the data for the second CNN2 and the two classes class2 and class3 for detection of leaf disc slices with and without pathogen.
