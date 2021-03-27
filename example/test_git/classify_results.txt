@@ -1,7 +1,7 @@
 # Date time: 2021-03-19 10:52:51.980733
 # Folder:		test/
-# Model 1:	/Users/daniel/PostDoc/Programs/CNN/CNN/CNN1_model.h5
-# Model 1:	/Users/daniel/PostDoc/Programs/CNN/CNN/CNN2_model.h5
+# Model 1:	~/Leaf-disc-scoring/CNN1_model.h5
+# Model 1:	~/Leaf-disc-scoring/CNN2_model.h5
 Exp_name	Sample	Number	Leaf_disc	Agar	perc_leaf_disc	perc_agar	spo	no_spo	perc_spo	perc_no_spo
 test_git	test/score1_3_Plate_1_II_s47.jpg	1	333	173	66	34	4	329	1	99
 test_git	test/score5_1_Plate_3_I_s03.jpg	3	354	152	70	30	16	338	5	95
