@@ -57,8 +57,8 @@ $ cd image-sorter2/
 
 After you have installed the requirements to this very useful tool you should be all set to run this tool. We will not run the original script but the adjusted one supplied in this scripts/ folder:
 ```shell
-(keras) $ cd ~/Leaf-disc-scoring/scripts/
-(keras) ~/Leaf-disc-scoring/scripts $ python image-sorter2_script.py
+(keras)$ cd ~/Leaf-disc-scoring/scripts/
+(keras)~/Leaf-disc-scoring/scripts$ python image-sorter2_script.py
 [error]	No input folder
 Usage: python -i /path/to/images/ -m or -c -l class1,class2,class3 -e .jpg
 -h print this help
