@@ -120,7 +120,6 @@ $ run_classification -f test/ -e test_git
 [info]		Folder:		test/
 [info]		Model 1:	/Users/daniel/PostDoc/Programs/CNN/CNN/CNN1_model.h5
 [info]		Model 2:	/Users/daniel/PostDoc/Programs/CNN/CNN/CNN2_model.h5
-[warning]		Creation of the directory test//spo/ failed
 [info]  Progress: |██████████████████████████████████████████████████| 100.0% Complete
 [info] Elapsed time: 2 min
 [info]	Running plot_coords.R
