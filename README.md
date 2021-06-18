@@ -9,7 +9,6 @@ Zendler D, Malagol N, Schwandner A, Hausmann L, Zyprian E
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Leaf disc scoring pipeline</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/Daniel-Ze/Leaf-disc-scoring" property="cc:attributionName" rel="cc:attributionURL">Daniel Zendler</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
-<img src="https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/img/pipeline.png?raw=true">
 
 ## The general pipeline
 
@@ -24,7 +23,9 @@ The leaf disc scoring pipeline first slices the supplied leaf disc image into 50
   1. CNN1: Group slices into background and leaf disc itself
   2. CNN2: Group classified leaf disc slices into infected and not infected
 
-The resulting number of leaf disc slices infected and not infected are expressed as percentage and are included in the final result. The pipeline will iterate over all images in a given folder. The pipeline outputs the raw results as a tab delimited text file that can be further used with R. Further the pipeline produces plots of the original RGB image overlaid with the slcies classified as infected with downy mildew and a boxplot showing the overall phenotypic distribution in the given dataset.\
+The resulting number of leaf disc slices infected and not infected are expressed as percentage and are included in the final result. The pipeline will iterate over all images in a given folder. The pipeline outputs the raw results as a tab delimited text file that can be further used with R. Further the pipeline produces plots of the original RGB image overlaid with the slcies classified as infected with downy mildew and a boxplot showing the overall phenotypic distribution in the given dataset.
+
+<img src="https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/img/pipeline.png?raw=true">
 
 ## What it needs
 
