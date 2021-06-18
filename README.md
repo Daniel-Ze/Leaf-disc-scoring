@@ -1,4 +1,4 @@
-![title](https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/git_title.png)
+![title](https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/img/git_title.png)
 
 Objective and high-throughput calssification of leaf disc images form inoculation experiments.
 
@@ -132,7 +132,7 @@ $ run_classification -f test/ -e test_git
 Running the program should yield the following results:
 
 The program also generates a plot indicating the leaf disc slices which were classified as infected in a folder called **results**. In the same folder a plot should be present showing the percentage leaf disc covered with sporangiophore distribution of the analyzed leaf disc images. The raw results can be found in a tab delimited text file in the main folder called **classify_results.txt**
-![results](https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/results_combined_git.png?raw=true)
+![results](https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/img/results_combined_git.png?raw=true)
 
 ## "Oh no my images are not in the right resolution" , "My samples are not infected with downy mildew and I don't work with grapevine" or "I want to train my own models"
 
