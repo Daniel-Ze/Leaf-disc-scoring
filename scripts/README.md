@@ -196,9 +196,10 @@ $ conda activate keras
 (keras) $ pip install pandas
 (keras) $ pip install numpy
 ```
-Now that we have jupyter installed in out keras conda environment we can open the script jupyter notebook:
+Now that we have jupyter installed in our keras conda environment we can open the jupyter notebook from the scripts folder:
 ```shell
-(keras) $ jupyter notebook ~/Leaf-disc-scoring/scripts/leaf-disc-scoring_CNN_training.ipynb
+(keras) $ cd ~/Leaf-disc-scoring/scripts
+(keras) $ jupyter notebook leaf-disc-scoring_CNN_training.ipynb
 ```
 Follow the notes in the jupyter notebook. It will guide you through the process of model training. Once you're finished with the training, you're happy with the model accurracy and loss and the model evaluation went fine you can use the saved model to test it with your data. The run_classification script let's you take alternative models in different combinations for CNN1 and CNN2 with the flags -l and -s.
 
