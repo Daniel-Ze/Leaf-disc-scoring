@@ -3,7 +3,9 @@
 Objective and high-throughput calssification of leaf disc images form inoculation experiments.
 
 If you use this repository or derivatives of it please cite:\
+\
 **High-throughput phenotyping of leaf discs infected with grapevine downy mildew using shallow convolutional neural networks**\
+\
 Zendler D., Malagol N., Schwandner A., Töpfer, R., Hausmann L., Zyprian E.
 Julius Kühn Institute, Institute for Grapevine Breeding Geilweilerhof
 
