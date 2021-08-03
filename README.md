@@ -77,8 +77,8 @@ Save workspace image? [y/n/c]: n
 ```
   - Make the bash script executable
 ```shell
-$ cd ~/leaf-disc-scoring
-$ chmod a+x run_classification
+(keras)$ cd ~/Leaf-disc-scoring
+(keras)~/Leaf-disc-scoring/$ chmod a+x run_classification
 ```
   - If you want to have the programm accessible from everywhere (! **make sure to
     adjust the path** !)
