@@ -109,11 +109,13 @@ If you decide to save the repository to another location than your base home fol
 
 ## <a name="running-the-pipeline"></a>Running the pipeline
 
-Before running the program make sure to activate the conda environment with all the necessary depencies installed.
+To test the install run the pipeline without any arguments:
 ```shell
-$ conda activate Keras
 (keras)$ run_classification
-Running from /home/user/Leaf-disc-scoring/.
+/home/user/miniconda3/etc/profile.d/conda.sh exists.
+[info]	Running from /home/user/Leaf-disc-scoring/.
+[warning] No conda environment name given. Defaulting to: keras
+[info]	Running Keras in version: 2.4.3
 
 Usage: run_classification -f path/to/leaf/disc/dir/ -e Inoculation1 -l model_l_vs_b.h5 -s model_s_vs_no-s.h5 -k keras
 	-f Path to leaf disc containing folder. Don't forget the / at the end
