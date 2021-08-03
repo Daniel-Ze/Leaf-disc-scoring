@@ -168,4 +168,4 @@ Running the program should yield the following results:
 
 ## <a name="custom-scnn"></a>"Oh no my images are not in the right resolution" , "My samples are not infected with downy mildew and I don't work with grapevine" or simply "I want to train my own models"
 
-With the main pipeline a folder with additional scripts is supplied. The python scripts should help you to set your stuff up with another pathogen or if you just want to train your models on image data from yoour experiments. So please go to scripts and read the README.
+With the main pipeline a folder with additional scripts is supplied. The python scripts should help you to set your stuff up with another pathogen or if you just want to train your models on image data from yoour experiments. So please go to scripts and read the [README](https://github.com/Daniel-Ze/Leaf-disc-scoring/tree/main/scripts).
