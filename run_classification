@@ -3,7 +3,7 @@
 # Version 0.1
 # license http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-home=~/Leaf-disc-scoring/
+home="$(cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"/
 miniconda=~/miniconda3/etc/profile.d/conda.sh
 keras="keras"
 keras_version_expected="2.4.3"
