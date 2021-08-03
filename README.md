@@ -60,7 +60,7 @@ $ conda activate keras
   - Install python requirements
 ```shell
 (keras)$ cd ~/Leaf-disc-scoring/
-(keras)$ pip install -r requirements.txt
+(keras)~/Leaf-disc-scoring/$ pip install -r requirements.txt
 ```
 
   - Install R
