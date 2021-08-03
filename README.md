@@ -16,7 +16,7 @@ Julius Kühn Institute, Institute for Grapevine Breeding Geilweilerhof
 [What it needs](#what-it-needs)\
 [How to install all the dependencies](#how-to-install-all-dependencies)\
 [Running the pipeline](#running-the-pipeline)\
-[Create custom SCNNs](#custom-scnn)\
+[Create custom SCNNs](#custom-scnn)
 
 ## <a name="the-general-pipeline"></a>The general pipeline<a name="the-general-pipeline"></a> 
 
