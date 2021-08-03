@@ -89,6 +89,17 @@ $ echo 'export PATH=~/Leaf-disc-scoring:$PATH' >>~/.bash_profile
 $ echo 'export PATH=~/Leaf-disc-scoring:$PATH' >>~/.bashrc
 ```
   - Restart the terminal and you're all set
+If you decide to save the repository to another location than your base home folder make sure to adjust the ./bash_profile / ./bashrc entries. Furthermore, the run_classification script on **line 6** has to be adjusted:
+
+```bash
+1 #!/bin/bash
+2 
+3 # Version 0.1
+4 # license http://creativecommons.org/licenses/by-nc-sa/4.0/
+5 
+6 home=~/Leaf-disc-scoring/         <- Edit this line to your directory
+7 miniconda=~/miniconda3/etc/profile.d/conda.sh
+```
 
 ## Running the pipeline
 
