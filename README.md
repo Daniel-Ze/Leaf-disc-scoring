@@ -46,12 +46,13 @@ The resulting number of leaf disc slices infected and not infected are expressed
 
 Recommended installation:
   - Clone repository
-  - Install miniconda3 (if not already installed) and install mamba
+  - Install miniconda3 (https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) and install mamba (conda install mamba)
   - Make a conda environment called Keras with python 3.6 installed
 ```shell
-$ git clone https://github.com/Daniel-Ze/Leaf-disc-scoring.git
-$ mamba create -n keras python=3.6
-$ conda activate keras
+(base)$ git clone https://github.com/Daniel-Ze/Leaf-disc-scoring.git
+(base)$ mamba create -n keras python=3.6
+(base)$ conda activate keras
+(keras)$ _
 ```
   - Next upgrade pip and setuptools
 ```shell
