@@ -11,8 +11,11 @@ Julius Kühn Institute, Institute for Grapevine Breeding Geilweilerhof
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Leaf disc scoring pipeline</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/Daniel-Ze/Leaf-disc-scoring" property="cc:attributionName" rel="cc:attributionURL">Daniel Zendler</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
+## Index
+[link](#the-general-pipeline)
 
-## The general pipeline
+
+## <a name="the-general-pipeline"></a>The general pipeline<a name="the-general-pipeline"></a> 
 
 The SCNNs were trained with images with a resolution of **2752 × 2208 pixels**. Using other resolutions than this has not been tested with the supplied model files and therefore no garuntee for success is given when using different resolutions.\
 The whole pipeline is written in python and R. The two scripts are wrapped in a bash script for consecutive execution. The pipeline can therefore be run on any given UNIX system with all the depencies installed. It was tested and worked on:
@@ -160,6 +163,6 @@ Running the program should yield the following results:
 
 ![results](https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/img/results_combined_git.png?raw=true)
 
-## "Oh no my images are not in the right resolution" , "My samples are not infected with downy mildew and I don't work with grapevine" or "I want to train my own models"
+## "Oh no my images are not in the right resolution" , "My samples are not infected with downy mildew and I don't work with grapevine" or simply "I want to train my own models"
 
 With the main pipeline a folder with additional scripts is supplied. The python scripts should help you to set your stuff up with another pathogen or if you just want to train your models on image data from yoour experiments. So please go to scripts and read the README.
