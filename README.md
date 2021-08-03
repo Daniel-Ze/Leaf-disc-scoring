@@ -17,7 +17,7 @@ Julius Kühn Institute, Institute for Grapevine Breeding Geilweilerhof
 The CNNs were trained with images with a resolution of **2752 × 2208 pixels**. Using other resolutions than this has not been tested with the supplied model files and therefore no garuntee for success is given when using different resolutions.\
 The whole pipeline is written in python and R. The two scripts are wrapped in a bash script for consecutive execution. The pipeline can therefore be run on any given UNIX system with all the depencies installed. It was tested and worked on:
 
-  - MacOS Mojave
+  - MacOS Mojave, Big Sur
   - Ubuntu 18 LTS, 20 LTS.
 
 The leaf disc scoring pipeline first slices the supplied leaf disc image into 506 sub images using image_slicer. The scoring pipeline itself then consists of two trained CNNs with binary output:
