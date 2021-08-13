@@ -1,0 +1,3435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HardwareExperiment Version="1.2">
+  <RunMode>OptimizeBeforePerformEnabled,ValidateAndAdaptBeforePerformEnabled,TimeStitchLoopedBlockEnabled</RunMode>
+  <BeforeHardwareSetting></BeforeHardwareSetting>
+  <AfterHardwareSetting></AfterHardwareSetting>
+  <ExperimentBlockIndex>0</ExperimentBlockIndex>
+  <IsSegmented>false</IsSegmented>
+  <IsStandardMode>true</IsStandardMode>
+  <ImageTransferMode>MemoryMappedAndFileStream</ImageTransferMode>
+  <AutoSave IsActivated="false" EnableSingleFileSave="false">
+    <StorageFolder>D:\zeiss\Pictures</StorageFolder>
+    <Name>New</Name>
+    <IsAutoSubFolder>true</IsAutoSubFolder>
+    <IsAutoSubFolderExternal>true</IsAutoSubFolderExternal>
+    <IsClosedOnCompletion>false</IsClosedOnCompletion>
+    <SingleFileSaveFormat>JPG</SingleFileSaveFormat>
+    <ConvertTo8Bit>false</ConvertTo8Bit>
+    <AddXmlMetadata>false</AddXmlMetadata>
+    <ApplyDisplayMappings>false</ApplyDisplayMappings>
+    <SaveOriginalData>true</SaveOriginalData>
+    <UseChannelNames>false</UseChannelNames>
+    <Quality>90</Quality>
+    <CompressionMethod>None</CompressionMethod>
+    <SingleFileSaveDestinationFolder>D:\zeiss\Pictures</SingleFileSaveDestinationFolder>
+    <SingleFileName>New</SingleFileName>
+    <DimensionsForSeparateFolders>-C;-T;-Z;-S</DimensionsForSeparateFolders>
+  </AutoSave>
+  <Scripting IsActivated="false">
+    <RunMacroBeforeExperiment>false</RunMacroBeforeExperiment>
+    <MacroBeforeExperiment></MacroBeforeExperiment>
+    <ErrorActionBeforeExperiment>ErrorAction_Continue</ErrorActionBeforeExperiment>
+    <RunMacroAfterExperiment>false</RunMacroAfterExperiment>
+    <MacroAfterExperiment></MacroAfterExperiment>
+    <ErrorActionAfterExperiment>ErrorAction_Continue</ErrorActionAfterExperiment>
+  </Scripting>
+  <BlockExecutionOrder>1</BlockExecutionOrder>
+  <LoopDefinitions />
+  <ExperimentBlocks>
+    <AcquisitionBlock IsActivated="true" BlockReference="637056122787021016">
+      <RunMode>ComponentUpdateEnabled,StateUpdateEnabled</RunMode>
+      <BeforeHardwareSetting></BeforeHardwareSetting>
+      <AfterHardwareSetting></AfterHardwareSetting>
+      <SubDimensionSetups>
+        <RegionsSetup IsActivated="true">
+          <SampleHolder>
+            <Overlap>0.1</Overlap>
+            <ScanMode>Meander</ScanMode>
+            <PositionedRegionsScanMode>FirstYThenX</PositionedRegionsScanMode>
+            <TemplateShapesScanMode>Comb</TemplateShapesScanMode>
+            <IsConstantTiles>false</IsConstantTiles>
+            <TileRegionAnchorMode>Center</TileRegionAnchorMode>
+            <StageReferencePoint>0,0</StageReferencePoint>
+            <UseStageBacklashCorrection>true</UseStageBacklashCorrection>
+            <UseFocusBacklashCorrection>true</UseFocusBacklashCorrection>
+            <IsOptimizedPositionedRegionsSorting>true</IsOptimizedPositionedRegionsSorting>
+            <IsOptimizedTemplateShapesSorting>true</IsOptimizedTemplateShapesSorting>
+            <UseStageContinualSpeed>false</UseStageContinualSpeed>
+            <StageContinualSpeed>0.8</StageContinualSpeed>
+            <UseStageContinualAcceleration>false</UseStageContinualAcceleration>
+            <StageContinualAcceleration>0.5</StageContinualAcceleration>
+            <MoveToLoadPositionBetweenRegions>false</MoveToLoadPositionBetweenRegions>
+            <MoveToLoadPositionBetweenShapes>false</MoveToLoadPositionBetweenShapes>
+            <SplitScenesInSeparateFiles>false</SplitScenesInSeparateFiles>
+            <TileRegionCoveringMode>AlignedToLocalTileRegion</TileRegionCoveringMode>
+            <TemplateShapesFillMode>FillGrade</TemplateShapesFillMode>
+            <TemplateShapesFillGrade>0.65</TemplateShapesFillGrade>
+            <TemplateShapesFillWidth>10</TemplateShapesFillWidth>
+            <TemplateShapesFillHeight>10</TemplateShapesFillHeight>
+            <IsOnlineStitchingEnabled>false</IsOnlineStitchingEnabled>
+            <IsOnlinePyramidEnabled>true</IsOnlinePyramidEnabled>
+            <GlobalInterpolationExpansionDegree>2</GlobalInterpolationExpansionDegree>
+            <LocalInterpolationExpansionDegree>2</LocalInterpolationExpansionDegree>
+            <IsFocusSurfaceOutlierRemovingEnabled>true</IsFocusSurfaceOutlierRemovingEnabled>
+            <FocusSurfaceOutlierExpansionDegree>1</FocusSurfaceOutlierExpansionDegree>
+            <FocusSurfaceOutlierThresholdSigma>2.75</FocusSurfaceOutlierThresholdSigma>
+            <UseDefaultSurfaceFit>true</UseDefaultSurfaceFit>
+            <UsedSurfaceFitTypeName></UsedSurfaceFitTypeName>
+            <DelayAfterStageMove>0</DelayAfterStageMove>
+            <TileDimension>
+              <Width>12494.080213</Width>
+              <Height>10024.320171</Height>
+              <CenterOffsetX>0</CenterOffsetX>
+              <CenterOffsetY>0</CenterOffsetY>
+            </TileDimension>
+            <OnlineStitchingParameter>
+              <UseFocusReferenceChannel>true</UseFocusReferenceChannel>
+              <ReferenceChannelId>0</ReferenceChannelId>
+            </OnlineStitchingParameter>
+            <AllowedScanArea IsActivated="false">
+              <ContourType>Rectangle</ContourType>
+              <Center>0,0</Center>
+              <Size>0,0</Size>
+            </AllowedScanArea>
+            <TileRegions>
+              <TileRegion Name="A1" Id="637436210418065470">
+                <CenterPosition>9000,8000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>1-1</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="A2" Id="637436210419126350">
+                <CenterPosition>21000,8000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>1-2</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="A3" Id="637436210419276469">
+                <CenterPosition>33000,8000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>1-3</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="A4" Id="637436210419406569">
+                <CenterPosition>45000,8000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>1-4</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="A5" Id="637436210419546674">
+                <CenterPosition>57000,8000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>1-5</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="A6" Id="637436210419746818">
+                <CenterPosition>69000,8000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>1-6</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="A7" Id="637436210419886929">
+                <CenterPosition>81000,8000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>1-7</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="A8" Id="637436210420017027">
+                <CenterPosition>93000,8000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>1-8</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="A9" Id="637436210420657498">
+                <CenterPosition>105000,8000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>1-9</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="A10" Id="637436210420807611">
+                <CenterPosition>117000,8000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>1-10</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="A11" Id="637436210420957726">
+                <CenterPosition>129000,8000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>1-11</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="A12" Id="637436210421107845">
+                <CenterPosition>141000,8000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>1-12</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="B1" Id="637436210421708278">
+                <CenterPosition>9000,20000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>2-1</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="B2" Id="637436210421848389">
+                <CenterPosition>21000,20000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>2-2</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="B3" Id="637436210421988494">
+                <CenterPosition>33000,20000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>2-3</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="B4" Id="637436210422228673">
+                <CenterPosition>45000,20000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>2-4</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="B5" Id="637436210422378780">
+                <CenterPosition>57000,20000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>2-5</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="B6" Id="637436210422518891">
+                <CenterPosition>69000,20000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>2-6</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="B7" Id="637436210422658996">
+                <CenterPosition>81000,20000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>2-7</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="B8" Id="637436210422859143">
+                <CenterPosition>93000,20000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>2-8</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="B9" Id="637436210423009261">
+                <CenterPosition>105000,20000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>2-9</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="B10" Id="637436210423159374">
+                <CenterPosition>117000,20000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>2-10</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="B11" Id="637436210423299479">
+                <CenterPosition>129000,20000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>2-11</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="B12" Id="637436210423509636">
+                <CenterPosition>141000,20000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>2-12</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="C1" Id="637436210423729801">
+                <CenterPosition>9000,32000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>3-1</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="C2" Id="637436210423909936">
+                <CenterPosition>21000,32000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>3-2</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="C3" Id="637436210424240182">
+                <CenterPosition>33000,32000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>3-3</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="C4" Id="637436210424530399">
+                <CenterPosition>45000,32000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>3-4</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="C5" Id="637436210424670507">
+                <CenterPosition>57000,32000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>3-5</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="C6" Id="637436210424810606">
+                <CenterPosition>69000,32000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>3-6</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="C7" Id="637436210425000749">
+                <CenterPosition>81000,32000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>3-7</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="C8" Id="637436210425140857">
+                <CenterPosition>93000,32000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>3-8</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="C9" Id="637436210425280962">
+                <CenterPosition>105000,32000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>3-9</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="C10" Id="637436210425421064">
+                <CenterPosition>117000,32000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>3-10</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="C11" Id="637436210425611206">
+                <CenterPosition>129000,32000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>3-11</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="C12" Id="637436210425751312">
+                <CenterPosition>141000,32000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>3-12</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="D1" Id="637436210425891417">
+                <CenterPosition>9000,44000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>4-1</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="D2" Id="637436210426021514">
+                <CenterPosition>21000,44000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>4-2</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="D3" Id="637436210426211660">
+                <CenterPosition>33000,44000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>4-3</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="D4" Id="637436210426351762">
+                <CenterPosition>45000,44000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>4-4</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="D5" Id="637436210426481857">
+                <CenterPosition>57000,44000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>4-5</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="D6" Id="637436210426621965">
+                <CenterPosition>69000,44000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>4-6</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="D7" Id="637436210426812113">
+                <CenterPosition>81000,44000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>4-7</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="D8" Id="637436210426952218">
+                <CenterPosition>93000,44000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>4-8</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="D9" Id="637436210427082304">
+                <CenterPosition>105000,44000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>4-9</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="D10" Id="637436210427232417">
+                <CenterPosition>117000,44000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>4-10</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="D11" Id="637436210427422565">
+                <CenterPosition>129000,44000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>4-11</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="D12" Id="637436210427562673">
+                <CenterPosition>141000,44000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>4-12</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="E1" Id="637436210427712777">
+                <CenterPosition>9000,56000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>5-1</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="E2" Id="637436210427902925">
+                <CenterPosition>21000,56000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>5-2</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="E3" Id="637436210428053043">
+                <CenterPosition>33000,56000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>5-3</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="E4" Id="637436210428193148">
+                <CenterPosition>45000,56000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>5-4</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="E5" Id="637436210428333248">
+                <CenterPosition>57000,56000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>5-5</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="E6" Id="637436210428703530">
+                <CenterPosition>69000,56000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>5-6</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="E7" Id="637436210428863650">
+                <CenterPosition>81000,56000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>5-7</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="E8" Id="637436210429003755">
+                <CenterPosition>93000,56000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>5-8</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="E9" Id="637436210429143860">
+                <CenterPosition>105000,56000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>5-9</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="E10" Id="637436210429333999">
+                <CenterPosition>117000,56000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>5-10</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="E11" Id="637436210429474107">
+                <CenterPosition>129000,56000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>5-11</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="E12" Id="637436210429604205">
+                <CenterPosition>141000,56000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>5-12</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="F1" Id="637436210429744307">
+                <CenterPosition>9000,68000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>6-1</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="F2" Id="637436210429944460">
+                <CenterPosition>21000,68000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>6-2</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="F3" Id="637436210430084565">
+                <CenterPosition>33000,68000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>6-3</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="F4" Id="637436210430224670">
+                <CenterPosition>45000,68000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>6-4</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="F5" Id="637436210430414813">
+                <CenterPosition>57000,68000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>6-5</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="F6" Id="637436210430564928">
+                <CenterPosition>69000,68000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>6-6</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="F7" Id="637436210430695023">
+                <CenterPosition>81000,68000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>6-7</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="F8" Id="637436210430845133">
+                <CenterPosition>93000,68000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>6-8</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="F9" Id="637436210431185384">
+                <CenterPosition>105000,68000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>6-9</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="F10" Id="637436210431505623">
+                <CenterPosition>117000,68000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>6-10</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="F11" Id="637436210431755952">
+                <CenterPosition>129000,68000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>6-11</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="F12" Id="637436210431936138">
+                <CenterPosition>141000,68000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>6-12</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="G1" Id="637436210432136288">
+                <CenterPosition>9000,80000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>7-1</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="G2" Id="637436210432276393">
+                <CenterPosition>21000,80000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>7-2</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="G3" Id="637436210432416499">
+                <CenterPosition>33000,80000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>7-3</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="G4" Id="637436210432616651">
+                <CenterPosition>45000,80000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>7-4</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="G5" Id="637436210432766761">
+                <CenterPosition>57000,80000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>7-5</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="G6" Id="637436210432916873">
+                <CenterPosition>69000,80000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>7-6</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="G7" Id="637436210433056979">
+                <CenterPosition>81000,80000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>7-7</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="G8" Id="637436210433267136">
+                <CenterPosition>93000,80000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>7-8</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="G9" Id="637436210433417248">
+                <CenterPosition>105000,80000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>7-9</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="G10" Id="637436210433567372">
+                <CenterPosition>117000,80000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>7-10</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="G11" Id="637436210433707466">
+                <CenterPosition>129000,80000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>7-11</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="G12" Id="637436210434007690">
+                <CenterPosition>141000,80000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>7-12</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="H1" Id="637436210434167813">
+                <CenterPosition>9000,92000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>8-1</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="H2" Id="637436210434317923">
+                <CenterPosition>21000,92000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>8-2</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="H3" Id="637436210434548089">
+                <CenterPosition>33000,92000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>8-3</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="H4" Id="637436210434698208">
+                <CenterPosition>45000,92000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>8-4</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="H5" Id="637436210434848320">
+                <CenterPosition>57000,92000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>8-5</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="H6" Id="637436210434998433">
+                <CenterPosition>69000,92000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>8-6</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="H7" Id="637436210435198582">
+                <CenterPosition>81000,92000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>8-7</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="H8" Id="637436210435348695">
+                <CenterPosition>93000,92000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>8-8</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="H9" Id="637436210435498808">
+                <CenterPosition>105000,92000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>8-9</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="H10" Id="637436210435648920">
+                <CenterPosition>117000,92000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>8-10</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="H11" Id="637436210435849070">
+                <CenterPosition>129000,92000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>8-11</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+              <TileRegion Name="H12" Id="637436210435999183">
+                <CenterPosition>141000,92000</CenterPosition>
+                <ContourSize>9674.709,9674.709</ContourSize>
+                <Columns>1</Columns>
+                <Rows>1</Rows>
+                <Z>-134464</Z>
+                <TemplateShapeId>8-12</TemplateShapeId>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <IsProtected>true</IsProtected>
+                <AreSupportPointsOutsideContourAllowed>false</AreSupportPointsOutsideContourAllowed>
+                <PreferSupportPointsZ>false</PreferSupportPointsZ>
+                <GeometryLockingMode>None</GeometryLockingMode>
+                <Contour Type="Rectangle" />
+                <SupportPoints />
+              </TileRegion>
+            </TileRegions>
+            <SingleTileRegions />
+            <SingleTileRegionArrays />
+            <Template Name="LeafDiscPlate - Kopie">
+              <AnchorPoint>0,0</AnchorPoint>
+              <BoundsSize>150000,100000</BoundsSize>
+              <Category>Custom</Category>
+              <HasRegularShapes>true</HasRegularShapes>
+              <ReferencePoint>0,0</ReferencePoint>
+              <ReferencePointLocationMode>Custom</ReferencePointLocationMode>
+              <ShapeType>Rectangle</ShapeType>
+              <ShapeColumns>12</ShapeColumns>
+              <ShapeRows>8</ShapeRows>
+              <ShapeWidth>12000</ShapeWidth>
+              <ShapeHeight>12000</ShapeHeight>
+              <ShapeDistanceX>12000</ShapeDistanceX>
+              <ShapeDistanceY>12000</ShapeDistanceY>
+              <OriginalShapeWidth>12000</OriginalShapeWidth>
+              <OriginalShapeHeight>12000</OriginalShapeHeight>
+              <OriginalShapeDistanceX>12000</OriginalShapeDistanceX>
+              <OriginalShapeDistanceY>12000</OriginalShapeDistanceY>
+              <AreShapesCenteredX>true</AreShapesCenteredX>
+              <AreShapesCenteredY>true</AreShapesCenteredY>
+              <ShapesDistanceToBorderX>0</ShapesDistanceToBorderX>
+              <ShapesDistanceToBorderY>0</ShapesDistanceToBorderY>
+              <Rotation>0</Rotation>
+              <ImmersionPoint>38000,13000</ImmersionPoint>
+              <BottomMaterial>Glass</BottomMaterial>
+              <BottomThickness>170</BottomThickness>
+              <BottomOffset>1500</BottomOffset>
+              <BottomOffsetMeasured>NaN</BottomOffsetMeasured>
+              <BottomRefractiveIndex>1.52</BottomRefractiveIndex>
+              <InsertType>Default</InsertType>
+              <PartOfInsertName></PartOfInsertName>
+              <BottomColor>Unknown</BottomColor>
+              <UsageHints></UsageHints>
+              <BottomDetectionShape>A1</BottomDetectionShape>
+              <BottomDetectionPoint>38000,13000</BottomDetectionPoint>
+              <SupportPoints>
+                <SupportPoint Name="SP" Id="637217647283160347">
+                  <X>9000</X>
+                  <Y>8000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>1-1</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160348">
+                  <X>21000</X>
+                  <Y>8000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>1-2</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160349">
+                  <X>33000</X>
+                  <Y>8000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>1-3</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160350">
+                  <X>45000</X>
+                  <Y>8000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>1-4</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160351">
+                  <X>57000</X>
+                  <Y>8000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>1-5</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160352">
+                  <X>69000</X>
+                  <Y>8000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>1-6</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160353">
+                  <X>81000</X>
+                  <Y>8000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>1-7</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160354">
+                  <X>93000</X>
+                  <Y>8000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>1-8</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160355">
+                  <X>105000</X>
+                  <Y>8000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>1-9</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160356">
+                  <X>117000</X>
+                  <Y>8000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>1-10</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160357">
+                  <X>129000</X>
+                  <Y>8000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>1-11</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160358">
+                  <X>141000</X>
+                  <Y>8000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>1-12</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160359">
+                  <X>9000</X>
+                  <Y>20000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>2-1</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160360">
+                  <X>21000</X>
+                  <Y>20000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>2-2</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160361">
+                  <X>33000</X>
+                  <Y>20000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>2-3</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160362">
+                  <X>45000</X>
+                  <Y>20000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>2-4</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160363">
+                  <X>57000</X>
+                  <Y>20000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>2-5</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160364">
+                  <X>69000</X>
+                  <Y>20000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>2-6</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160365">
+                  <X>81000</X>
+                  <Y>20000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>2-7</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160366">
+                  <X>93000</X>
+                  <Y>20000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>2-8</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160367">
+                  <X>105000</X>
+                  <Y>20000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>2-9</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160368">
+                  <X>117000</X>
+                  <Y>20000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>2-10</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160369">
+                  <X>129000</X>
+                  <Y>20000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>2-11</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160370">
+                  <X>141000</X>
+                  <Y>20000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>2-12</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160371">
+                  <X>9000</X>
+                  <Y>32000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>3-1</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160372">
+                  <X>21000</X>
+                  <Y>32000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>3-2</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160373">
+                  <X>33000</X>
+                  <Y>32000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>3-3</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160374">
+                  <X>45000</X>
+                  <Y>32000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>3-4</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160375">
+                  <X>57000</X>
+                  <Y>32000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>3-5</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160376">
+                  <X>69000</X>
+                  <Y>32000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>3-6</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160377">
+                  <X>81000</X>
+                  <Y>32000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>3-7</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160378">
+                  <X>93000</X>
+                  <Y>32000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>3-8</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160379">
+                  <X>105000</X>
+                  <Y>32000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>3-9</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160380">
+                  <X>117000</X>
+                  <Y>32000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>3-10</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160381">
+                  <X>129000</X>
+                  <Y>32000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>3-11</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160382">
+                  <X>141000</X>
+                  <Y>32000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>3-12</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160383">
+                  <X>9000</X>
+                  <Y>44000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>4-1</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160384">
+                  <X>21000</X>
+                  <Y>44000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>4-2</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160385">
+                  <X>33000</X>
+                  <Y>44000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>4-3</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160386">
+                  <X>45000</X>
+                  <Y>44000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>4-4</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160387">
+                  <X>57000</X>
+                  <Y>44000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>4-5</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160388">
+                  <X>69000</X>
+                  <Y>44000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>4-6</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160389">
+                  <X>81000</X>
+                  <Y>44000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>4-7</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160390">
+                  <X>93000</X>
+                  <Y>44000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>4-8</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160391">
+                  <X>105000</X>
+                  <Y>44000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>4-9</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160392">
+                  <X>117000</X>
+                  <Y>44000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>4-10</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160393">
+                  <X>129000</X>
+                  <Y>44000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>4-11</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160394">
+                  <X>141000</X>
+                  <Y>44000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>4-12</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160395">
+                  <X>9000</X>
+                  <Y>56000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>5-1</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160396">
+                  <X>21000</X>
+                  <Y>56000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>5-2</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160397">
+                  <X>33000</X>
+                  <Y>56000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>5-3</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160398">
+                  <X>45000</X>
+                  <Y>56000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>5-4</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160399">
+                  <X>57000</X>
+                  <Y>56000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>5-5</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160400">
+                  <X>69000</X>
+                  <Y>56000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>5-6</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160401">
+                  <X>81000</X>
+                  <Y>56000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>5-7</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160402">
+                  <X>93000</X>
+                  <Y>56000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>5-8</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160403">
+                  <X>105000</X>
+                  <Y>56000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>5-9</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160404">
+                  <X>117000</X>
+                  <Y>56000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>5-10</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160405">
+                  <X>129000</X>
+                  <Y>56000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>5-11</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160406">
+                  <X>141000</X>
+                  <Y>56000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>5-12</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160407">
+                  <X>9000</X>
+                  <Y>68000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>6-1</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160408">
+                  <X>21000</X>
+                  <Y>68000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>6-2</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160409">
+                  <X>33000</X>
+                  <Y>68000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>6-3</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160410">
+                  <X>45000</X>
+                  <Y>68000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>6-4</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160411">
+                  <X>57000</X>
+                  <Y>68000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>6-5</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160412">
+                  <X>69000</X>
+                  <Y>68000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>6-6</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160413">
+                  <X>81000</X>
+                  <Y>68000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>6-7</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160414">
+                  <X>93000</X>
+                  <Y>68000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>6-8</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160415">
+                  <X>105000</X>
+                  <Y>68000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>6-9</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160416">
+                  <X>117000</X>
+                  <Y>68000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>6-10</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160417">
+                  <X>129000</X>
+                  <Y>68000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>6-11</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160418">
+                  <X>141000</X>
+                  <Y>68000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>6-12</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160419">
+                  <X>9000</X>
+                  <Y>80000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>7-1</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160420">
+                  <X>21000</X>
+                  <Y>80000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>7-2</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160421">
+                  <X>33000</X>
+                  <Y>80000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>7-3</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160422">
+                  <X>45000</X>
+                  <Y>80000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>7-4</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160423">
+                  <X>57000</X>
+                  <Y>80000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>7-5</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160424">
+                  <X>69000</X>
+                  <Y>80000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>7-6</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160425">
+                  <X>81000</X>
+                  <Y>80000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>7-7</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160426">
+                  <X>93000</X>
+                  <Y>80000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>7-8</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160427">
+                  <X>105000</X>
+                  <Y>80000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>7-9</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160428">
+                  <X>117000</X>
+                  <Y>80000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>7-10</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160429">
+                  <X>129000</X>
+                  <Y>80000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>7-11</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160430">
+                  <X>141000</X>
+                  <Y>80000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>7-12</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160431">
+                  <X>9000</X>
+                  <Y>92000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>8-1</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160432">
+                  <X>21000</X>
+                  <Y>92000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>8-2</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160433">
+                  <X>33000</X>
+                  <Y>92000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>8-3</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160434">
+                  <X>45000</X>
+                  <Y>92000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>8-4</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160435">
+                  <X>57000</X>
+                  <Y>92000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>8-5</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160436">
+                  <X>69000</X>
+                  <Y>92000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>8-6</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160437">
+                  <X>81000</X>
+                  <Y>92000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>8-7</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160438">
+                  <X>93000</X>
+                  <Y>92000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>8-8</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160439">
+                  <X>105000</X>
+                  <Y>92000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>8-9</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160440">
+                  <X>117000</X>
+                  <Y>92000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>8-10</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160441">
+                  <X>129000</X>
+                  <Y>92000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>8-11</TemplateShapeId>
+                </SupportPoint>
+                <SupportPoint Name="SP" Id="637217647283160442">
+                  <X>141000</X>
+                  <Y>92000</Y>
+                  <Z>-135678</Z>
+                  <TemplateShapeId>8-12</TemplateShapeId>
+                </SupportPoint>
+              </SupportPoints>
+            </Template>
+          </SampleHolder>
+          <SubDimensionSetups>
+            <TilesSetup IsActivated="true">
+              <SubDimensionSetups>
+                <MultiTrackSetup IsActivated="true">
+                  <IsTIRFAngleSynchronized>true</IsTIRFAngleSynchronized>
+                  <ImagingDepth>0</ImagingDepth>
+                  <Track IsActivated="true" IsSelected="true">
+                    <DetectionModeSetup>
+                      <Zeiss.Micro.Acquisition.WfTrackDetectionMode />
+                    </DetectionModeSetup>
+                    <BeforeHardwareSetting>Leere Davor-Hardwareeinstellung</BeforeHardwareSetting>
+                    <AfterHardwareSetting>Leere Danach-Hardwareeinstellung</AfterHardwareSetting>
+                    <TrackName></TrackName>
+                    <Channels>
+                      <Channel IsActivated="true" IsSelected="true" ChannelSetupId="637056123129534779" Name="Bright" Description="">
+                        <Color>#FFFFFFFF</Color>
+                        <PixelShiftX>0</PixelShiftX>
+                        <PixelShiftY>0</PixelShiftY>
+                        <GenerateMetaData>true</GenerateMetaData>
+                        <DataGrabberSetup>
+                          <CameraFrameSetup Id="MTBCamera_MTBTube_Cameraport.Axiocam506c">
+                            <ShadingReference IsActivated="true">false</ShadingReference>
+                            <ShadingReferenceSource IsActivated="true">1</ShadingReferenceSource>
+                            <ExposureTime IsActivated="true">19.376</ExposureTime>
+                            <AutoExposure IsActivated="true">false</AutoExposure>
+                          </CameraFrameSetup>
+                        </DataGrabberSetup>
+                        <ContrastMethod>
+                          <Name>TL Brightfield</Name>
+                          <ShortName>Bright</ShortName>
+                          <Description></Description>
+                          <IlluminationType>Transmitted</IlluminationType>
+                          <ContrastMethods>TransmittedLightBrightfield</ContrastMethods>
+                          <ContrastTypes>BrightField</ContrastTypes>
+                          <Color>#FFFFFFFF</Color>
+                        </ContrastMethod>
+                      </Channel>
+                    </Channels>
+                    <IsExtendedSetupModificationWarningShown>false</IsExtendedSetupModificationWarningShown>
+                    <ZStackMode>Yes</ZStackMode>
+                    <UseZStackCenter>true</UseZStackCenter>
+                    <ZStackSliceIndex>1</ZStackSliceIndex>
+                    <IsDisabledForApoTome>true</IsDisabledForApoTome>
+                    <FocusOffset>0</FocusOffset>
+                    <DirectDevice>Standard</DirectDevice>
+                  </Track>
+                  <SubDimensionSetups />
+                </MultiTrackSetup>
+              </SubDimensionSetups>
+            </TilesSetup>
+          </SubDimensionSetups>
+        </RegionsSetup>
+        <LiveSetup IsActivated="false">
+          <SubDimensionSetups />
+        </LiveSetup>
+        <PanoramaSetup IsActivated="false">
+          <SubDimensionSetups />
+        </PanoramaSetup>
+        <HalfPupilSetup IsActivated="false">
+          <IsContainerAdaptionEnabled>true</IsContainerAdaptionEnabled>
+          <StartAngle>0</StartAngle>
+          <SubDimensionSetups />
+        </HalfPupilSetup>
+        <TimeSeriesSetup IsActivated="false">
+          <IsLongAsPossible>false</IsLongAsPossible>
+          <IsBurstMode>false</IsBurstMode>
+          <Duration>
+            <Cycles>10</Cycles>
+          </Duration>
+          <IsFastAsPossible>false</IsFastAsPossible>
+          <Interval>
+            <TimeSpan>
+              <Value>0</Value>
+              <DefaultUnitFormat>s</DefaultUnitFormat>
+            </TimeSpan>
+          </Interval>
+          <BeforeHardwareSetting></BeforeHardwareSetting>
+          <AfterHardwareSetting></AfterHardwareSetting>
+          <StartMode>
+            <Manual>
+              <DigitalIn>None</DigitalIn>
+              <DigitalOut>None</DigitalOut>
+              <TimeSpan>
+                <Value>0.001</Value>
+                <DefaultUnitFormat>ms</DefaultUnitFormat>
+              </TimeSpan>
+              <DateTime>
+                <Seconds>0</Seconds>
+                <Minutes>0</Minutes>
+                <Hours>0</Hours>
+              </DateTime>
+              <Interval>0</Interval>
+              <IntervalUnit>ms</IntervalUnit>
+              <MarkerDescription></MarkerDescription>
+            </Manual>
+          </StartMode>
+          <StopMode>
+            <Manual>
+              <DigitalIn>None</DigitalIn>
+              <DigitalOut>None</DigitalOut>
+              <TimeSpan>
+                <Value>0.001</Value>
+                <DefaultUnitFormat>ms</DefaultUnitFormat>
+              </TimeSpan>
+              <DateTime>
+                <Seconds>0</Seconds>
+                <Minutes>0</Minutes>
+                <Hours>0</Hours>
+              </DateTime>
+              <Interval>0</Interval>
+              <IntervalUnit>ms</IntervalUnit>
+              <MarkerDescription></MarkerDescription>
+            </Manual>
+          </StopMode>
+          <PauseBeginMode>
+            <Manual>
+              <DigitalIn>None</DigitalIn>
+              <DigitalOut>None</DigitalOut>
+              <TimeSpan>
+                <Value>0.001</Value>
+                <DefaultUnitFormat>ms</DefaultUnitFormat>
+              </TimeSpan>
+              <DateTime>
+                <Seconds>0</Seconds>
+                <Minutes>0</Minutes>
+                <Hours>0</Hours>
+              </DateTime>
+              <Interval>0</Interval>
+              <IntervalUnit>ms</IntervalUnit>
+              <MarkerDescription></MarkerDescription>
+            </Manual>
+          </PauseBeginMode>
+          <PauseEndMode>
+            <Manual>
+              <DigitalIn>None</DigitalIn>
+              <DigitalOut>None</DigitalOut>
+              <TimeSpan>
+                <Value>0.001</Value>
+                <DefaultUnitFormat>ms</DefaultUnitFormat>
+              </TimeSpan>
+              <DateTime>
+                <Seconds>0</Seconds>
+                <Minutes>0</Minutes>
+                <Hours>0</Hours>
+              </DateTime>
+              <Interval>0</Interval>
+              <IntervalUnit>ms</IntervalUnit>
+              <MarkerDescription></MarkerDescription>
+            </Manual>
+          </PauseEndMode>
+          <StartNextTimeSliceMode>
+            <Manual>
+              <DigitalIn>None</DigitalIn>
+              <DigitalOut>None</DigitalOut>
+              <TimeSpan>
+                <Value>0.001</Value>
+                <DefaultUnitFormat>ms</DefaultUnitFormat>
+              </TimeSpan>
+              <DateTime>
+                <Seconds>0</Seconds>
+                <Minutes>0</Minutes>
+                <Hours>0</Hours>
+              </DateTime>
+              <Interval>0</Interval>
+              <IntervalUnit>ms</IntervalUnit>
+              <MarkerDescription></MarkerDescription>
+            </Manual>
+          </StartNextTimeSliceMode>
+          <TimeSeriesTriggerIntervalModeCollection />
+          <TimeSeriesTriggerMarkerModeCollection />
+          <SwitchCollection />
+          <SetupExtensions />
+          <SubDimensionSetups />
+        </TimeSeriesSetup>
+        <ZStackSetup IsActivated="false">
+          <IsCenterMode>false</IsCenterMode>
+          <IsIntervalKept>true</IsIntervalKept>
+          <Offset>0</Offset>
+          <RefractiveIndexCorrection>1</RefractiveIndexCorrection>
+          <UseFocusBacklashCorrection>true</UseFocusBacklashCorrection>
+          <DelayAfterFocusMove>0</DelayAfterFocusMove>
+          <EnforceOptimalZDistance>false</EnforceOptimalZDistance>
+          <EnforceMovementAgainstGravity>true</EnforceMovementAgainstGravity>
+          <First>
+            <Distance>
+              <Value>-2E-06</Value>
+              <DefaultUnitFormat>um</DefaultUnitFormat>
+            </Distance>
+          </First>
+          <Last>
+            <Distance>
+              <Value>2E-06</Value>
+              <DefaultUnitFormat>um</DefaultUnitFormat>
+            </Distance>
+          </Last>
+          <Interval>
+            <Distance>
+              <Value>1E-06</Value>
+              <DefaultUnitFormat>um</DefaultUnitFormat>
+            </Distance>
+          </Interval>
+          <SetupExtensions />
+          <SubDimensionSetups />
+        </ZStackSetup>
+        <ApoTomeAcquisitionSetup IsActivated="true">
+          <PhaseCount>5</PhaseCount>
+          <IsOnlineProcessing>false</IsOnlineProcessing>
+          <SubDimensionSetups />
+        </ApoTomeAcquisitionSetup>
+        <CorrelativeSetup IsActivated="false">
+          <HolderDocument>
+            <Image />
+            <Delta1To2>
+              <X>0</X>
+              <Y>0</Y>
+            </Delta1To2>
+            <Delta2To3>
+              <X>0</X>
+              <Y>0</Y>
+            </Delta2To3>
+            <HolderName></HolderName>
+            <IsReadOnly>false</IsReadOnly>
+            <Calibration>
+              <Marker1>
+                <X>NaN</X>
+                <Y>NaN</Y>
+                <Z>NaN</Z>
+              </Marker1>
+              <Marker2>
+                <X>NaN</X>
+                <Y>NaN</Y>
+                <Z>NaN</Z>
+              </Marker2>
+              <Marker3>
+                <X>NaN</X>
+                <Y>NaN</Y>
+                <Z>NaN</Z>
+              </Marker3>
+              <StageRotation>NaN</StageRotation>
+              <CorrectedMarkerDeltas>
+                <Delta1To2>
+                  <X>NaN</X>
+                  <Y>NaN</Y>
+                </Delta1To2>
+                <Delta2To3>
+                  <X>NaN</X>
+                  <Y>NaN</Y>
+                </Delta2To3>
+              </CorrectedMarkerDeltas>
+            </Calibration>
+            <IsHolderEnabled>true</IsHolderEnabled>
+            <HolderNumber />
+            <CorrelativeSessionId>2341e9b0-0ee6-4182-b040-3b1bfda175fc</CorrelativeSessionId>
+          </HolderDocument>
+          <SubDimensionSetups />
+        </CorrelativeSetup>
+      </SubDimensionSetups>
+      <HelperSetups>
+        <AcquisitionModeSetup IsActivated="true">
+          <SelectedDetector>MTBCamera_MTBTube_Cameraport.Axiocam506c</SelectedDetector>
+          <Detectors>
+            <Detector Id="MTBCamera_MTBTube_Cameraport.Axiocam506c">
+              <ApplyCameraProfile Status="Valid">false</ApplyCameraProfile>
+              <ApplyImageOrientation Status="Valid">true</ApplyImageOrientation>
+              <ExposureTime Status="Valid">19.376</ExposureTime>
+              <Frame Status="Valid">0,0,2752,2208</Frame>
+              <ImageOrientation Status="Valid">3</ImageOrientation>
+              <ContinuousAcquisitionSafeMode Status="Valid">true</ContinuousAcquisitionSafeMode>
+              <EnableSignalsForFastAcq Status="Valid"></EnableSignalsForFastAcq>
+              <ShadingReference Status="Valid">false</ShadingReference>
+              <ShadingReferenceSource Status="Valid">1</ShadingReferenceSource>
+              <ShadingReferenceSourceVisibility Status="Valid">true</ShadingReferenceSourceVisibility>
+              <Resolution Status="Valid">1</Resolution>
+              <BinningList Status="Valid">0</BinningList>
+              <ColorMode Status="Valid">1</ColorMode>
+              <WhiteBalance Status="Valid">0.03166377760958,0.075582717828482,0.044299398622057</WhiteBalance>
+              <WhiteBalanceOffset Status="Valid">0</WhiteBalanceOffset>
+              <ColorSaturation Status="Valid">0.5</ColorSaturation>
+              <AnalogGainModeList Status="Valid">0</AnalogGainModeList>
+              <LiveSpeed Status="Valid">0</LiveSpeed>
+              <Trigger Status="Valid">false</Trigger>
+              <TriggerMode Status="Valid">0</TriggerMode>
+              <SnapShutter Status="Valid">false</SnapShutter>
+              <LiveShutter Status="Valid">false</LiveShutter>
+              <ShutterMode Status="Valid">0</ShutterMode>
+              <ShutterOpenDelay Status="Valid">0</ShutterOpenDelay>
+              <SoftwareBinningList Status="Valid">0</SoftwareBinningList>
+              <ResamplingParameterKey Status="Valid">1</ResamplingParameterKey>
+              <ResamplingModeParameterKey Status="Valid">0</ResamplingModeParameterKey>
+              <PixelClock Status="Valid">1</PixelClock>
+              <ImageDeliveryBufferCount Status="Valid">4</ImageDeliveryBufferCount>
+              <Adjust Status="Valid">0.7</Adjust>
+              <AdjustFrameRate Status="Valid">true</AdjustFrameRate>
+              <AutoExposure Status="Valid">false</AutoExposure>
+              <AutoExposureFrame Status="Valid">Empty</AutoExposureFrame>
+              <Binning Status="Valid">1,1</Binning>
+              <BlackReference Status="Valid">false</BlackReference>
+              <DefaultDisplayGamma Status="Valid">0.45</DefaultDisplayGamma>
+              <DeliverExactFrame Status="Valid">false</DeliverExactFrame>
+              <DualCameraCalibration Status="Valid">false</DualCameraCalibration>
+              <DualCameraCalibrationId Status="Valid">None</DualCameraCalibrationId>
+              <ExposureDelay Status="Valid">0</ExposureDelay>
+              <CalculateExposureMaximum Status="Valid">10000</CalculateExposureMaximum>
+              <AutoExposureTolerance Status="Valid">0.05</AutoExposureTolerance>
+              <FrameRateTarget Status="Valid">30</FrameRateTarget>
+              <HDRBits Status="Valid">2</HDRBits>
+              <NoiseFilter Status="Valid">false</NoiseFilter>
+              <NoiseFilterThreshold Status="Valid">1.5</NoiseFilterThreshold>
+              <ReferenceImageCount Status="Valid">3</ReferenceImageCount>
+              <SnapMode Status="Valid">0</SnapMode>
+              <UnsharpMask Status="Valid">false</UnsharpMask>
+              <UnsharpMaskState Status="Valid"></UnsharpMaskState>
+              <ImageCount Status="Valid">3</ImageCount>
+              <AcquisitionFrame Status="Valid">0,0,2752,2208</AcquisitionFrame>
+              <SDKVersion Status="Valid">2.05</SDKVersion>
+              <EnableLiveSpeed Status="Valid">true</EnableLiveSpeed>
+              <AbortOnMissedFrames Status="Valid">true</AbortOnMissedFrames>
+              <LiveShutterSignal Status="Valid">1</LiveShutterSignal>
+              <ShutterSignal Status="Valid">1</ShutterSignal>
+              <UseAsyncTriggerReadySignal Status="Valid">true</UseAsyncTriggerReadySignal>
+              <FrameTime Status="Valid">0</FrameTime>
+              <ReadoutPort Status="Valid">0</ReadoutPort>
+              <AntiGlow Status="Valid">1</AntiGlow>
+              <SnapWithSWTrigger Status="Valid">false</SnapWithSWTrigger>
+              <TileAdjustment Status="Valid">0</TileAdjustment>
+              <CameraBitsPerPixel Status="Valid">0</CameraBitsPerPixel>
+              <CameraLUT1 Status="Valid">0</CameraLUT1>
+              <CameraLUT2 Status="Valid">1</CameraLUT2>
+              <CameraGamma Status="Valid">1</CameraGamma>
+              <PreProcessingMemoryBuffersCount Status="Valid">0</PreProcessingMemoryBuffersCount>
+              <PreProcessingDiscBuffersCount Status="Valid">0</PreProcessingDiscBuffersCount>
+              <DiscMemoryType Status="Valid">false</DiscMemoryType>
+              <Compression Status="Valid">false</Compression>
+              <ContinuousAcquisitionMode Status="Valid">0</ContinuousAcquisitionMode>
+              <SequenceCount Status="Valid">0</SequenceCount>
+              <SequenceProgress Status="Valid">true</SequenceProgress>
+              <LEDIntensity Status="Valid">9</LEDIntensity>
+              <LEDIntensityTrigger Status="Valid">9</LEDIntensityTrigger>
+              <AutomaticTriggerControl Status="Valid">true</AutomaticTriggerControl>
+              <SuppressTemperatureWarnings Status="Valid">false</SuppressTemperatureWarnings>
+              <AdaptExposureByBinningChange Status="Valid">false</AdaptExposureByBinningChange>
+            </Detector>
+          </Detectors>
+          <Devices />
+          <MixedMode>
+            <DisparityWarpingActivated>false</DisparityWarpingActivated>
+            <DisparityMapFile></DisparityMapFile>
+            <DoAutoScalingSynchronization>false</DoAutoScalingSynchronization>
+            <SelectedScalingMaster>LSM</SelectedScalingMaster>
+            <UsedExternalImagePixelDistance>0,0</UsedExternalImagePixelDistance>
+          </MixedMode>
+        </AcquisitionModeSetup>
+        <AutoImmersionSetup IsActivated="false">
+          <ImmersionTimeInterval>0</ImmersionTimeInterval>
+          <ImmersionTravelDistance>0</ImmersionTravelDistance>
+          <IsBubbleEliminationMovementEnabled>false</IsBubbleEliminationMovementEnabled>
+          <BubbleEliminationMovementTargetX>20000</BubbleEliminationMovementTargetX>
+          <BubbleEliminationMovementTargetY>20000</BubbleEliminationMovementTargetY>
+        </AutoImmersionSetup>
+        <BleachingSetup IsActivated="false">
+          <BleachSettingsName>nicht gesetzt</BleachSettingsName>
+          <BleachSettingsType></BleachSettingsType>
+          <BeforeHardwareSetting></BeforeHardwareSetting>
+          <AfterHardwareSetting></AfterHardwareSetting>
+        </BleachingSetup>
+        <DynamicsSetup IsActivated="false" GraphicScale="1" Id="637056122787111077" />
+        <ExperimentModifierRulesSetup IsActivated="false">
+          <Flags>
+            <RunMode></RunMode>
+          </Flags>
+        </ExperimentModifierRulesSetup>
+        <ExperimentRegionsSetup IsActivated="false">
+          <FitFrameSizeToRegions>false</FitFrameSizeToRegions>
+          <ImageCenterAsCoordinateReference>true</ImageCenterAsCoordinateReference>
+          <Regions />
+        </ExperimentRegionsSetup>
+        <FocusSetup IsActivated="true">
+          <RepetitionSettingsMode>Expert</RepetitionSettingsMode>
+          <FocusStrategy IsActivated="true">
+            <StrategyMode>SoftwareAutofocus</StrategyMode>
+            <ReferenceChannelId>637056123129534779</ReferenceChannelId>
+            <FixedZPosition>0</FixedZPosition>
+            <UseZPositionFromTilesSetup>true</UseZPositionFromTilesSetup>
+            <ExecutionInTileRegionMode>CenterOfRegion</ExecutionInTileRegionMode>
+            <SupportPointsMode>FixedZPosition</SupportPointsMode>
+            <FocusZStackMode>FixedZ</FocusZStackMode>
+            <WaitPositionMode>CenterOfFirstRegion</WaitPositionMode>
+            <WaitPositionX>0</WaitPositionX>
+            <WaitPositionY>0</WaitPositionY>
+            <WaitPositionZ>0</WaitPositionZ>
+            <IsUpdatePositionedRegionsToClientEnabled>true</IsUpdatePositionedRegionsToClientEnabled>
+            <PositionedRegionsUpdateMode>CumulatedPositions</PositionedRegionsUpdateMode>
+            <BreakAfterSupportPointsDetermination>false</BreakAfterSupportPointsDetermination>
+            <ErrorNotificationHints>None</ErrorNotificationHints>
+            <AdditionalSupportPointOffset>0</AdditionalSupportPointOffset>
+            <TimeSeriesIntervalInfo>
+              <IsActivated>false</IsActivated>
+              <IsMainIntervalEnabled>true</IsMainIntervalEnabled>
+              <IsSubIntervalEnabled>false</IsSubIntervalEnabled>
+              <MainInterval>1</MainInterval>
+              <SubInterval>1</SubInterval>
+            </TimeSeriesIntervalInfo>
+            <RegionsIntervalInfo>
+              <IsActivated>false</IsActivated>
+              <IsMainIntervalEnabled>true</IsMainIntervalEnabled>
+              <IsSubIntervalEnabled>false</IsSubIntervalEnabled>
+              <MainInterval>1</MainInterval>
+              <SubInterval>1</SubInterval>
+            </RegionsIntervalInfo>
+            <TilesIntervalInfo>
+              <IsActivated>true</IsActivated>
+              <IsMainIntervalEnabled>true</IsMainIntervalEnabled>
+              <IsSubIntervalEnabled>false</IsSubIntervalEnabled>
+              <MainInterval>1</MainInterval>
+              <SubInterval>1</SubInterval>
+            </TilesIntervalInfo>
+            <HardwareAutofocusOptions>
+              <IsSupportedBySoftwareAutofocus>false</IsSupportedBySoftwareAutofocus>
+            </HardwareAutofocusOptions>
+            <HardwareAutofocusSupportPointsModeOptions>
+              <IsSupportedBySoftwareAutofocus>false</IsSupportedBySoftwareAutofocus>
+            </HardwareAutofocusSupportPointsModeOptions>
+          </FocusStrategy>
+          <Autofocus Id="Autofocus">
+            <AutofocusStrategyMode Status="Valid">Software</AutofocusStrategyMode>
+            <AutofocusSignalQualityThreshold Status="Valid">50</AutofocusSignalQualityThreshold>
+          </Autofocus>
+          <HardwareAutofocus Id="MTBAutoFocus">
+            <Period>0</Period>
+            <AutofocusMountingAngle>0</AutofocusMountingAngle>
+            <AutofocusPositionOffset>0</AutofocusPositionOffset>
+            <AutofocusOperationMode>Exact</AutofocusOperationMode>
+            <AutofocusSpecimenType>Reflective</AutofocusSpecimenType>
+          </HardwareAutofocus>
+          <SoftwareAutofocus>
+            <ReflectionMode>Disabled</ReflectionMode>
+            <ReflectionModeOffset>120</ReflectionModeOffset>
+            <AutofocusRegion>
+              <X>0</X>
+              <Y>0</Y>
+              <DX>1</DX>
+              <DY>1</DY>
+            </AutofocusRegion>
+            <BacklashStepsize>2</BacklashStepsize>
+            <DepthOfFocus>1715.91</DepthOfFocus>
+            <DoBleachingCorrection>true</DoBleachingCorrection>
+            <InitialDirection>0</InitialDirection>
+            <IsAutomaticRange>true</IsAutomaticRange>
+            <LowerLimit>100</LowerLimit>
+            <PredefinedStepsize>Optimal</PredefinedStepsize>
+            <SharpnessMeasureMethod>Contrast</SharpnessMeasureMethod>
+            <RelativeSearchRange>68636.400000000009</RelativeSearchRange>
+            <SearchRangeType>Relative</SearchRangeType>
+            <SearchStrategy>Sequential</SearchStrategy>
+            <SharpnessMeasureSet Name="Best" Aggregator="RootMeanSquare">
+              <SharpnessMeasure DecisionWeight="1" ScoreType="HaarGradient">
+                <Parameters>
+                  <Parameter>1</Parameter>
+                </Parameters>
+              </SharpnessMeasure>
+              <SharpnessMeasure DecisionWeight="2" ScoreType="HaarGradient">
+                <Parameters>
+                  <Parameter>2</Parameter>
+                </Parameters>
+              </SharpnessMeasure>
+              <SharpnessMeasure DecisionWeight="3" ScoreType="HaarGradient">
+                <Parameters>
+                  <Parameter>3</Parameter>
+                </Parameters>
+              </SharpnessMeasure>
+            </SharpnessMeasureSet>
+            <UpperLimit>-100</UpperLimit>
+            <UseAcquisitionROI>true</UseAcquisitionROI>
+            <UseCameraParameters>false</UseCameraParameters>
+            <UseChannelInformation>true</UseChannelInformation>
+            <IsLiveAnalysisReportingEnabled>false</IsLiveAnalysisReportingEnabled>
+            <Extensions>
+              <Extension ID="urn:uuid:23da5db8-181d-49fa-83e5-df1c2d42f0b8" Name="LsmAutofocusCoarseSearchParameters">
+                <Mode>SinglePeak</Mode>
+                <EnforceMovementAgainstGravity>true</EnforceMovementAgainstGravity>
+                <ExtendedParameters />
+              </Extension>
+              <Extension ID="urn:uuid:e291569a-8562-4dd2-8f37-d0afa3e81a20" Name="LsmAutofocusParameters">
+                <Experiment Version="1.2">
+                  <RunMode>OptimizeBeforePerformEnabled,PreventColibriOptimizations,ContinuousAcquisitionEnabled,PreventFocusRestoreAfterExperiment,PreventStageXYRestoreAfterExperiment,DisableDataRepositioning</RunMode>
+                  <BeforeHardwareSetting></BeforeHardwareSetting>
+                  <AfterHardwareSetting></AfterHardwareSetting>
+                  <ExperimentBlockIndex>0</ExperimentBlockIndex>
+                  <IsSegmented>false</IsSegmented>
+                  <IsStandardMode>true</IsStandardMode>
+                  <ImageTransferMode>MemoryMappedOnlyWithFinalCopy</ImageTransferMode>
+                  <AutoSave IsActivated="false" EnableSingleFileSave="false">
+                    <StorageFolder>D:\zeiss\Pictures</StorageFolder>
+                    <Name>New</Name>
+                    <IsAutoSubFolder>true</IsAutoSubFolder>
+                    <IsAutoSubFolderExternal>true</IsAutoSubFolderExternal>
+                    <IsClosedOnCompletion>false</IsClosedOnCompletion>
+                    <SingleFileSaveFormat>JPG</SingleFileSaveFormat>
+                    <ConvertTo8Bit>false</ConvertTo8Bit>
+                    <AddXmlMetadata>false</AddXmlMetadata>
+                    <ApplyDisplayMappings>false</ApplyDisplayMappings>
+                    <SaveOriginalData>true</SaveOriginalData>
+                    <UseChannelNames>false</UseChannelNames>
+                    <Quality>90</Quality>
+                    <CompressionMethod>None</CompressionMethod>
+                    <SingleFileSaveDestinationFolder>D:\zeiss\Pictures</SingleFileSaveDestinationFolder>
+                    <SingleFileName>New</SingleFileName>
+                    <DimensionsForSeparateFolders>-C;-T;-Z;-S</DimensionsForSeparateFolders>
+                  </AutoSave>
+                  <Scripting IsActivated="false">
+                    <RunMacroBeforeExperiment>false</RunMacroBeforeExperiment>
+                    <MacroBeforeExperiment></MacroBeforeExperiment>
+                    <ErrorActionBeforeExperiment>ErrorAction_Continue</ErrorActionBeforeExperiment>
+                    <RunMacroAfterExperiment>false</RunMacroAfterExperiment>
+                    <MacroAfterExperiment></MacroAfterExperiment>
+                    <ErrorActionAfterExperiment>ErrorAction_Continue</ErrorActionAfterExperiment>
+                  </Scripting>
+                  <BlockExecutionOrder>1</BlockExecutionOrder>
+                  <LoopDefinitions />
+                  <ExperimentBlocks>
+                    <AcquisitionBlock IsActivated="true" BlockReference="637056122787021016">
+                      <RunMode>ComponentUpdateEnabled,StateUpdateEnabled,PauseAcquisitionOnProcessingGraphOverload</RunMode>
+                      <BeforeHardwareSetting></BeforeHardwareSetting>
+                      <AfterHardwareSetting></AfterHardwareSetting>
+                      <SubDimensionSetups>
+                        <TimeSeriesSetup IsActivated="true">
+                          <IsLongAsPossible>true</IsLongAsPossible>
+                          <IsBurstMode>false</IsBurstMode>
+                          <Duration>
+                            <Cycles>1</Cycles>
+                          </Duration>
+                          <IsFastAsPossible>false</IsFastAsPossible>
+                          <Interval>
+                            <TimeSpan>
+                              <Value>0</Value>
+                              <DefaultUnitFormat>s</DefaultUnitFormat>
+                            </TimeSpan>
+                          </Interval>
+                          <BeforeHardwareSetting></BeforeHardwareSetting>
+                          <AfterHardwareSetting></AfterHardwareSetting>
+                          <StartMode>
+                            <Manual>
+                              <DigitalIn>None</DigitalIn>
+                              <DigitalOut>None</DigitalOut>
+                              <TimeSpan>
+                                <Value>0.001</Value>
+                                <DefaultUnitFormat>ms</DefaultUnitFormat>
+                              </TimeSpan>
+                              <DateTime>
+                                <Seconds>0</Seconds>
+                                <Minutes>0</Minutes>
+                                <Hours>0</Hours>
+                              </DateTime>
+                              <Interval>0</Interval>
+                              <IntervalUnit>ms</IntervalUnit>
+                              <MarkerDescription></MarkerDescription>
+                            </Manual>
+                          </StartMode>
+                          <StopMode>
+                            <Manual>
+                              <DigitalIn>None</DigitalIn>
+                              <DigitalOut>None</DigitalOut>
+                              <TimeSpan>
+                                <Value>0.001</Value>
+                                <DefaultUnitFormat>ms</DefaultUnitFormat>
+                              </TimeSpan>
+                              <DateTime>
+                                <Seconds>0</Seconds>
+                                <Minutes>0</Minutes>
+                                <Hours>0</Hours>
+                              </DateTime>
+                              <Interval>0</Interval>
+                              <IntervalUnit>ms</IntervalUnit>
+                              <MarkerDescription></MarkerDescription>
+                            </Manual>
+                          </StopMode>
+                          <PauseBeginMode>
+                            <Manual>
+                              <DigitalIn>None</DigitalIn>
+                              <DigitalOut>None</DigitalOut>
+                              <TimeSpan>
+                                <Value>0.001</Value>
+                                <DefaultUnitFormat>ms</DefaultUnitFormat>
+                              </TimeSpan>
+                              <DateTime>
+                                <Seconds>0</Seconds>
+                                <Minutes>0</Minutes>
+                                <Hours>0</Hours>
+                              </DateTime>
+                              <Interval>0</Interval>
+                              <IntervalUnit>ms</IntervalUnit>
+                              <MarkerDescription></MarkerDescription>
+                            </Manual>
+                          </PauseBeginMode>
+                          <PauseEndMode>
+                            <Manual>
+                              <DigitalIn>None</DigitalIn>
+                              <DigitalOut>None</DigitalOut>
+                              <TimeSpan>
+                                <Value>0.001</Value>
+                                <DefaultUnitFormat>ms</DefaultUnitFormat>
+                              </TimeSpan>
+                              <DateTime>
+                                <Seconds>0</Seconds>
+                                <Minutes>0</Minutes>
+                                <Hours>0</Hours>
+                              </DateTime>
+                              <Interval>0</Interval>
+                              <IntervalUnit>ms</IntervalUnit>
+                              <MarkerDescription></MarkerDescription>
+                            </Manual>
+                          </PauseEndMode>
+                          <StartNextTimeSliceMode>
+                            <Manual>
+                              <DigitalIn>None</DigitalIn>
+                              <DigitalOut>None</DigitalOut>
+                              <TimeSpan>
+                                <Value>0.001</Value>
+                                <DefaultUnitFormat>ms</DefaultUnitFormat>
+                              </TimeSpan>
+                              <DateTime>
+                                <Seconds>0</Seconds>
+                                <Minutes>0</Minutes>
+                                <Hours>0</Hours>
+                              </DateTime>
+                              <Interval>0</Interval>
+                              <IntervalUnit>ms</IntervalUnit>
+                              <MarkerDescription></MarkerDescription>
+                            </Manual>
+                          </StartNextTimeSliceMode>
+                          <TimeSeriesTriggerIntervalModeCollection />
+                          <TimeSeriesTriggerMarkerModeCollection />
+                          <SetupExtensions />
+                          <SubDimensionSetups>
+                            <MultiTrackSetup IsActivated="true">
+                              <IsTIRFAngleSynchronized>true</IsTIRFAngleSynchronized>
+                              <ImagingDepth>0</ImagingDepth>
+                              <Track IsActivated="true" IsSelected="true">
+                                <DetectionModeSetup>
+                                  <Zeiss.Micro.Acquisition.WfTrackDetectionMode />
+                                </DetectionModeSetup>
+                                <BeforeHardwareSetting>Leere Davor-Hardwareeinstellung</BeforeHardwareSetting>
+                                <AfterHardwareSetting>Leere Danach-Hardwareeinstellung</AfterHardwareSetting>
+                                <TrackName></TrackName>
+                                <Channels>
+                                  <Channel IsActivated="true" IsSelected="true" ChannelSetupId="637056123129534779" Name="Bright" Description="">
+                                    <Color>#FFFFFFFF</Color>
+                                    <PixelShiftX>0</PixelShiftX>
+                                    <PixelShiftY>0</PixelShiftY>
+                                    <GenerateMetaData>true</GenerateMetaData>
+                                    <DataGrabberSetup>
+                                      <CameraFrameSetup Id="MTBCamera_MTBTube_Cameraport.Axiocam506c">
+                                        <ShadingReference IsActivated="true">false</ShadingReference>
+                                        <ShadingReferenceSource IsActivated="true">1</ShadingReferenceSource>
+                                        <ExposureTime IsActivated="true">19.376</ExposureTime>
+                                        <AutoExposure IsActivated="true">false</AutoExposure>
+                                      </CameraFrameSetup>
+                                    </DataGrabberSetup>
+                                    <ContrastMethod>
+                                      <Name>TL Brightfield</Name>
+                                      <ShortName>Bright</ShortName>
+                                      <Description></Description>
+                                      <IlluminationType>Transmitted</IlluminationType>
+                                      <ContrastMethods>TransmittedLightBrightfield</ContrastMethods>
+                                      <ContrastTypes>BrightField</ContrastTypes>
+                                      <Color>#FFFFFFFF</Color>
+                                    </ContrastMethod>
+                                  </Channel>
+                                </Channels>
+                                <IsExtendedSetupModificationWarningShown>false</IsExtendedSetupModificationWarningShown>
+                                <ZStackMode>Yes</ZStackMode>
+                                <UseZStackCenter>true</UseZStackCenter>
+                                <ZStackSliceIndex>1</ZStackSliceIndex>
+                                <IsDisabledForApoTome>true</IsDisabledForApoTome>
+                                <FocusOffset>0</FocusOffset>
+                                <DirectDevice>Standard</DirectDevice>
+                              </Track>
+                              <SubDimensionSetups />
+                            </MultiTrackSetup>
+                          </SubDimensionSetups>
+                        </TimeSeriesSetup>
+                        <RegionsSetup IsActivated="false">
+                          <SampleHolder>
+                            <Overlap>0.1</Overlap>
+                            <ScanMode>Meander</ScanMode>
+                            <PositionedRegionsScanMode>FirstYThenX</PositionedRegionsScanMode>
+                            <TemplateShapesScanMode>Meander</TemplateShapesScanMode>
+                            <IsConstantTiles>false</IsConstantTiles>
+                            <TileRegionAnchorMode>Center</TileRegionAnchorMode>
+                            <StageReferencePoint>0,0</StageReferencePoint>
+                            <UseStageBacklashCorrection>true</UseStageBacklashCorrection>
+                            <UseFocusBacklashCorrection>true</UseFocusBacklashCorrection>
+                            <IsOptimizedPositionedRegionsSorting>true</IsOptimizedPositionedRegionsSorting>
+                            <IsOptimizedTemplateShapesSorting>true</IsOptimizedTemplateShapesSorting>
+                            <UseStageContinualSpeed>false</UseStageContinualSpeed>
+                            <StageContinualSpeed>0.8</StageContinualSpeed>
+                            <UseStageContinualAcceleration>false</UseStageContinualAcceleration>
+                            <StageContinualAcceleration>0.5</StageContinualAcceleration>
+                            <MoveToLoadPositionBetweenRegions>false</MoveToLoadPositionBetweenRegions>
+                            <MoveToLoadPositionBetweenShapes>false</MoveToLoadPositionBetweenShapes>
+                            <SplitScenesInSeparateFiles>false</SplitScenesInSeparateFiles>
+                            <TileRegionCoveringMode>AlignedToLocalTileRegion</TileRegionCoveringMode>
+                            <TemplateShapesFillMode>FillGrade</TemplateShapesFillMode>
+                            <TemplateShapesFillGrade>0.25</TemplateShapesFillGrade>
+                            <TemplateShapesFillWidth>10</TemplateShapesFillWidth>
+                            <TemplateShapesFillHeight>10</TemplateShapesFillHeight>
+                            <IsOnlineStitchingEnabled>false</IsOnlineStitchingEnabled>
+                            <IsOnlinePyramidEnabled>true</IsOnlinePyramidEnabled>
+                            <GlobalInterpolationExpansionDegree>2</GlobalInterpolationExpansionDegree>
+                            <LocalInterpolationExpansionDegree>2</LocalInterpolationExpansionDegree>
+                            <IsFocusSurfaceOutlierRemovingEnabled>true</IsFocusSurfaceOutlierRemovingEnabled>
+                            <FocusSurfaceOutlierExpansionDegree>1</FocusSurfaceOutlierExpansionDegree>
+                            <FocusSurfaceOutlierThresholdSigma>2.75</FocusSurfaceOutlierThresholdSigma>
+                            <UseDefaultSurfaceFit>true</UseDefaultSurfaceFit>
+                            <UsedSurfaceFitTypeName></UsedSurfaceFitTypeName>
+                            <DelayAfterStageMove>0</DelayAfterStageMove>
+                            <TileDimension>
+                              <Width>0</Width>
+                              <Height>0</Height>
+                              <CenterOffsetX>0</CenterOffsetX>
+                              <CenterOffsetY>0</CenterOffsetY>
+                            </TileDimension>
+                            <OnlineStitchingParameter>
+                              <UseFocusReferenceChannel>true</UseFocusReferenceChannel>
+                              <ReferenceChannelId>0</ReferenceChannelId>
+                            </OnlineStitchingParameter>
+                            <AllowedScanArea IsActivated="false">
+                              <ContourType>Rectangle</ContourType>
+                              <Center>0,0</Center>
+                              <Size>0,0</Size>
+                            </AllowedScanArea>
+                            <TileRegions />
+                            <SingleTileRegions />
+                            <SingleTileRegionArrays />
+                          </SampleHolder>
+                          <SubDimensionSetups />
+                        </RegionsSetup>
+                        <TilesSetup IsActivated="false">
+                          <SubDimensionSetups />
+                        </TilesSetup>
+                        <LiveSetup IsActivated="false">
+                          <SubDimensionSetups />
+                        </LiveSetup>
+                        <PanoramaSetup IsActivated="false">
+                          <SubDimensionSetups />
+                        </PanoramaSetup>
+                        <HalfPupilSetup IsActivated="false">
+                          <IsContainerAdaptionEnabled>true</IsContainerAdaptionEnabled>
+                          <StartAngle>0</StartAngle>
+                          <SubDimensionSetups />
+                        </HalfPupilSetup>
+                        <ZStackSetup IsActivated="false">
+                          <IsCenterMode>false</IsCenterMode>
+                          <IsIntervalKept>true</IsIntervalKept>
+                          <Offset>0</Offset>
+                          <RefractiveIndexCorrection>1</RefractiveIndexCorrection>
+                          <UseFocusBacklashCorrection>true</UseFocusBacklashCorrection>
+                          <DelayAfterFocusMove>0</DelayAfterFocusMove>
+                          <EnforceOptimalZDistance>false</EnforceOptimalZDistance>
+                          <EnforceMovementAgainstGravity>true</EnforceMovementAgainstGravity>
+                          <First>
+                            <Distance>
+                              <Value>-2E-06</Value>
+                              <DefaultUnitFormat>um</DefaultUnitFormat>
+                            </Distance>
+                          </First>
+                          <Last>
+                            <Distance>
+                              <Value>2E-06</Value>
+                              <DefaultUnitFormat>um</DefaultUnitFormat>
+                            </Distance>
+                          </Last>
+                          <Interval>
+                            <Distance>
+                              <Value>1E-06</Value>
+                              <DefaultUnitFormat>um</DefaultUnitFormat>
+                            </Distance>
+                          </Interval>
+                          <SetupExtensions />
+                          <SubDimensionSetups />
+                        </ZStackSetup>
+                        <ApoTomeAcquisitionSetup IsActivated="false">
+                          <PhaseCount>5</PhaseCount>
+                          <IsOnlineProcessing>false</IsOnlineProcessing>
+                          <IsStartedFromAcquisitionTab>true</IsStartedFromAcquisitionTab>
+                          <SubDimensionSetups />
+                        </ApoTomeAcquisitionSetup>
+                        <CorrelativeSetup IsActivated="false">
+                          <HolderDocument>
+                            <Image />
+                            <Delta1To2>
+                              <X>0</X>
+                              <Y>0</Y>
+                            </Delta1To2>
+                            <Delta2To3>
+                              <X>0</X>
+                              <Y>0</Y>
+                            </Delta2To3>
+                            <HolderName></HolderName>
+                            <IsReadOnly>false</IsReadOnly>
+                            <Calibration>
+                              <Marker1>
+                                <X>NaN</X>
+                                <Y>NaN</Y>
+                                <Z>NaN</Z>
+                              </Marker1>
+                              <Marker2>
+                                <X>NaN</X>
+                                <Y>NaN</Y>
+                                <Z>NaN</Z>
+                              </Marker2>
+                              <Marker3>
+                                <X>NaN</X>
+                                <Y>NaN</Y>
+                                <Z>NaN</Z>
+                              </Marker3>
+                              <StageRotation>NaN</StageRotation>
+                              <CorrectedMarkerDeltas>
+                                <Delta1To2>
+                                  <X>NaN</X>
+                                  <Y>NaN</Y>
+                                </Delta1To2>
+                                <Delta2To3>
+                                  <X>NaN</X>
+                                  <Y>NaN</Y>
+                                </Delta2To3>
+                              </CorrectedMarkerDeltas>
+                            </Calibration>
+                            <IsHolderEnabled>true</IsHolderEnabled>
+                            <HolderNumber></HolderNumber>
+                            <CorrelativeSessionId>2341e9b0-0ee6-4182-b040-3b1bfda175fc</CorrelativeSessionId>
+                          </HolderDocument>
+                          <SubDimensionSetups />
+                        </CorrelativeSetup>
+                      </SubDimensionSetups>
+                      <HelperSetups>
+                        <AcquisitionModeSetup IsActivated="true">
+                          <SelectedDetector>MTBCamera_MTBTube_Cameraport.Axiocam506c</SelectedDetector>
+                          <Detectors>
+                            <Detector Id="MTBCamera_MTBTube_Cameraport.Axiocam506c">
+                              <ApplyCameraProfile Status="Valid">false</ApplyCameraProfile>
+                              <ApplyImageOrientation Status="Valid">true</ApplyImageOrientation>
+                              <ExposureTime Status="Valid">19.376</ExposureTime>
+                              <Frame Status="Valid">0,0,2752,2208</Frame>
+                              <ImageOrientation Status="Valid">3</ImageOrientation>
+                              <ContinuousAcquisitionSafeMode Status="Valid">true</ContinuousAcquisitionSafeMode>
+                              <EnableSignalsForFastAcq Status="Valid"></EnableSignalsForFastAcq>
+                              <ShadingReference Status="Valid">false</ShadingReference>
+                              <ShadingReferenceSource Status="Valid">1</ShadingReferenceSource>
+                              <ShadingReferenceSourceVisibility Status="Valid">true</ShadingReferenceSourceVisibility>
+                              <Resolution Status="Valid">1</Resolution>
+                              <BinningList Status="Valid">0</BinningList>
+                              <ColorMode Status="Valid">1</ColorMode>
+                              <WhiteBalance Status="Valid">0.03166377760958,0.075582717828482,0.044299398622057</WhiteBalance>
+                              <WhiteBalanceOffset Status="Valid">0</WhiteBalanceOffset>
+                              <ColorSaturation Status="Valid">0.5</ColorSaturation>
+                              <AnalogGainModeList Status="Valid">0</AnalogGainModeList>
+                              <LiveSpeed Status="Valid">0</LiveSpeed>
+                              <Trigger Status="Valid">false</Trigger>
+                              <TriggerMode Status="Valid">0</TriggerMode>
+                              <SnapShutter Status="Valid">false</SnapShutter>
+                              <LiveShutter Status="Valid">false</LiveShutter>
+                              <ShutterMode Status="Valid">0</ShutterMode>
+                              <ShutterOpenDelay Status="Valid">0</ShutterOpenDelay>
+                              <SoftwareBinningList Status="Valid">0</SoftwareBinningList>
+                              <ResamplingParameterKey Status="Valid">1</ResamplingParameterKey>
+                              <ResamplingModeParameterKey Status="Valid">0</ResamplingModeParameterKey>
+                              <PixelClock Status="Valid">1</PixelClock>
+                              <ImageDeliveryBufferCount Status="Valid">4</ImageDeliveryBufferCount>
+                              <Adjust Status="Valid">0.7</Adjust>
+                              <AdjustFrameRate Status="Valid">true</AdjustFrameRate>
+                              <AutoExposure Status="Valid">false</AutoExposure>
+                              <AutoExposureFrame Status="Valid">Empty</AutoExposureFrame>
+                              <Binning Status="Valid">1,1</Binning>
+                              <BlackReference Status="Valid">false</BlackReference>
+                              <DefaultDisplayGamma Status="Valid">0.45</DefaultDisplayGamma>
+                              <DeliverExactFrame Status="Valid">false</DeliverExactFrame>
+                              <DualCameraCalibration Status="Valid">false</DualCameraCalibration>
+                              <DualCameraCalibrationId Status="Valid">None</DualCameraCalibrationId>
+                              <ExposureDelay Status="Valid">0</ExposureDelay>
+                              <CalculateExposureMaximum Status="Valid">10000</CalculateExposureMaximum>
+                              <AutoExposureTolerance Status="Valid">0.05</AutoExposureTolerance>
+                              <FrameRateTarget Status="Valid">30</FrameRateTarget>
+                              <HDRBits Status="Valid">2</HDRBits>
+                              <NoiseFilter Status="Valid">false</NoiseFilter>
+                              <NoiseFilterThreshold Status="Valid">1.5</NoiseFilterThreshold>
+                              <ReferenceImageCount Status="Valid">3</ReferenceImageCount>
+                              <SnapMode Status="Valid">0</SnapMode>
+                              <UnsharpMask Status="Valid">false</UnsharpMask>
+                              <UnsharpMaskState Status="Valid"></UnsharpMaskState>
+                              <ImageCount Status="Valid">3</ImageCount>
+                              <AcquisitionFrame Status="Valid">0,0,2752,2208</AcquisitionFrame>
+                              <SDKVersion Status="Valid">2.05</SDKVersion>
+                              <EnableLiveSpeed Status="Valid">true</EnableLiveSpeed>
+                              <AbortOnMissedFrames Status="Valid">true</AbortOnMissedFrames>
+                              <LiveShutterSignal Status="Valid">1</LiveShutterSignal>
+                              <ShutterSignal Status="Valid">1</ShutterSignal>
+                              <UseAsyncTriggerReadySignal Status="Valid">true</UseAsyncTriggerReadySignal>
+                              <FrameTime Status="Valid">0</FrameTime>
+                              <ReadoutPort Status="Valid">0</ReadoutPort>
+                              <AntiGlow Status="Valid">1</AntiGlow>
+                              <SnapWithSWTrigger Status="Valid">false</SnapWithSWTrigger>
+                              <TileAdjustment Status="Valid">0</TileAdjustment>
+                              <CameraBitsPerPixel Status="Valid">0</CameraBitsPerPixel>
+                              <CameraLUT1 Status="Valid">0</CameraLUT1>
+                              <CameraLUT2 Status="Valid">1</CameraLUT2>
+                              <CameraGamma Status="Valid">1</CameraGamma>
+                              <PreProcessingMemoryBuffersCount Status="Valid">0</PreProcessingMemoryBuffersCount>
+                              <PreProcessingDiscBuffersCount Status="Valid">0</PreProcessingDiscBuffersCount>
+                              <DiscMemoryType Status="Valid">false</DiscMemoryType>
+                              <Compression Status="Valid">false</Compression>
+                              <ContinuousAcquisitionMode Status="Valid">0</ContinuousAcquisitionMode>
+                              <SequenceCount Status="Valid">0</SequenceCount>
+                              <SequenceProgress Status="Valid">true</SequenceProgress>
+                              <LEDIntensity Status="Valid">9</LEDIntensity>
+                              <LEDIntensityTrigger Status="Valid">9</LEDIntensityTrigger>
+                              <AutomaticTriggerControl Status="Valid">true</AutomaticTriggerControl>
+                              <SuppressTemperatureWarnings Status="Valid">false</SuppressTemperatureWarnings>
+                              <AdaptExposureByBinningChange Status="Valid">false</AdaptExposureByBinningChange>
+                            </Detector>
+                          </Detectors>
+                          <Devices />
+                          <MixedMode>
+                            <DisparityWarpingActivated>false</DisparityWarpingActivated>
+                            <DisparityMapFile></DisparityMapFile>
+                            <DoAutoScalingSynchronization>false</DoAutoScalingSynchronization>
+                            <SelectedScalingMaster>LSM</SelectedScalingMaster>
+                            <UsedExternalImagePixelDistance>0,0</UsedExternalImagePixelDistance>
+                          </MixedMode>
+                        </AcquisitionModeSetup>
+                        <AutoImmersionSetup IsActivated="false">
+                          <ImmersionTimeInterval>0</ImmersionTimeInterval>
+                          <ImmersionTravelDistance>0</ImmersionTravelDistance>
+                          <IsBubbleEliminationMovementEnabled>false</IsBubbleEliminationMovementEnabled>
+                          <BubbleEliminationMovementTargetX>20000</BubbleEliminationMovementTargetX>
+                          <BubbleEliminationMovementTargetY>20000</BubbleEliminationMovementTargetY>
+                        </AutoImmersionSetup>
+                        <BleachingSetup IsActivated="false">
+                          <BleachSettingsName>nicht gesetzt</BleachSettingsName>
+                          <BleachSettingsType></BleachSettingsType>
+                          <BeforeHardwareSetting></BeforeHardwareSetting>
+                          <AfterHardwareSetting></AfterHardwareSetting>
+                        </BleachingSetup>
+                        <DynamicsSetup IsActivated="false" GraphicScale="1" Id="637436224014838399" />
+                        <ExperimentModifierRulesSetup IsActivated="false">
+                          <Flags>
+                            <RunMode></RunMode>
+                          </Flags>
+                        </ExperimentModifierRulesSetup>
+                        <ExperimentRegionsSetup IsActivated="false">
+                          <FitFrameSizeToRegions>false</FitFrameSizeToRegions>
+                          <ImageCenterAsCoordinateReference>true</ImageCenterAsCoordinateReference>
+                          <Regions />
+                        </ExperimentRegionsSetup>
+                        <FocusSetup IsActivated="true">
+                          <RepetitionSettingsMode>Expert</RepetitionSettingsMode>
+                          <FocusStrategy IsActivated="true">
+                            <StrategyMode>None</StrategyMode>
+                            <ReferenceChannelId>637056123129534779</ReferenceChannelId>
+                            <FixedZPosition>0</FixedZPosition>
+                            <UseZPositionFromTilesSetup>true</UseZPositionFromTilesSetup>
+                            <ExecutionInTileRegionMode>CenterOfRegion</ExecutionInTileRegionMode>
+                            <SupportPointsMode>FixedZPosition</SupportPointsMode>
+                            <FocusZStackMode>FixedZ</FocusZStackMode>
+                            <WaitPositionMode>CenterOfFirstRegion</WaitPositionMode>
+                            <WaitPositionX>0</WaitPositionX>
+                            <WaitPositionY>0</WaitPositionY>
+                            <WaitPositionZ>0</WaitPositionZ>
+                            <IsUpdatePositionedRegionsToClientEnabled>true</IsUpdatePositionedRegionsToClientEnabled>
+                            <PositionedRegionsUpdateMode>CumulatedPositions</PositionedRegionsUpdateMode>
+                            <BreakAfterSupportPointsDetermination>false</BreakAfterSupportPointsDetermination>
+                            <ErrorNotificationHints>None</ErrorNotificationHints>
+                            <AdditionalSupportPointOffset>0</AdditionalSupportPointOffset>
+                            <TimeSeriesIntervalInfo>
+                              <IsActivated>false</IsActivated>
+                              <IsMainIntervalEnabled>true</IsMainIntervalEnabled>
+                              <IsSubIntervalEnabled>false</IsSubIntervalEnabled>
+                              <MainInterval>1</MainInterval>
+                              <SubInterval>1</SubInterval>
+                            </TimeSeriesIntervalInfo>
+                            <RegionsIntervalInfo>
+                              <IsActivated>false</IsActivated>
+                              <IsMainIntervalEnabled>true</IsMainIntervalEnabled>
+                              <IsSubIntervalEnabled>false</IsSubIntervalEnabled>
+                              <MainInterval>1</MainInterval>
+                              <SubInterval>1</SubInterval>
+                            </RegionsIntervalInfo>
+                            <TilesIntervalInfo>
+                              <IsActivated>true</IsActivated>
+                              <IsMainIntervalEnabled>true</IsMainIntervalEnabled>
+                              <IsSubIntervalEnabled>false</IsSubIntervalEnabled>
+                              <MainInterval>1</MainInterval>
+                              <SubInterval>1</SubInterval>
+                            </TilesIntervalInfo>
+                            <HardwareAutofocusOptions>
+                              <IsSupportedBySoftwareAutofocus>false</IsSupportedBySoftwareAutofocus>
+                            </HardwareAutofocusOptions>
+                            <HardwareAutofocusSupportPointsModeOptions>
+                              <IsSupportedBySoftwareAutofocus>false</IsSupportedBySoftwareAutofocus>
+                            </HardwareAutofocusSupportPointsModeOptions>
+                          </FocusStrategy>
+                          <Autofocus Id="Autofocus">
+                            <AutofocusStrategyMode Status="Valid">Software</AutofocusStrategyMode>
+                            <AutofocusSignalQualityThreshold Status="Valid">50</AutofocusSignalQualityThreshold>
+                          </Autofocus>
+                          <HardwareAutofocus Id="MTBAutoFocus">
+                            <Period>0</Period>
+                            <AutofocusMountingAngle>0</AutofocusMountingAngle>
+                            <AutofocusPositionOffset>0</AutofocusPositionOffset>
+                            <AutofocusOperationMode>Exact</AutofocusOperationMode>
+                            <AutofocusSpecimenType>Reflective</AutofocusSpecimenType>
+                          </HardwareAutofocus>
+                          <SoftwareAutofocus>
+                            <ReflectionMode>Disabled</ReflectionMode>
+                            <ReflectionModeOffset>120</ReflectionModeOffset>
+                            <AutofocusRegion>
+                              <X>0</X>
+                              <Y>0</Y>
+                              <DX>1</DX>
+                              <DY>1</DY>
+                            </AutofocusRegion>
+                            <BacklashStepsize>2</BacklashStepsize>
+                            <DepthOfFocus>1715.91</DepthOfFocus>
+                            <DoBleachingCorrection>true</DoBleachingCorrection>
+                            <InitialDirection>0</InitialDirection>
+                            <IsAutomaticRange>true</IsAutomaticRange>
+                            <LowerLimit>100</LowerLimit>
+                            <PredefinedStepsize>Optimal</PredefinedStepsize>
+                            <SharpnessMeasureMethod>Contrast</SharpnessMeasureMethod>
+                            <RelativeSearchRange>68636.400000000009</RelativeSearchRange>
+                            <SearchRangeType>Relative</SearchRangeType>
+                            <SearchStrategy>Sequential</SearchStrategy>
+                            <SharpnessMeasureSet Name="Best" Aggregator="RootMeanSquare">
+                              <SharpnessMeasure DecisionWeight="1" ScoreType="HaarGradient">
+                                <Parameters>
+                                  <Parameter>1</Parameter>
+                                </Parameters>
+                              </SharpnessMeasure>
+                              <SharpnessMeasure DecisionWeight="2" ScoreType="HaarGradient">
+                                <Parameters>
+                                  <Parameter>2</Parameter>
+                                </Parameters>
+                              </SharpnessMeasure>
+                              <SharpnessMeasure DecisionWeight="3" ScoreType="HaarGradient">
+                                <Parameters>
+                                  <Parameter>3</Parameter>
+                                </Parameters>
+                              </SharpnessMeasure>
+                            </SharpnessMeasureSet>
+                            <UpperLimit>-100</UpperLimit>
+                            <UseAcquisitionROI>true</UseAcquisitionROI>
+                            <UseCameraParameters>false</UseCameraParameters>
+                            <UseChannelInformation>true</UseChannelInformation>
+                            <IsLiveAnalysisReportingEnabled>false</IsLiveAnalysisReportingEnabled>
+                            <Extensions>
+                              <Extension ID="urn:uuid:23da5db8-181d-49fa-83e5-df1c2d42f0b8" Name="LsmAutofocusCoarseSearchParameters">
+                                <Mode>SinglePeak</Mode>
+                                <EnforceMovementAgainstGravity>true</EnforceMovementAgainstGravity>
+                                <ExtendedParameters />
+                              </Extension>
+                              <Extension ID="urn:uuid:e291569a-8562-4dd2-8f37-d0afa3e81a20" Name="LsmAutofocusParameters">
+                                <SearchMode>Fine, CoarseAuto</SearchMode>
+                              </Extension>
+                            </Extensions>
+                          </SoftwareAutofocus>
+                          <DefiniteFocus IsActivated="false">
+                            <IsContinuousStabilizationEnabled>false</IsContinuousStabilizationEnabled>
+                            <ContinuousStabilizationMode>Periodic</ContinuousStabilizationMode>
+                            <Period>10</Period>
+                            <OperationMode>Exact</OperationMode>
+                            <IsPausedDuringAcquisition>true</IsPausedDuringAcquisition>
+                            <SkipInitialization>false</SkipInitialization>
+                            <DelayOnFirstTileInRegion>0</DelayOnFirstTileInRegion>
+                          </DefiniteFocus>
+                        </FocusSetup>
+                        <LinkamRampSetup IsActivated="false">
+                          <Rate>10</Rate>
+                          <Limit>50</Limit>
+                          <HoldTime>0</HoldTime>
+                          <RampType>None</RampType>
+                        </LinkamRampSetup>
+                        <RatioSetup IsActivated="false">
+                          <IsRatioImageGenerated>false</IsRatioImageGenerated>
+                          <SelectedColorMode>Palette</SelectedColorMode>
+                          <Color>#00FFFFFF</Color>
+                          <PaletteName>rainbow</PaletteName>
+                          <RatioDisplayMinimum>0</RatioDisplayMinimum>
+                          <RatioDisplayMaximum>10</RatioDisplayMaximum>
+                          <RatioMethod>DualWavelength</RatioMethod>
+                          <SelectedReferenceIdChannel1>0</SelectedReferenceIdChannel1>
+                          <SelectedReferenceIdChannel2>0</SelectedReferenceIdChannel2>
+                          <RatioBackgroundCorrection>None</RatioBackgroundCorrection>
+                          <BackgroundCorrectionChannel1>0</BackgroundCorrectionChannel1>
+                          <BackgroundCorrectionChannel2>0</BackgroundCorrectionChannel2>
+                          <BackgroundCorrectionFaktor1>1</BackgroundCorrectionFaktor1>
+                          <BackgroundCorrectionFaktor2>1</BackgroundCorrectionFaktor2>
+                          <AverageFrame>5</AverageFrame>
+                          <Multiplicator>1</Multiplicator>
+                          <IsOptionalThreshold>false</IsOptionalThreshold>
+                          <OptionalThresholdChannel1>0</OptionalThresholdChannel1>
+                          <OptionalThresholdChannel2>0</OptionalThresholdChannel2>
+                          <ThresholdChannelOrderId1>0</ThresholdChannelOrderId1>
+                          <ThresholdChannelOrderId2>0</ThresholdChannelOrderId2>
+                          <IsRatioClipping>true</IsRatioClipping>
+                          <RatioClipping>10</RatioClipping>
+                          <IsRatioCalculationEnabled>true</IsRatioCalculationEnabled>
+                          <IsRatioReferenceImageDefined>true</IsRatioReferenceImageDefined>
+                          <AverageStartFrame>1</AverageStartFrame>
+                          <AverageEndFrame>1</AverageEndFrame>
+                        </RatioSetup>
+                        <ResetDetectorSetup IsActivated="false">
+                          <ResetDetectorsInTilesExperiment>false</ResetDetectorsInTilesExperiment>
+                        </ResetDetectorSetup>
+                        <TempSeriesSetup IsActivated="false">
+                          <TemperatureStep>0</TemperatureStep>
+                        </TempSeriesSetup>
+                        <DisableBlankingSetup IsActivated="false" />
+                        <BleachFrameSynchronizationSetup IsActivated="false" />
+                        <ExperimentRemoteProcessingSetup IsActivated="false">
+                          <OutputFolder>\</OutputFolder>
+                          <IsAutoSubFolder>false</IsAutoSubFolder>
+                          <FileName>New_processed.czi</FileName>
+                          <UseSuffix>false</UseSuffix>
+                          <Suffix>processed</Suffix>
+                          <AutoOpenProcessedImage>false</AutoOpenProcessedImage>
+                        </ExperimentRemoteProcessingSetup>
+                      </HelperSetups>
+                    </AcquisitionBlock>
+                  </ExperimentBlocks>
+                  <HardwareSettingsPool>
+                    <HardwareSetting Name="Leere Davor-Hardwareeinstellung">
+                      <ParameterCollection Id="MTBRLShutter">
+                        <IsClosed Status="Valid" IsActivated="true">true</IsClosed>
+                      </ParameterCollection>
+                      <ParameterCollection Id="MTBFiberlight1">
+                        <Intensity Status="Valid" IsActivated="true">80</Intensity>
+                        <LampMode Status="Valid" IsActivated="true">Manual</LampMode>
+                      </ParameterCollection>
+                      <ParameterCollection Id="MTBReflectorChanger">
+                        <Position Status="Valid" IsActivated="true">4</Position>
+                        <PositionName Status="Valid" IsActivated="true">Reflector.none</PositionName>
+                      </ParameterCollection>
+                      <ParameterCollection Id="MTBTubeVisCamChanger">
+                        <Position Status="Valid" IsActivated="true">2</Position>
+                        <PositionName Status="Valid" IsActivated="true">FotoTube.VIS_Cam_0/100</PositionName>
+                      </ParameterCollection>
+                    </HardwareSetting>
+                    <HardwareSetting Name="Leere Danach-Hardwareeinstellung">
+                      <ParameterCollection Id="MTBFiberlight1">
+                        <Intensity Status="Valid" IsActivated="true">0</Intensity>
+                        <LampMode Status="Valid" IsActivated="true">Standby</LampMode>
+                      </ParameterCollection>
+                    </HardwareSetting>
+                  </HardwareSettingsPool>
+                  <ExperimentFeedback IsActivated="false">
+                    <IsSynchronous>true</IsSynchronous>
+                    <IsSynchronousToAnalysis>true</IsSynchronousToAnalysis>
+                    <IsSynchronousToFile>false</IsSynchronousToFile>
+                    <AllowNonExperimentObservablesToTriggerScript>false</AllowNonExperimentObservablesToTriggerScript>
+                    <DeadlockTimeout>10</DeadlockTimeout>
+                    <PreScript></PreScript>
+                    <LoopScript></LoopScript>
+                    <PostScript></PostScript>
+                    <IsWarningPopupShown>true</IsWarningPopupShown>
+                    <AreDebugMessagesEnabled>false</AreDebugMessagesEnabled>
+                    <Actions />
+                  </ExperimentFeedback>
+                  <AdditionalSettings />
+                </Experiment>
+                <SearchMode>Fine, CoarseAuto</SearchMode>
+              </Extension>
+            </Extensions>
+          </SoftwareAutofocus>
+          <DefiniteFocus IsActivated="false">
+            <IsContinuousStabilizationEnabled>false</IsContinuousStabilizationEnabled>
+            <ContinuousStabilizationMode>Periodic</ContinuousStabilizationMode>
+            <Period>10</Period>
+            <OperationMode>Exact</OperationMode>
+            <IsPausedDuringAcquisition>true</IsPausedDuringAcquisition>
+            <SkipInitialization>false</SkipInitialization>
+            <DelayOnFirstTileInRegion>0</DelayOnFirstTileInRegion>
+          </DefiniteFocus>
+        </FocusSetup>
+        <LinkamRampSetup IsActivated="false">
+          <Rate>10</Rate>
+          <Limit>50</Limit>
+          <HoldTime>0</HoldTime>
+          <RampType>None</RampType>
+        </LinkamRampSetup>
+        <RatioSetup IsActivated="false">
+          <IsRatioImageGenerated>false</IsRatioImageGenerated>
+          <SelectedColorMode>Palette</SelectedColorMode>
+          <Color>#00FFFFFF</Color>
+          <PaletteName>rainbow</PaletteName>
+          <RatioDisplayMinimum>0</RatioDisplayMinimum>
+          <RatioDisplayMaximum>10</RatioDisplayMaximum>
+          <RatioMethod>DualWavelength</RatioMethod>
+          <SelectedReferenceIdChannel1>0</SelectedReferenceIdChannel1>
+          <SelectedReferenceIdChannel2>0</SelectedReferenceIdChannel2>
+          <RatioBackgroundCorrection>None</RatioBackgroundCorrection>
+          <BackgroundCorrectionChannel1>0</BackgroundCorrectionChannel1>
+          <BackgroundCorrectionChannel2>0</BackgroundCorrectionChannel2>
+          <BackgroundCorrectionFaktor1>1</BackgroundCorrectionFaktor1>
+          <BackgroundCorrectionFaktor2>1</BackgroundCorrectionFaktor2>
+          <AverageFrame>5</AverageFrame>
+          <Multiplicator>1</Multiplicator>
+          <IsOptionalThreshold>false</IsOptionalThreshold>
+          <OptionalThresholdChannel1>0</OptionalThresholdChannel1>
+          <OptionalThresholdChannel2>0</OptionalThresholdChannel2>
+          <ThresholdChannelOrderId1>0</ThresholdChannelOrderId1>
+          <ThresholdChannelOrderId2>0</ThresholdChannelOrderId2>
+          <IsRatioClipping>true</IsRatioClipping>
+          <RatioClipping>10</RatioClipping>
+          <IsRatioCalculationEnabled>true</IsRatioCalculationEnabled>
+          <IsRatioReferenceImageDefined>true</IsRatioReferenceImageDefined>
+          <AverageStartFrame>1</AverageStartFrame>
+          <AverageEndFrame>1</AverageEndFrame>
+        </RatioSetup>
+        <ResetDetectorSetup IsActivated="false">
+          <ResetDetectorsInTilesExperiment>false</ResetDetectorsInTilesExperiment>
+        </ResetDetectorSetup>
+        <TempSeriesSetup IsActivated="false">
+          <TemperatureStep>0</TemperatureStep>
+        </TempSeriesSetup>
+        <DisableBlankingSetup IsActivated="false" />
+        <BleachFrameSynchronizationSetup IsActivated="false" />
+        <ExperimentRemoteProcessingSetup IsActivated="false">
+          <OutputFolder>\</OutputFolder>
+          <IsAutoSubFolder>false</IsAutoSubFolder>
+          <FileName>New_processed.czi</FileName>
+          <UseSuffix>false</UseSuffix>
+          <Suffix>processed</Suffix>
+          <AutoOpenProcessedImage>false</AutoOpenProcessedImage>
+        </ExperimentRemoteProcessingSetup>
+      </HelperSetups>
+    </AcquisitionBlock>
+  </ExperimentBlocks>
+  <HardwareSettingsPool>
+    <HardwareSetting Name="Leere Davor-Hardwareeinstellung">
+      <ParameterCollection Id="MTBHXP120Shutter">
+        <IsClosed Status="Valid" IsActivated="true">true</IsClosed>
+      </ParameterCollection>
+      <ParameterCollection Id="MTBRLShutter">
+        <IsClosed Status="Valid" IsActivated="true">true</IsClosed>
+      </ParameterCollection>
+      <ParameterCollection Id="MTBFiberlight1">
+        <Intensity Status="Valid" IsActivated="true">80</Intensity>
+        <LampMode Status="Valid" IsActivated="true">Manual</LampMode>
+      </ParameterCollection>
+      <ParameterCollection Id="MTBReflectorChanger">
+        <Position Status="Valid" IsActivated="true">4</Position>
+        <PositionName Status="Valid" IsActivated="true">Reflector.none</PositionName>
+      </ParameterCollection>
+      <ParameterCollection Id="MTBTubeVisCamChanger">
+        <Position Status="Valid" IsActivated="true">2</Position>
+        <PositionName Status="Valid" IsActivated="true">FotoTube.VIS_Cam_0/100</PositionName>
+      </ParameterCollection>
+    </HardwareSetting>
+    <HardwareSetting Name="Leere Danach-Hardwareeinstellung">
+      <ParameterCollection Id="MTBFiberlight1">
+        <Intensity Status="Valid" IsActivated="true">0</Intensity>
+        <LampMode Status="Valid" IsActivated="true">Standby</LampMode>
+      </ParameterCollection>
+    </HardwareSetting>
+  </HardwareSettingsPool>
+  <ExperimentFeedback IsActivated="false">
+    <IsSynchronous>true</IsSynchronous>
+    <IsSynchronousToAnalysis>true</IsSynchronousToAnalysis>
+    <IsSynchronousToFile>false</IsSynchronousToFile>
+    <AllowNonExperimentObservablesToTriggerScript>false</AllowNonExperimentObservablesToTriggerScript>
+    <DeadlockTimeout>10</DeadlockTimeout>
+    <PreScript></PreScript>
+    <LoopScript></LoopScript>
+    <PostScript></PostScript>
+    <IsWarningPopupShown>true</IsWarningPopupShown>
+    <AreDebugMessagesEnabled>false</AreDebugMessagesEnabled>
+    <Actions />
+  </ExperimentFeedback>
+  <AdditionalSettings />
+  <Metadata>
+    <ExperimentDuration></ExperimentDuration>
+  </Metadata>
+</HardwareExperiment>
