@@ -1,3 +1,4 @@
+![](microscope_title.png)
 # Microscope instructions
 
 This folder contains all the instructions necessary for automatic leaf disc imaging with the Zeiss AxioZoom (motorized table, Software autofocus) and the ZenBlue3.0 software.
