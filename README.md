@@ -1,6 +1,6 @@
 ![title](https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/img/git_title.png)
 
-Objective and high-throughput calssification of leaf disc images form inoculation experiments.
+Objective high-throughput calssification of leaf disc images form inoculation experiments.
 
 If you use this repository or derivatives of it please cite:\
 \
