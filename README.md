@@ -6,7 +6,7 @@ If you use this repository or derivatives of it please cite:\
 \
 **High-throughput phenotyping of leaf discs infected with grapevine downy mildew using shallow convolutional neural networks**\
 \
-Zendler D., Malagol N., Schwandner A., Töpfer, R., Hausmann L., Zyprian E. Agronomy 2021, 11, 1768. https://doi.org/10.3390/agronomy11091768\
+Zendler D., Malagol N., Schwandner A., Töpfer, R., Hausmann L., Zyprian E. Agronomy 2021, 11, 1768. https://doi.org/10.3390/agronomy11091768 \
 \
 Original article on bioRxiv: https://doi.org/10.1101/2021.08.19.456931 \
 \
