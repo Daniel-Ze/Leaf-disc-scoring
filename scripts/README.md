@@ -98,7 +98,7 @@ Usage: python random_select_val_train.py -i /path/to/images/ -v 100 -t 500 -e .j
 -e file extension of the slices
 ```
 To train our models later we will need a folder structure like this:
-```
+```shell
 /image_data/
 |----/training/
 |    |----/class1/
