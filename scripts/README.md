@@ -99,13 +99,13 @@ Usage: python random_select_val_train.py -i /path/to/images/ -v 100 -t 500 -e .j
 ```
 To train our models later we will need a folder structure like this:
 ```
-/image_data
-          /training
-                 /class1
-                 /class2
-          /validation
-                 /class1
-                 /class2
+/image_data/
+|----/training/
+|    |----/class1/
+|    `----/class2/
+`----/validation/
+     |----/class1/
+     `----/class2/
 ```
 The ratio of training to validation should be around 60 : 40 % of images from the respective class. We are going to train binary CNNs therefore we will have two classes for training and validation later on.\
 In the Keras tutorial a total of 1000 images per class were used for training the CNN and 400 images were used for validation. We will follow this tutorial with our random select python script. We will chose 1000 images for training and 400 images for validation for each class we have generated in a folder called combined/:
@@ -133,20 +133,20 @@ As you might recall we have to train two CNNs, one for background vs. leaf disc 
 You can name class4 instead leaf_disc_all. Copy 500 from the random class2(= leaf_disc)/training/ and 500 images from the random class3(= leaf_disc_with_pathogen)/training/ into class4(leaf_disc_all)/training/.\
 We will do the same for the validation images: 200 images from random class2class2(= leaf_disc)/validation/ and 200 images from andom class3(= leaf_disc_with_pathogen)/validation/ into class4(=leaf_disc_all)/validation/.\
 Out folder structure should look now like this:
-```
-image_data/combined
-                /class1 (=background)
-                      /training (1000 images)
-                      /validation (400 images)
-                /class2 (=leaf_disc)
-                      /training (1000 images)
-                      /validation (400 images)
-                /class3 (=leaf_disc_with_pathogen)
-                      /training (1000 images)
-                      /validation (400 images)
-                /class4 (leaf_disc_all)
-                      /training (1000 images)
-                      /validation (400 images)
+```shell
+image_data/combined/
+|----/class1/ (=background)
+|    |----/training/ (1000 images)
+|    `----/validation/ (400 images)
+|----/class2/ (=leaf_disc)
+|    |----/training/ (1000 images)
+|    `----/validation/ (400 images)
+|----/class3/ (=leaf_disc_with_pathogen)
+|    |----/training/ (1000 images)
+|    `----/validation/ (400 images)
+`----/class4/ (leaf_disc_all)
+     |----/training/ (1000 images)
+     `----/validation/ (400 images)
 ```
 Now we have all the data that we need to train our very own CNN models. First CNN model to train would be background vs. leaf disc. We therefore need the training and validation data of class1 and class4:
 ```shell
@@ -163,27 +163,28 @@ Please follow these steps for the data for the second CNN2 and the two classes c
 
 You have created datasets for training your models. During the training of the models they will be validated with the generated validation data which will give you an idea how well your trained model will perform. However, it is important to perform an evaluation of the model with unrelated data. Therefore, we will generate for both CNN1 and CNN2 a third dataset called 'eval'. This dataset consists again of two classes each (class1, class4 - CNN1; class2, class3 - CNN2). So take some more images from your dataset and follow the steps 1 to 4. For this dataset it is not importatnt to have the same amount of pictures per class.
 Our final 'CNN1' and 'CNN2' folders should look as follows at the end:
-```
-image_data/CNN1
-            /training
-                  /class1 (1000 images)
-                  /class4 (1000 images)
-            /validation
-                  /class1 (400 images)
-                  /class4 (400 images)
-            /eval
-                  /class1
-                  /class4
-image_data/CNN2
-            /training
-                  /class2 (1000 images)
-                  /class3 (1000 images)
-            /validation
-                  /class2 (400 images)
-                  /class3 (400 images)
-            /eval
-                  /class2
-                  /class3
+```shell
+image_data/CNN1/
+|----/training/
+|    |----/class1/ (1000 images)
+|    `----/class4/ (1000 images)
+|----/validation/
+|    |----/class1/ (400 images)
+|    `----/class4/ (400 images)
+`----/eval/
+     |----/class1/
+     `----/class4/
+
+image_data/CNN2/
+|----/training/
+|    |----/class2/ (1000 images)
+|    `----/class3/ (1000 images)
+|----/validation/
+|    |----/class2/ (400 images)
+|    `----/class3/ (400 images)
+`----/eval/
+     |----/class2
+     `----/class3
 ```
 
 ## 6. Training the CNN models
