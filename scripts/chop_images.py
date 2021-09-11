@@ -53,7 +53,7 @@ if extension == "":
     usage()
 
 print("[info]\tInput folder: " + input_folder)
-print("[info]\tSlices:       " + slices)
+print("[info]\tSlices:       " + str(slices))
 print("[info]\tImage type:   " + extension)
 
 leaf_discs = input_folder
