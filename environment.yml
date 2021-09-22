@@ -1,0 +1,24 @@
+name: keras
+channels:
+  - conda-forge
+  - r
+  - defaults
+dependencies:
+  - python=3.6
+  - R=3.6
+  - r::r-ggplot2
+  - r::r-r.utils
+  - r::r-readr
+  - r::r-stringr
+  - r::r-stringi
+  - r::r-jpeg
+  - r::r-data.table
+  - pip
+  - pip:
+    - pip
+    - setuptools
+    - image_slicer
+    - opencv-python
+    - matplotlib
+    - tensorflow==2.4.2
+    - keras==2.4.3
