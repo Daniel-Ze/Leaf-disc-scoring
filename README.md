@@ -49,8 +49,28 @@ The resulting number of leaf disc slices infected and not infected are expressed
     - data.table
 
 ## <a name="how-to-install-all-dependencies"></a>How to install all dependencies
+**Quick way of installing all dependencies:**
+```shell
+(base)$ git clone https://github.com/Daniel-Ze/Leaf-disc-scoring.git
+(base)$ cd Leaf-disc-scoring
+(base)~/Leaf-disc-scoring $ conda env create --file environment.yml
+```
+  - Make the bash script executable
+```shell
+(base)~/Leaf-disc-scoring/$ chmod a+x run_classification
+```
+  - If you want to have the programm accessible from everywhere (! **make sure to
+    adjust the path** !)
+```shell
+# MacOS:
+$ echo 'export PATH=~/Leaf-disc-scoring:$PATH' >>~/.bash_profile
+# Linux
+$ echo 'export PATH=~/Leaf-disc-scoring:$PATH' >>~/.bashrc
+```
+  - Restart the terminal and you're all set
+If you decide to save the repository to another location than your base home folder make sure to adjust the ./bash_profile or ./bashrc entries accordingly.
 
-Recommended installation:
+**Recommended installation:**
   - Clone repository
   - Install miniconda3 (https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) and install mamba (conda install mamba)
   - Make a conda environment called Keras with python 3.6 installed
