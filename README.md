@@ -53,7 +53,7 @@ The resulting number of leaf disc slices infected and not infected are expressed
 ```shell
 (base)$ git clone https://github.com/Daniel-Ze/Leaf-disc-scoring.git
 (base)$ cd Leaf-disc-scoring
-(base)~/Leaf-disc-scoring $ conda env create --file environment.yml
+(base)~/Leaf-disc-scoring $ mamba env create --file environment.yml
 ```
   - Make the bash script executable
 ```shell
