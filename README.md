@@ -97,7 +97,7 @@ If you decide to save the repository to another location than your base home fol
   - Install all libraries for R
 ```shell
 (keras)$ R
-> install.packages(c("ggplot2","R.utils","readr","stringr","jpeg","data.table"))
+> install.packages(c("ggplot2","R.utils","readr","stringr","jpeg","data.table","cowplot","ggpubr","mclust"))
 > q()
 Save workspace image? [y/n/c]: n
 ```
@@ -147,26 +147,26 @@ Running the test:
 (base)~/Leaf-disc-scoring$ run_classification -f example/ -e my_test -k keras
 
 # 3. Watch the output being created
-/Users/daniel/miniconda3/etc/profile.d/conda.sh exists.
-[info]	Running from /home/user/Leaf-disc-scoring/.
-[warning] No conda environment name given. Defaulting to: keras
-[info]	Running Keras in version: 2.4.3
-[info]	Leaf disc folder exists.
-[info]	Experiment name : test_git
-[info]	No -l option. Using standard model: CNN1_model.h5
-[info]	No -S option. Using standard model: CNN2_model.h5
-[info]	Running classify_leaf_disc.py. This might take some time.
-[info]		# leaf discs:	4
-[info]		Folder:		test/
-[info]		Model 1:	/home/user/Leaf-disc-scoring/CNN1_model.h5
-[info]		Model 2:	/home/user/Leaf-disc-scoring/CNN2_model.h5
-[info]  Progress: |██████████████████████████████████████████████████| 100.0% Complete
-[info] Elapsed time: 2 min
-[info]	Running plot_coords.R
-[info]		Plotting score1_3_Plate_1_II_s47.jpg
-[info]		Plotting score5_1_Plate_3_I_s03.jpg
-[info]		Plotting score7_4_Plate_6_II_s77.jpg
-[info]		Plotting score9_3_Plate_6_I_s18.jpg
+/home/user/miniconda3/etc/profile.d/conda.sh exists.
+[ info ]        Running from /home/user/Leaf-disc-scoring/.
+[ ✔✔✔✔ ]        Running Keras in version: 2.4.3
+[ ✔✔✔✔ ]        Leaf disc folder exists.
+[ info ]        No experiment name supplied. Using: Experiment2830
+[ info ]        No -l option. Using standard model: CNN1_model.h5
+[ info ]        No -S option. Using standard model: CNN2_model.h5
+[ info ]        Running classify_leaf_disc.py. This might take some time.
+[ info ]                # leaf discs:   4
+[ info ]                Folder:         example/
+[ ✓✓✓✓ ]                Model 1:        /home/user/Leaf-disc-scoring/CNN1_model.h5
+[ ✓✓✓✓ ]                Model 2:        /home/user/Leaf-disc-scoring/CNN2_model.h5
+[ info ]                Dumping classified images to example/spo/
+[ info ]  Progress: |██████████████████████████████████████████████████| 100.0% Complete
+[ info ]  Elapsed time: 1 min
+[ info ]        Running plot_coords.R
+[ info ]                Plotting score1_3_Plate_1_II_s47.jpg
+[ info ]                Plotting score5_1_Plate_3_I_s03.jpg
+[ info ]                Plotting score7_4_Plate_6_II_s77.jpg
+[ info ]                Plotting score9_3_Plate_6_I_s18.jpg
 
 # 4. Go to the example folder in Leaf-disc-scoring and compare the output to "test_git"
 ```
