@@ -10,11 +10,26 @@ import time
 import random
 import datetime
 
+# Be fancy
+global R, G, Y, NC
+R = '\033[0;31m'
+G = '\033[0;32m'
+Y = '\033[0;33m'
+NC = '\033[0m'
+CHECK = G+'\u2713\u2713\u2713\u2713'+NC
+
 # Version 0.2
 # license http://creativecommons.org/licenses/by-nc-sa/4.0/
 
+def eprint(*args, **kwargs):
+    '''
+    Error message handling. Print to stderr.
+    '''
+    print(*args, file=sys.stderr, **kwargs)
+
+
 # Print iterations progress (https://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console)
-def printProgressBar (iteration, total, prefix = '', suffix = '', decimals = 1, length = 100, fill = 'X', printEnd = "\r"):
+def printProgressBar (iteration, total, prefix = '', suffix = '', decimals = 1, length = 100, fill = G+'\u2588'+NC, printEnd = "\r"):
     """
     Call in a loop to create terminal progress bar
     @params:
@@ -29,7 +44,7 @@ def printProgressBar (iteration, total, prefix = '', suffix = '', decimals = 1, 
     """
     percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
     filledLength = int(length * iteration // total)
-    bar = fill * filledLength + ' ' * (length - filledLength)
+    bar = fill * filledLength + '.' * (length - filledLength)
     print(f'\r{prefix} |{bar}| {percent}% {suffix}', end = printEnd)
     # Print New Line on Complete
     if iteration == total:
@@ -42,33 +57,34 @@ def input():
         if os.path.isdir(sys.argv[1]) == True:
             f_leaf_discs = sys.argv[1]
         else:
-            print("Leaf disc image folder does not exist")
+            print("[ "+R+"error"+NC+" ]\tLeaf disc image folder does not exist")
             exit()
 
         try:
             f_model_leaf_vs_back = keras.models.load_model(sys.argv[2])
             # Do something with the file
-        except IOError:
-            print("Model file leaf vs back not accessible")
+        except IOError as err:
+            eprint(err)
+            print("[ "+R+"error"+NC+" ]\tModel file leaf vs back not accessible")
             exit()
 
         try:
             f_model_nospo_vs_spo = keras.models.load_model(sys.argv[3])
             # Do something with the file
-        except IOError:
-            print("Model file nospo vs spo not accessible")
+        except IOError as err:
+            eprint(err)
+            print("[ "+R+"error"+NC+" ]\tModel file nospo vs spo not accessible")
             exit()
 
         if sys.argv[4] == '':
-            print("No experiment name given.")
+            print("["+R+"error"+NC+" ]\tNo experiment name given.")
             exit()
         else:
             f_exp_name=sys.argv[4]
 
         return f_leaf_discs, f_model_leaf_vs_back, f_model_nospo_vs_spo, f_exp_name
     else:
-        print(sys.argv)
-        exit("Usage: python /path/to/leaf/disc /path/to/CNN_model_leaf_vs_back /path/to/CNN_model_nospo_vs_spo experiment_name")
+        exit(Y+"Usage"+NC+": python /path/to/leaf/disc /path/to/CNN_model_leaf_vs_back /path/to/CNN_model_nospo_vs_spo experiment_name")
 
 
 # Run CNN1 for leaf vs back
@@ -109,8 +125,9 @@ def classify_img_slices(f_image):
     # Create a temporary directory for the image slices
     try:
         os.mkdir(leaf_discs_path + "tmp"+rnd+"/")
-    except OSError:
-        print ("[warning]\t\tCreation of the directory %s/tmp/ failed" % leaf_discs_path)
+    except OSError as err:
+        eprint(err)
+        print("[ "+R+"warning"+NC+" ]\t\tCreation of the directory {}/tmp/ failed".format(leaf_discs_path))
 
     # Slice the leaf disc image in 500 pieces and save them in the tmp file
     tiles = image_slicer.slice(f_image, 500, save=False)
@@ -218,24 +235,28 @@ def main():
             continue
 
     # Print the run parameters
-    print("[info]\t\t# leaf discs:\t"+str(num_img))
-    print("[info]\t\tFolder:\t\t"+leaf_discs)
-    print("[info]\t\tModel 1:\t"+str(sys.argv[2]))
-    print("[info]\t\tModel 2:\t"+str(sys.argv[3]))
+    print("[ "+Y+"info"+NC+" ]\t\t# leaf discs:\t"+str(num_img))
+    print("[ "+Y+"info"+NC+" ]\t\tFolder:\t\t"+leaf_discs)
+    print("[ "+CHECK+" ]\t\tModel 1:\t"+str(sys.argv[2]))
+    print("[ "+CHECK+" ]\t\tModel 2:\t"+str(sys.argv[3]))
 
     # Create a temporary directory for the image slices
-    try:
-        os.mkdir(leaf_discs + "spo/")
-    except OSError:
-        print ("[warning]\t\tCreation of the directory %s/spo/ failed" % leaf_discs)
+    if os.path.isdir(leaf_discs + "spo/") == False:
+        try:
+            os.mkdir(leaf_discs + "spo/")
+        except OSError as err:
+            eprint(err)
+            print ("[ "+R+"warning"+NC+" ]\t\tCreation of the directory {}spo/ failed".format(leaf_discs))
+    else:
+        print("[ "+Y+"info"+NC+" ]\t\tDumping classified images to {}spo/".format(leaf_discs))
 
     # Open the output file for the results (creates it if not existing)
     with open(leaf_discs+"classify_results.txt", 'w') as results:
         # Print the header of the results file: Date and time, the folder with leaf discs, CNN1 and CNN2
-        results.write("# Date time: " + str(datetime.datetime.now()))
-        results.write("# Folder:\t\t"+leaf_discs)
-        results.write("# Model 1:\t"+sys.argv[2])
-        results.write("# Model 1:\t"+sys.argv[3])
+        results.write("# Date time: " + str(datetime.datetime.now()) + "\n")
+        results.write("# Folder:\t\t" + leaf_discs + "\n")
+        results.write("# Model 1:\t" + sys.argv[2] + "\n")
+        results.write("# Model 1:\t" + sys.argv[3] + "\n")
         results.write("Exp_name\tSample\tNumber\tLeaf_disc\tAgar\tperc_leaf_disc\tperc_agar\tspo\tno_spo\tperc_spo\tperc_no_spo\n")
     results.close()
 
@@ -249,7 +270,7 @@ def main():
             continue
 
     # Print the progress bar to stdout
-    printProgressBar(0, num_img, prefix = '[info]  Progress:', suffix = 'Complete', length = 50)
+    printProgressBar(0, num_img, prefix = '[ '+Y+'info'+NC+' ]  Progress:', suffix = 'Complete', length = 50)
 
     # Start iterating over the images in the directory
     for image in leaf_disc_imgs:
@@ -259,12 +280,12 @@ def main():
             classify_img_slices(image)
             i = i + 1
             sample = sample + 1
-            printProgressBar(i, num_img, prefix = '[info]  Progress:', suffix = 'Complete', length = 50)
+            printProgressBar(i, num_img, prefix = '[ '+Y+'info'+NC+' ]  Progress:', suffix = 'Complete', length = 50)
         else:
             continue
 
     end = time.time()
-    print("[info] Elapsed time: " + str(round((end - start)/60))+" min")
+    print("[ "+Y+"info"+NC+" ]  Elapsed time: " + str(round((end - start)/60))+" min")
 
 
 if __name__ == '__main__':
