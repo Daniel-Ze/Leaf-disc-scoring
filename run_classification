@@ -1,7 +1,14 @@
 #!/bin/bash
 
-# Version 0.1
+# Version 0.2
 # license http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+# Be fancy
+R='\033[0;31m'
+G='\033[0;32m'
+Y='\033[0;33m'
+NC='\033[0m'
+CHECK=${G}'\xE2\x9C\x94\xE2\x9C\x94\xE2\x9C\x94\xE2\x9C\x94'${NC}
 
 home="$(cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"/
 miniconda=~/miniconda3/etc/profile.d/conda.sh
@@ -13,20 +20,20 @@ if [[ -f $miniconda ]]; then
   echo "$miniconda exists."
   source $miniconda
 else
-  echo -e "[error]\tCould not find miniconda installation."
+  printf "[ ${R}error${NC} ]\tCould not find miniconda installation.\n"
   exit 1
 fi
 
 # Check the Leaf-disc-install folder
 if [[ -d "$home" ]]; then
-    echo -e "[info]\tRunning from $home."
+    printf "[ ${Y}info${NC} ]\tRunning from $home.\n"
   else
-    echo -e "CNN home not found. Make sure to adjust line 4 in the run_classification script."
+    printf "CNN home not found. Make sure to adjust line 4 in the run_classification script.\n"
     exit 1
 fi
 
 plot_coords=$home"plot_coords.R"
-plot_pheno=$home"plot_pheno.R"
+plot_pheno=$home"plot_pheno_v02.R"
 classify_leaf_disc=$home"classify_leaf_disc.py"
 
 helpFunction()
@@ -38,13 +45,31 @@ helpFunction()
   echo -e "\t-l Path to custom Keras model: leaf vs background (if not supplied standard model will be used)"
   echo -e "\t-s Path to custom Keras model: sporangia vs no-sporangia (if notsupplied standard model will be used)"
   echo -e "\t-k name of the conda environment with Leaf-disc-scoring dependencies installed (default: keras)"
+  echo -e "\t-c Citation reference in BibTex"
   echo -e ""
   exit 1
 }
 
-while getopts "e:f:l:s:k:" opt
+citeThis()
+{
+echo -e "@article{Zendler2021,
+		author = {Zendler, Daniel and Malagol, Nagarjun and Schwandner, Anna and T{\"{o}}pfer, Reinhard and Hausmann, Ludger and Zyprian, Eva},
+		doi = {10.3390/agronomy11091768},
+		issn = {20734395},
+		journal = {Agronomy},
+		number = {9},
+		pages = {1768},
+		title = {{High-throughput phenotyping of leaf discs infected with grapevine downy mildew using shallow convolutional neural networks}},
+		volume = {11},
+		year = {2021}
+	}"
+	exit
+}
+
+while getopts "ce:f:l:s:k:" opt
 do
   case "$opt" in
+    c ) citeThis ;;
     e ) parameterE="$OPTARG" ;;
     f ) parameterF="$OPTARG" ;;
     l ) parameterL="$OPTARG" ;;
@@ -56,7 +81,7 @@ done
 
 if [ -z "$parameterK" ]
 then
-  echo -e "[warning] No conda environment name given. Defaulting to: keras"
+  printf "[ ${Y}warning${NC} ]\tNo conda environment name given. Defaulting to: keras\n"
   parameterK="keras"
 fi
 
@@ -69,24 +94,24 @@ keras_version=$(python -c 'import keras; print(keras.__version__)' 2> /dev/null)
 if [ -z $keras_version ]
 then
   echo $keras_version
-  echo -e "\t!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-  echo -e "\t!!No Keras installation found in conda environment       !!"
-  echo -e "\t!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+  echo -e "\t${R}!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!${NC}"
+  echo -e "\t${R}!!No Keras installation found in conda environment       !!${NC}"
+  echo -e "\t${R}!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!${NC}"
   exit 1
 else
   # Check if the right version is installed
   if [ "$keras_version" != "$keras_version_expected" ]
   then
-    echo -e "[error]\tWrong Keras version found. Make sure to install Keras v2.4.3"
+    printf "[ ${R}error${NC} ]\tWrong Keras version found. Make sure to install Keras v2.4.3\n"
     exit 1
   else
-    echo -e "[info]\tRunning Keras in version: "$keras_version
+    printf "[ ${CHECK} ]\tRunning Keras in version: "$keras_version"\n"
   fi
 fi
 
 # Check if the specified folder with leaf disc images exists
 if [[ -d "$parameterF" ]]; then
-    echo -e "[info]\tLeaf disc folder exists."
+    printf "[ ${CHECK} ]\tLeaf disc folder exists.\n"
   else
     helpFunction
 fi
@@ -94,42 +119,55 @@ fi
 # Check if there was a name given for the experiment
 if [ -z "$parameterE" ]
 then
-    echo -e "[info]\tNo experiment name supplied. Using: Inoculation1"
-    parameterE=Inoculation1
+    RAND_NR=$[ $RANDOM % 5000 + 2500 ]
+    printf "[ ${Y}info${NC} ]\tNo experiment name supplied. Using: Experiment${RAND_NR}\n"
+    parameterE=Experiment${RAND_NR}
 else
-    echo -e "[info]\tExperiment name : "$parameterE
+    printf "[ ${Y}info${NC} ]\tExperiment name : "$parameterE"\n"
 fi
 
 # Check if an alternative CNN1 model was supplied
 if [ -z "$parameterL" ]
 then
-   echo -e "[info]\tNo -l option. Using standard model: CNN1_model.h5";
+   printf "[ ${Y}info${NC} ]\tNo -l option. Using standard model: CNN1_model.h5\n"
    parameterL=$home"CNN1_model.h5"
 fi
 
 #Check if an alternative CNN2 model was supplied
 if [ -z "$parameterS" ]
 then
-   echo -e "[info]\tNo -S option. Using standard model: CNN2_model.h5";
+   printf "[ ${Y}info${NC} ]\tNo -S option. Using standard model: CNN2_model.h5\n"
    parameterS=$home"CNN2_model.h5"
 fi
 
 # Create directories and output files
-mkdir $parameterF"results"
-mkdir $parameterF"spo"
+if ! mkdir $parameterF"results"
+then
+   printf "[ ${R}error${NC} ]\t${paramterF}results exists. Failed previous run? Manually delete to proceed.\n"
+   exit 1
+fi
+if ! mkdir $parameterF"spo"
+then
+   printf "[ ${R}error${NC} ]\t${paramterF}spo exists. Failed previous run? Manually delete to proceed.\n"
+   exit 1
+fi
 touch $parameterF"classify_results.txt"
 touch $parameterF"error.log"
 
 # Start the python script for clasification
-echo -e "[info]\tRunning classify_leaf_disc.py. This might take some time."
-python $classify_leaf_disc $parameterF $parameterL $parameterS $parameterE 2> $parameterF"error.log"
+printf "[ ${Y}info${NC} ]\tRunning classify_leaf_disc.py. This might take some time.\n"
+if ! python $classify_leaf_disc $parameterF $parameterL $parameterS $parameterE 2> $parameterF"error.log"
+then
+   print "[ ${R}error${NC} ]\tSomething went wrong while classifying the leaf disc images. Check ${paramterF}error.log\n"
+   exit 1
+fi
 
 # Plotting the data on the RGB images
-echo -e "[info]\tRunning plot_coords.R"
+printf "[ ${Y}info${NC} ]\tRunning plot_coords.R\n"
 coords=$parameterF*.jpg
 for f in $coords
 do
-  echo -e "[info]\t\tPlotting "$(basename -- $f )
+  printf "[ ${Y}info${NC} ]\t\tPlotting "$(basename -- $f)"\n"
   Rscript $plot_coords -c $f"spo_coord.txt" 2>> $parameterF"error.log"
 done
 
