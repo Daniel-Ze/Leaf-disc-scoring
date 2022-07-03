@@ -1,4 +1,4 @@
-name: keras
+name: keras_test_v02
 channels:
   - conda-forge
   - r
@@ -13,6 +13,9 @@ dependencies:
   - r::r-stringi
   - r::r-jpeg
   - r::r-data.table
+  - r::r-cowplot
+  - r::r-mclust
+  - r::r-ggpubr
   - pip
   - pip:
     - pip
