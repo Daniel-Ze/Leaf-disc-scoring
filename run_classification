@@ -81,8 +81,8 @@ done
 
 if [ -z "$parameterK" ]
 then
-  printf "[ ${Y}warning${NC} ]\tNo conda environment name given. Defaulting to: keras\n"
-  parameterK="keras"
+  printf "[ ${Y}warning${NC} ]\tNo conda environment name given. Defaulting to: keras_test_v02\n"
+  parameterK="keras_test_v02"
 fi
 
 conda activate $parameterK
