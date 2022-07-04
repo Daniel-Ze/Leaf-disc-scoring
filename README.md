@@ -147,7 +147,7 @@ If you intend to use the classification for images of the size **2752 × 220
 
 To Check if the program runs properly a set of test images is supplied. In total four leaf discs with different degrees of infection severity are supplied.\
 Running the test:
-```shell
+```
 # 1. Change into the Leaf-disc-scoring repository
 (base)$ cd ~/Leaf-disc-scoring
 
