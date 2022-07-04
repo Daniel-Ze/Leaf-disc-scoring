@@ -51,8 +51,16 @@ The resulting number of leaf disc slices infected and not infected are expressed
 ## <a name="how-to-install-all-dependencies"></a>How to install all dependencies
 **Quick way of installing all dependencies:**
 ```shell
+# 1. Clone the rpository
 (base)$ git clone https://github.com/Daniel-Ze/Leaf-disc-scoring.git
+
+# 2. Change to the repository directory
 (base)$ cd Leaf-disc-scoring
+
+# 3. Activate the test branch with new output and better error handling
+(base)~/Leaf-disc-scoring $ git checkout test
+
+# 4. Create the conda environment (the new environment name has been changed to keras_test_v02)
 (base)~/Leaf-disc-scoring $ mamba env create --file environment.yml
 ```
   - Make the bash script executable
