@@ -254,9 +254,9 @@ def main():
     with open(leaf_discs+"classify_results.txt", 'w') as results:
         # Print the header of the results file: Date and time, the folder with leaf discs, CNN1 and CNN2
         results.write("# Date time: " + str(datetime.datetime.now()) + "\n")
-        results.write("# Folder:\t\t" + leaf_discs + "\n")
-        results.write("# Model 1:\t" + sys.argv[2] + "\n")
-        results.write("# Model 1:\t" + sys.argv[3] + "\n")
+        results.write("# Folder: " + leaf_discs + "\n")
+        results.write("# Model 1: " + sys.argv[2] + "\n")
+        results.write("# Model 1: " + sys.argv[3] + "\n")
         results.write("Exp_name\tSample\tNumber\tLeaf_disc\tAgar\tperc_leaf_disc\tperc_agar\tspo\tno_spo\tperc_spo\tperc_no_spo\n")
     results.close()
 
