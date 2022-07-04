@@ -33,7 +33,7 @@ if [[ -d "$home" ]]; then
 fi
 
 plot_coords=$home"plot_coords.R"
-plot_pheno=$home"plot_pheno_v02.R"
+plot_pheno=$home"plot_pheno.R"
 classify_leaf_disc=$home"classify_leaf_disc.py"
 
 helpFunction()
