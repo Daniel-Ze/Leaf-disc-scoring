@@ -179,12 +179,16 @@ Running the test:
 # 4. Go to the example folder in Leaf-disc-scoring and compare the output to "test_git"
 ```
 Running the program should yield the following results:
+  A ) RGB images overlayed with the identified image slices with sporangiophores
+  B ) Boxplot showing the percentage leaf disc area covered with sporangiophores; Individual samples are colored according to the assigned cluster
+  C ) Histogram showing the percentage leaf disc area covered with sporangiophores:
+    - Bars are colored in the clusters of the samples
+    - dotted vertical line indicates the mean of the cluster
+    - Density blot is overlayed over the histogram
+    - Rug blot at the x-axis shows the sample distribution
+  D ) Raw results can be found in a tab delimited text file in the main folder called **classify_results.txt**
 
-  - The program generates a plot indicating the leaf disc slices which were classified as infected in a folder called **results**. 
-  - In the same folder a plot should be present showing the percentage leaf disc covered with sporangiophore distribution of the analyzed leaf disc images. 
-  - The raw results can be found in a tab delimited text file in the main folder called **classify_results.txt**
-
-![results](https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/img/results_combined_git.png?raw=true)
+![results](https://github.com/Daniel-Ze/Leaf-disc-scoring/blob/main/img/results_combined_git_new.png?raw=true)
 
 ## <a name="custom-scnn"></a>"Oh no my images are not in the right resolution" , "My samples are not infected with downy mildew and I don't work with grapevine" or simply "I want to train my own models"
 
