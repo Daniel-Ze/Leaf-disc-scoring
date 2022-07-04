@@ -144,7 +144,7 @@ Running the test:
 (base)$ cd ~/Leaf-disc-scoring
 
 # 2. Run the bash script "run_classification" with the example images
-(base)~/Leaf-disc-scoring$ run_classification -f example/ -e my_test -k keras
+(base)~/Leaf-disc-scoring$ run_classification -f example/ -e my_test -k keras_test_v02
 
 # 3. Watch the output being created
 /Users/daniel/miniconda3/etc/profile.d/conda.sh exists.
