@@ -53,6 +53,11 @@ The resulting number of leaf disc slices infected and not infected are expressed
 ```shell
 (base)$ git clone https://github.com/Daniel-Ze/Leaf-disc-scoring.git
 (base)$ cd Leaf-disc-scoring
+
+# **Optional**: you can checkout the **test branch** of the repository for new plotting features and improved error handling. The **main branch** will not be changed.
+(base)~/Leaf-disc-scoring $ git checkout test
+# If you checkout the **test branch** follow the **test branch README.md**!
+
 (base)~/Leaf-disc-scoring $ mamba env create --file environment.yml
 ```
   - Make the bash script executable
