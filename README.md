@@ -132,7 +132,7 @@ To test the install run the pipeline without any arguments:
 (keras)$ run_classification
 /home/user/miniconda3/etc/profile.d/conda.sh exists.
 [info]	Running from /home/user/Leaf-disc-scoring/.
-[warning] No conda environment name given. Defaulting to: keras
+[warning] No conda environment name given. Defaulting to: keras_test_v02
 [info]	Running Keras in version: 2.4.3
 
 Usage: run_classification -f path/to/leaf/disc/dir/ -e Inoculation1 -l model_l_vs_b.h5 -s model_s_vs_no-s.h5 -k keras
